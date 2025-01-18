@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ast_8h">
+    <title>ast.h File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;stdarg.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structnumericNodeType">numericNodeType</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structoperatorNodeType">operatorNodeType</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structidentifierNodeType">identifierNodeType</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structnodeTypeTag">nodeTypeTag</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct__actionNode">_actionNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct__etapeRefNode">_etapeRefNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct__transitionRefNode">_transitionRefNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct__etapeNode">_etapeNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct__transitionNode">_transitionNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ast_8h_1aec6f43cd6b713cd85ea1a80d57291743">KEY_BUTTON</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ast_8h_1a6adef269911a5a9e52a96843ea998639">KEY_ANA</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ast_8h_1a7f1859b8e30d6f364f1132ad1a6849ab">KEY_PWM</link> 2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ast_8h_1aed6b8cfeec7eac1e7dc98efd97754958">KEY_TOR</link> 3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ast_8h_1a7578e30a39512cbf0a6e0e6bc3c9d26e">KEY_IDENT</link> 4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4">nodeOper</link>{<link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4ab37ac7b2840043e61c94a65ff9498cbd">OPER_ADD</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4aa902f208b75f810fc5ad602f8044d30c">OPER_SUB</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a05561cce626c90c0790144f3c4860717">OPER_MULT</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4aeedb46aad244e24f0c3d82cc73386e93">OPER_DIV</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a246f1e99edc09f42dce0813b0e3046af">OPER_SEQUENCE</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a1e0a314d484b5f4d6bb14d217691a52d">OPER_TRANSITION</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4aa3ffad38a1982e827c9c887d7d9cfc9d">OPER_STEP</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4adba6a93f12b4d96fe7e71a3264f7456c">OPER_INF</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a213be367f738a59ca509a4f5405adcad">OPER_SUP</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a30c5a68369789a6db7ef511298d7eaf5">OPER_GE</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a2de92458db58b1508d4709af4a37054d">OPER_LE</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a01b3d3deda819a631c04203d27df23e0">OPER_NE</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a7654f7fbe1d3c98395c24473fd412fc1">OPER_EQ</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4afd94ac6cdbdffd1a9d126c46df7eaacc">OPER_NOT</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4a250b2b24ddb8325214868d04dd1a896f">OPER_AND</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4adef3c98d09bc2b2ab09d7f237ee33006">OPER_OR</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4ad814d44048be35f5b01193b98104e1f8">OPER_NEG</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4ad6abeec53289c116a9d3ca7c960370ef">OPER_ASSIGN</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4ad261d93d8597df647ff47018b949aac0">OPER_RESERVE_SPACE</link>, <link linkend="ast_8h_1a4f0283c13f494b58969f47316a7b62a4af442dacd2757c2140fac5a0f8f7a2358">OPER_MAIN</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="ast_8h_1a14ca0b0420e32b2a603589b79d680a9e">nodeEnum</link>{<link linkend="ast_8h_1a14ca0b0420e32b2a603589b79d680a9ea5a4083c809444f95b46b0429718b627d">typeNumeric</link>, <link linkend="ast_8h_1a14ca0b0420e32b2a603589b79d680a9ea2cbf8a6f50394d346c822e5ac9bd8723">typeOperator</link>, <link linkend="ast_8h_1a14ca0b0420e32b2a603589b79d680a9ea193490f7a50fafce83da5ecf1880bbda">typeIdentifier</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="structnodeTypeTag">nodeTypeTag</link>  <link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="struct__actionNode">_actionNode</link>  <link linkend="ast_8h_1aadd5a12e44d84c3ed461231ff4b6f001">actionNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="struct__etapeRefNode">_etapeRefNode</link>  <link linkend="ast_8h_1a783fed330882669eab7bb82b2387504c">etapeRefNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="struct__transitionRefNode">_transitionRefNode</link>  <link linkend="ast_8h_1a67b6895182f914664b7fae2a669508e3">transitionRefNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="struct__etapeNode">_etapeNode</link>  <link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="struct__transitionNode">_transitionNode</link>  <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * <link linkend="ast_8h_1af24dffa4a76481eceaf07516479988b7">createNumericNode</link> (
+float v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * <link linkend="ast_8h_1aa1a7dd6e141f15a68b8148d6e8053596">createIdentifierNode</link> (
+char * id, int flag)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * <link linkend="ast_8h_1a681f2943d0fc66a64fec574c26f650ea">createOperatorNode</link> (
+int oper, int nOperands, ... )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a62f8c93065175a1e3e604b6fc2631c56">generateAsmExpression</link> (
+<link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * n, FILE * fout)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a56b0b138b1ae9b94bc6bdf5638a0535e">grafcet_interpreter</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a9ba813acb7deef1f162c85cafbd94a29">pushRefEtape</link> (
+<link linkend="ast_8h_1a783fed330882669eab7bb82b2387504c">etapeRefNode</link> ** head, char * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1ad94fc48b92faaa7067d7ff8b8bd92a91">pushRefTransition</link> (
+<link linkend="ast_8h_1a67b6895182f914664b7fae2a669508e3">transitionRefNode</link> ** head, char * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a3944ee6b4bed218c85cb86099b9adf7c">pushAction</link> (
+<link linkend="ast_8h_1aadd5a12e44d84c3ed461231ff4b6f001">actionNode</link> ** head, <link linkend="ast_8h_1aadd5a12e44d84c3ed461231ff4b6f001">actionNode</link> * action)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a74acbcb32f935aaecd2b55bd4369af5a">pushEtape</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> ** head, <link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * etape)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1abfaca9d0dc994f0c08d284e754e3f258">pushTransition</link> (
+<link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> ** head, <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * trans)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * <link linkend="ast_8h_1a2a20966de97a5b06982d3643f414e830">findEtapeByName</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * head, char * s)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a72a3046f6b7c2b5d5f27fffe496f25d8">printRefEtapes</link> (
+<link linkend="ast_8h_1a783fed330882669eab7bb82b2387504c">etapeRefNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1ab977bf46a28dbfb71181eba6a5ad07a7">printRefTransitions</link> (
+<link linkend="ast_8h_1a67b6895182f914664b7fae2a669508e3">transitionRefNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a7b2c8a852ecb48debf0d1deea30a87be">printEtapes</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a6a9ae5871f49658056712904f7bac85e">printTransitions</link> (
+<link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a76304605dc888b516fa1b253ddb84391">makeDual</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * en, <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * tn)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8h_1a77e171dbbf8fe93237a20247f3af5cc9">generateCode</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * en, <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * tn)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/anais/Bureau/ProjetInfoElec-EI2I3-2606/ast/ast.h</para>
+    </simplesect>
+</section>

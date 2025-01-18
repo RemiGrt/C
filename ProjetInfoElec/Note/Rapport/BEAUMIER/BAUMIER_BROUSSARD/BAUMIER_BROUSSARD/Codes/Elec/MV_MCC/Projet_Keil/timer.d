@@ -1,0 +1,9 @@
+.\timer.o: ..\User_Sources_Files\TIMER.c
+.\timer.o: C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h
+.\timer.o: C:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\timer.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\timer.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\timer.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\timer.o: C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h
+.\timer.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\timer.o: ..\User_Sources_Files\TIMER.h

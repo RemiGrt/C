@@ -1,0 +1,8 @@
+#! /bin/bash
+bison -y -d grafcet.y
+flex grafcet.l
+gcc -c y.tab.c lex.yy.c ast.c
+gcc y.tab.o lex.yy.o ast.o -o grafcet.exe
+gcc -o asm.exe asm.c
+./grafcet.exe < safe.grafcet > safe.asm
+#./asm.exe belt.asm belt.bin belt.txt

@@ -1,0 +1,29 @@
+int bit(n, i)
+{
+    return (n >> i) & 0x1;
+}
+
+int nb_bits(int n)
+{
+    return (int)(log(n)/log(2)) + 1;
+}
+
+int puissance_binaire(int a, int b)
+{
+    int r = 1;
+    int i;
+    for (i = nb_bits(b); b >=0; b--)
+    {
+        if (bit(i, b) == 1)
+            r = r * r * a;
+	else
+            r = r * r;
+    }
+    return r;
+}
+
+int main(){
+  
+
+  
+}

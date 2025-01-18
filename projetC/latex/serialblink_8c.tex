@@ -1,0 +1,59 @@
+\hypertarget{serialblink_8c}{}\section{serial/serialblink.c File Reference}
+\label{serialblink_8c}\index{serial/serialblink.\+c@{serial/serialblink.\+c}}
+{\ttfamily \#include $<$windows.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for serialblink.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{serialblink_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{serialblink_8c_acb089e16756281dd17cbf6cf0131ba84}{read\+Serial} (H\+A\+N\+D\+LE h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+read)
+\item 
+int \hyperlink{serialblink_8c_a3121f1d2fc282b4db02572efc69fba36}{write\+Serial} (H\+A\+N\+D\+LE h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+write)
+\item 
+void \hyperlink{serialblink_8c_a7ebb41efb2fc9d15737e5a1364865d63}{read\+Assembly} (H\+A\+N\+D\+LE h\+Serial, F\+I\+LE $\ast$fin)
+\item 
+int \hyperlink{serialblink_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{serialblink.\+c@{serialblink.\+c}!main@{main}}
+\index{main@{main}!serialblink.\+c@{serialblink.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{serialblink_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{serialblink_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\index{serialblink.\+c@{serialblink.\+c}!read\+Assembly@{read\+Assembly}}
+\index{read\+Assembly@{read\+Assembly}!serialblink.\+c@{serialblink.\+c}}
+\subsubsection[{\texorpdfstring{read\+Assembly(\+H\+A\+N\+D\+L\+E h\+Serial, F\+I\+L\+E $\ast$fin)}{readAssembly(HANDLE hSerial, FILE *fin)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Assembly (
+\begin{DoxyParamCaption}
+\item[{H\+A\+N\+D\+LE}]{h\+Serial, }
+\item[{F\+I\+LE $\ast$}]{fin}
+\end{DoxyParamCaption}
+)}\hypertarget{serialblink_8c_a7ebb41efb2fc9d15737e5a1364865d63}{}\label{serialblink_8c_a7ebb41efb2fc9d15737e5a1364865d63}
+\index{serialblink.\+c@{serialblink.\+c}!read\+Serial@{read\+Serial}}
+\index{read\+Serial@{read\+Serial}!serialblink.\+c@{serialblink.\+c}}
+\subsubsection[{\texorpdfstring{read\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+read)}{readSerial(HANDLE hSerial, char *buf, int bytes_to_read)}}]{\setlength{\rightskip}{0pt plus 5cm}int read\+Serial (
+\begin{DoxyParamCaption}
+\item[{H\+A\+N\+D\+LE}]{h\+Serial, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{bytes\+\_\+to\+\_\+read}
+\end{DoxyParamCaption}
+)}\hypertarget{serialblink_8c_acb089e16756281dd17cbf6cf0131ba84}{}\label{serialblink_8c_acb089e16756281dd17cbf6cf0131ba84}
+\index{serialblink.\+c@{serialblink.\+c}!write\+Serial@{write\+Serial}}
+\index{write\+Serial@{write\+Serial}!serialblink.\+c@{serialblink.\+c}}
+\subsubsection[{\texorpdfstring{write\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+write)}{writeSerial(HANDLE hSerial, char *buf, int bytes_to_write)}}]{\setlength{\rightskip}{0pt plus 5cm}int write\+Serial (
+\begin{DoxyParamCaption}
+\item[{H\+A\+N\+D\+LE}]{h\+Serial, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{bytes\+\_\+to\+\_\+write}
+\end{DoxyParamCaption}
+)}\hypertarget{serialblink_8c_a3121f1d2fc282b4db02572efc69fba36}{}\label{serialblink_8c_a3121f1d2fc282b4db02572efc69fba36}

@@ -1,0 +1,8 @@
+#! /bin/bash
+#bison -y -d grafcet.y
+#flex grafcet.l
+#gcc -c y.tab.c lex.yy.c ast.c canon_serial.c
+#gcc y.tab.o lex.yy.o ast.o canon_serial.o -o grafcet 
+gcc -c main.c
+gcc -c canon_serial.c
+gcc canon_serial.o main.o -o main

@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Assembleur: Référence du fichier asm.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Assembleur
+   </div>
+   <div id="projectbrief">ASM in, ByteCode out</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier asm.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programme contenant les fonctions nécessaires pour <a class="el" href="asm_8c.html" title="Programme permettant de passer d&#39;un fichier assembleur à un fichier binaire. ">asm.c</a> /! Principe : Remplir un tableau codeSegment pour qu'en le parcourant on n'ai qu'à écrire son contenu /! pour générer le fichier binaire.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="vm__codops_8h_source.html">vm_codops.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de asm.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h__incl.png" border="0" usemap="#asm_8h" alt=""/></div>
+<map name="asm_8h" id="asm_8h">
+<area shape="rect" id="node5" href="vm__codops_8h.html" title="vm_codops.h" alt="" coords="269,80,368,107"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h__dep__incl.png" border="0" usemap="#asm_8hdep" alt=""/></div>
+<map name="asm_8hdep" id="asm_8hdep">
+<area shape="rect" id="node2" href="asm_8c.html" title="Programme permettant de passer d&#39;un fichier assembleur à un fichier binaire. " alt="" coords="4,80,61,107"/></map>
+</div>
+</div>
+<p><a href="asm_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlabel.html">label</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structref.html">ref</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">On remplit le tableau tabReferences après avoir rencontré un jump et on remplit addrInCode au moment de la fonction resolveReferences.  <a href="structref.html#details">Plus de détails...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structinstructionName.html">instructionName</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af4c0f18024ae80530be0c34f53b9e265"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#af4c0f18024ae80530be0c34f53b9e265">MAX_CODESEGMENT_SIZE</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:af4c0f18024ae80530be0c34f53b9e265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a2897ab5006c370ee8d1cc8a480a82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a68a2897ab5006c370ee8d1cc8a480a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2493ee2807d0a22ea99da2a945ad1623"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a2493ee2807d0a22ea99da2a945ad1623">MAX_IDENTS_SIZE</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a2493ee2807d0a22ea99da2a945ad1623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a8e3f8c306236a7780a005af024b409d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a8e3f8c306236a7780a005af024b409d0">addInstructionName</a> (char *name, int opcode, int type, char *format, int nbops)</td></tr>
+<tr class="memdesc:a8e3f8c306236a7780a005af024b409d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remplissage du tableau tabInstructionNames. En remplissant chaque champ de la structure, on saura comment les chercher dans le fichier assembleur et comment les restituer dans le fichier binaire.  <a href="#a8e3f8c306236a7780a005af024b409d0">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a8e3f8c306236a7780a005af024b409d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab750a01f64600b7671b2ece23411428e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ab750a01f64600b7671b2ece23411428e">addLabel</a> (char *labelname, int addr)</td></tr>
+<tr class="separator:ab750a01f64600b7671b2ece23411428e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7b83aeaa35ee53b1766904c6a41c52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#aee7b83aeaa35ee53b1766904c6a41c52">addCode</a> (struct <a class="el" href="structinstructionName.html">instructionName</a> instr, int d)</td></tr>
+<tr class="memdesc:aee7b83aeaa35ee53b1766904c6a41c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">On remplit CodeSegment selon le type de l'instructions.  <a href="#aee7b83aeaa35ee53b1766904c6a41c52">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aee7b83aeaa35ee53b1766904c6a41c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceff036175ccdfa4a7abdb0a4b696292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#aceff036175ccdfa4a7abdb0a4b696292">decodeInstruction</a> (char *line)</td></tr>
+<tr class="memdesc:aceff036175ccdfa4a7abdb0a4b696292"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ol type="1">
+<li>On cherche l'instruction dans le tableau d'instructions connues </li>
+</ol>
+ <a href="#aceff036175ccdfa4a7abdb0a4b696292">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aceff036175ccdfa4a7abdb0a4b696292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12125ac03c4380dc7612b1f5ad76dce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a12125ac03c4380dc7612b1f5ad76dce6">parseAsm</a> (char *file)</td></tr>
+<tr class="memdesc:a12125ac03c4380dc7612b1f5ad76dce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction parseAsm(FILE *file) parcourt les lignes du fichier source assembleur tant qu'elle n'a pas rencontre de ligne avec "end" a l'interieur. Pour chaque ligne il y a trois cas de figure:  <a href="#a12125ac03c4380dc7612b1f5ad76dce6">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a12125ac03c4380dc7612b1f5ad76dce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06dffbe98503c9bf89e38e51a064a93d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a06dffbe98503c9bf89e38e51a064a93d">generateBinaryCode</a> (char *file)</td></tr>
+<tr class="separator:a06dffbe98503c9bf89e38e51a064a93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561e8a3d0dbcd8cf8b9f5bf563382c28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a561e8a3d0dbcd8cf8b9f5bf563382c28">findLabel</a> (int cpt)</td></tr>
+<tr class="separator:a561e8a3d0dbcd8cf8b9f5bf563382c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64fd9559bd8aac7553d6e16593859fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a64fd9559bd8aac7553d6e16593859fcb">resolveReferences</a> ()</td></tr>
+<tr class="separator:a64fd9559bd8aac7553d6e16593859fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77427535e3802e3d601169083f4094b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a77427535e3802e3d601169083f4094b2">dumpBinaryCode</a> (char *fout)</td></tr>
+<tr class="separator:a77427535e3802e3d601169083f4094b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac4d2310c6cfcbf048cc7ec2f246cce7f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ac4d2310c6cfcbf048cc7ec2f246cce7f">currentInst</a> = 0</td></tr>
+<tr class="memdesc:ac4d2310c6cfcbf048cc7ec2f246cce7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable globale indiquant le nombre courant de OPCODES dans codeSegment.  <a href="#ac4d2310c6cfcbf048cc7ec2f246cce7f">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ac4d2310c6cfcbf048cc7ec2f246cce7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0b2a75ab7b38d27871f33b45884b0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ada0b2a75ab7b38d27871f33b45884b0b">currentInstructionName</a></td></tr>
+<tr class="separator:ada0b2a75ab7b38d27871f33b45884b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb559820d9ca11295b4500f179ef6392"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> =0</td></tr>
+<tr class="separator:acb559820d9ca11295b4500f179ef6392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f7ecf6b6f6435ab0ed1200ff74d806"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a11f7ecf6b6f6435ab0ed1200ff74d806">codeSegment</a> [100]</td></tr>
+<tr class="separator:a11f7ecf6b6f6435ab0ed1200ff74d806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d22b1f05244d83f0c68fd19f754a66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a83d22b1f05244d83f0c68fd19f754a66">segment</a> =0</td></tr>
+<tr class="memdesc:a83d22b1f05244d83f0c68fd19f754a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">!  <a href="#a83d22b1f05244d83f0c68fd19f754a66">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a83d22b1f05244d83f0c68fd19f754a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b0baf361ab71ec0736cc1a0b29fc1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a55b0baf361ab71ec0736cc1a0b29fc1d">OP_CODE</a> = 410</td></tr>
+<tr class="memdesc:a55b0baf361ab71ec0736cc1a0b29fc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">!  <a href="#a55b0baf361ab71ec0736cc1a0b29fc1d">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a55b0baf361ab71ec0736cc1a0b29fc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6796f1a096cae791ba9e10ea92fb2bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ae6796f1a096cae791ba9e10ea92fb2bd">cpt_ref</a> =0</td></tr>
+<tr class="memdesc:ae6796f1a096cae791ba9e10ea92fb2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">!  <a href="#ae6796f1a096cae791ba9e10ea92fb2bd">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ae6796f1a096cae791ba9e10ea92fb2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c031a226e71ec6fa392444fcd54b3f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structlabel.html">label</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a25c031a226e71ec6fa392444fcd54b3f">tabLabels</a> [<a class="el" href="asm_8h.html#a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</a>]</td></tr>
+<tr class="separator:a25c031a226e71ec6fa392444fcd54b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305e1a498e970935554afae3ec49f78a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a305e1a498e970935554afae3ec49f78a">currentLabel</a> =0</td></tr>
+<tr class="separator:a305e1a498e970935554afae3ec49f78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2c287ae1bbe0240cd3cbc005c5e813"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structref.html">ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#aac2c287ae1bbe0240cd3cbc005c5e813">tabReferences</a> [<a class="el" href="asm_8h.html#a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</a>]</td></tr>
+<tr class="separator:aac2c287ae1bbe0240cd3cbc005c5e813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad90ea272bc00caeb8fc2d9cb7d8e2c91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ad90ea272bc00caeb8fc2d9cb7d8e2c91">currentRef</a> =0</td></tr>
+<tr class="separator:ad90ea272bc00caeb8fc2d9cb7d8e2c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab053067135c098e6c687dd2cffc1911b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinstructionName.html">instructionName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ab053067135c098e6c687dd2cffc1911b">tabInstructionNames</a> [<a class="el" href="asm_8h.html#a2493ee2807d0a22ea99da2a945ad1623">MAX_IDENTS_SIZE</a>]</td></tr>
+<tr class="separator:ab053067135c098e6c687dd2cffc1911b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Programme contenant les fonctions nécessaires pour <a class="el" href="asm_8c.html" title="Programme permettant de passer d&#39;un fichier assembleur à un fichier binaire. ">asm.c</a> /! Principe : Remplir un tableau codeSegment pour qu'en le parcourant on n'ai qu'à écrire son contenu /! pour générer le fichier binaire. </p>
+<p>/! </p>
+<dl class="section author"><dt>Auteur</dt><dd>Anaïs AUBERVAL /! </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>finale /! </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>30/06/2017 /! </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="ad72dbcf6d0153db1b8d8a58001feed83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4c0f18024ae80530be0c34f53b9e265"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_CODESEGMENT_SIZE&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2493ee2807d0a22ea99da2a945ad1623"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_IDENTS_SIZE&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a68a2897ab5006c370ee8d1cc8a480a82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_LABELS_SIZE&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="aee7b83aeaa35ee53b1766904c6a41c52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addCode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structinstructionName.html">instructionName</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>On remplit CodeSegment selon le type de l'instructions. </p>
+<p>! </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instr</td><td>l'instruction à rajouter dans codeSegment </td></tr>
+    <tr><td class="paramname">d</td><td>l'argument de l'instruction, si il n'y en a pas d=-1s </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_aee7b83aeaa35ee53b1766904c6a41c52_icgraph.png" border="0" usemap="#asm_8h_aee7b83aeaa35ee53b1766904c6a41c52_icgraph" alt=""/></div>
+<map name="asm_8h_aee7b83aeaa35ee53b1766904c6a41c52_icgraph" id="asm_8h_aee7b83aeaa35ee53b1766904c6a41c52_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#aceff036175ccdfa4a7abdb0a4b696292" title="On cherche l&#39;instruction dans le tableau d&#39;instructions connues " alt="" coords="128,5,253,32"/><area shape="rect" id="node3" href="asm_8h.html#a12125ac03c4380dc7612b1f5ad76dce6" title="Cette fonction parseAsm(FILE *file) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a..." alt="" coords="302,5,383,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e3f8c306236a7780a005af024b409d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addInstructionName </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbops</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remplissage du tableau tabInstructionNames. En remplissant chaque champ de la structure, on saura comment les chercher dans le fichier assembleur et comment les restituer dans le fichier binaire. </p>
+<p>! </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>le nom de l'instruction que l'on ajoute à tabInstructionNames </td></tr>
+    <tr><td class="paramname">opcode</td><td>l'opcode de l'instruction à ajouter </td></tr>
+    <tr><td class="paramname">type</td><td>le type de l'instruction à ajouter </td></tr>
+    <tr><td class="paramname">format</td><td>le format de l'instruction à ajouter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab750a01f64600b7671b2ece23411428e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addLabel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>labelname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>! </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">labelname</td><td>la chaine de caractère de l'étiquette à insérer dans <a class="el" href="structtabLabels.html" title="On remplit cette structure lorsqu&#39;on rencontre un &quot;:&quot;. ">tabLabels</a> </td></tr>
+    <tr><td class="paramname">addr</td><td>la ligne où on trouve le code l'étiquette dans le binaire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_ab750a01f64600b7671b2ece23411428e_icgraph.png" border="0" usemap="#asm_8h_ab750a01f64600b7671b2ece23411428e_icgraph" alt=""/></div>
+<map name="asm_8h_ab750a01f64600b7671b2ece23411428e_icgraph" id="asm_8h_ab750a01f64600b7671b2ece23411428e_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#a12125ac03c4380dc7612b1f5ad76dce6" title="Cette fonction parseAsm(FILE *file) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a..." alt="" coords="129,5,210,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aceff036175ccdfa4a7abdb0a4b696292"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">decodeInstruction </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><ol type="1">
+<li>On cherche l'instruction dans le tableau d'instructions connues </li>
+</ol>
+</p>
+<p>! </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>l'instruction qu'on a scanner, à décoder </td></tr>
+    <tr><td class="paramname">d</td><td>l'argument de l'instruction, si il n'y en a pas d=-1s<ol type="1">
+<li>On remplit CodeSegment avec l'instruction et son argument si il y en a un </li>
+</ol>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_aceff036175ccdfa4a7abdb0a4b696292_cgraph.png" border="0" usemap="#asm_8h_aceff036175ccdfa4a7abdb0a4b696292_cgraph" alt=""/></div>
+<map name="asm_8h_aceff036175ccdfa4a7abdb0a4b696292_cgraph" id="asm_8h_aceff036175ccdfa4a7abdb0a4b696292_cgraph">
+<area shape="rect" id="node2" href="asm_8h.html#aee7b83aeaa35ee53b1766904c6a41c52" title="On remplit CodeSegment selon le type de l&#39;instructions. " alt="" coords="179,5,253,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_aceff036175ccdfa4a7abdb0a4b696292_icgraph.png" border="0" usemap="#asm_8h_aceff036175ccdfa4a7abdb0a4b696292_icgraph" alt=""/></div>
+<map name="asm_8h_aceff036175ccdfa4a7abdb0a4b696292_icgraph" id="asm_8h_aceff036175ccdfa4a7abdb0a4b696292_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#a12125ac03c4380dc7612b1f5ad76dce6" title="Cette fonction parseAsm(FILE *file) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a..." alt="" coords="179,5,261,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a77427535e3802e3d601169083f4094b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dumpBinaryCode </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a561e8a3d0dbcd8cf8b9f5bf563382c28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int findLabel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cpt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28_icgraph.png" border="0" usemap="#asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28_icgraph" alt=""/></div>
+<map name="asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28_icgraph" id="asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#a64fd9559bd8aac7553d6e16593859fcb" title="resolveReferences" alt="" coords="128,5,259,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a06dffbe98503c9bf89e38e51a064a93d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateBinaryCode </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12125ac03c4380dc7612b1f5ad76dce6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">parseAsm </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction parseAsm(FILE *file) parcourt les lignes du fichier source assembleur tant qu'elle n'a pas rencontre de ligne avec "end" a l'interieur. Pour chaque ligne il y a trois cas de figure: </p>
+<ul>
+<li>si la ligne de texte contient un :, il s'agit d'une etiquette et on la declare</li>
+<li>si la ligne de texte contient un "#" : il s'agit d'un commentaire</li>
+<li>sinon, il s'agit d'une instruction et on appelle <a class="el" href="asm_8h.html#aceff036175ccdfa4a7abdb0a4b696292" title="On cherche l&#39;instruction dans le tableau d&#39;instructions connues ">decodeInstruction()</a></li>
+</ul>
+<p>! </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>fichier assembleur </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>! Gestion (suppression) des retours chariot </p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_a12125ac03c4380dc7612b1f5ad76dce6_cgraph.png" border="0" usemap="#asm_8h_a12125ac03c4380dc7612b1f5ad76dce6_cgraph" alt=""/></div>
+<map name="asm_8h_a12125ac03c4380dc7612b1f5ad76dce6_cgraph" id="asm_8h_a12125ac03c4380dc7612b1f5ad76dce6_cgraph">
+<area shape="rect" id="node2" href="asm_8h.html#ab750a01f64600b7671b2ece23411428e" title="addLabel" alt="" coords="161,5,236,32"/><area shape="rect" id="node3" href="asm_8h.html#aceff036175ccdfa4a7abdb0a4b696292" title="On cherche l&#39;instruction dans le tableau d&#39;instructions connues " alt="" coords="136,56,261,83"/><area shape="rect" id="node4" href="asm_8h.html#aee7b83aeaa35ee53b1766904c6a41c52" title="On remplit CodeSegment selon le type de l&#39;instructions. " alt="" coords="309,56,384,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a64fd9559bd8aac7553d6e16593859fcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resolveReferences </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8h_a64fd9559bd8aac7553d6e16593859fcb_cgraph.png" border="0" usemap="#asm_8h_a64fd9559bd8aac7553d6e16593859fcb_cgraph" alt=""/></div>
+<map name="asm_8h_a64fd9559bd8aac7553d6e16593859fcb_cgraph" id="asm_8h_a64fd9559bd8aac7553d6e16593859fcb_cgraph">
+<area shape="rect" id="node2" href="asm_8h.html#a561e8a3d0dbcd8cf8b9f5bf563382c28" title="findLabel" alt="" coords="184,5,259,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a11f7ecf6b6f6435ab0ed1200ff74d806"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int codeSegment[100]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6796f1a096cae791ba9e10ea92fb2bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cpt_ref =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>! </p>
+<p>variable servant à resolveReferences </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4d2310c6cfcbf048cc7ec2f246cce7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentInst = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable globale indiquant le nombre courant de OPCODES dans codeSegment. </p>
+<p>!</p>
+<p>Nombre d'instructions contenu dans le tableau d'instructions </p>
+
+</div>
+</div>
+<a class="anchor" id="ada0b2a75ab7b38d27871f33b45884b0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentInstructionName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a305e1a498e970935554afae3ec49f78a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentLabel =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad90ea272bc00caeb8fc2d9cb7d8e2c91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentRef =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acb559820d9ca11295b4500f179ef6392"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a55b0baf361ab71ec0736cc1a0b29fc1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OP_CODE = 410</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>! </p>
+<p>Opcode d'une instruction nouvelle (+1 à chaque fois) </p>
+
+</div>
+</div>
+<a class="anchor" id="a83d22b1f05244d83f0c68fd19f754a66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int segment =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>! </p>
+<p>Nombre de trucs dans codeSegment </p>
+
+</div>
+</div>
+<a class="anchor" id="ab053067135c098e6c687dd2cffc1911b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structinstructionName.html">instructionName</a> tabInstructionNames[<a class="el" href="asm_8h.html#a2493ee2807d0a22ea99da2a945ad1623">MAX_IDENTS_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a25c031a226e71ec6fa392444fcd54b3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structlabel.html">label</a>  <a class="el" href="structtabLabels.html">tabLabels</a>[<a class="el" href="asm_8h.html#a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aac2c287ae1bbe0240cd3cbc005c5e813"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structref.html">ref</a>  tabReferences[<a class="el" href="asm_8h.html#a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

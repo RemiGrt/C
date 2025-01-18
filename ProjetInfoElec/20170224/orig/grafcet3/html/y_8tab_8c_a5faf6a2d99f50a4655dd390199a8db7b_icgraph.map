@@ -1,0 +1,11 @@
+<map id="malloc" name="malloc">
+<area shape="rect" id="node2" href="$ast_8h.html#af24dffa4a76481eceaf07516479988b7" title="createNumericNode" alt="" coords="113,5,252,32"/>
+<area shape="rect" id="node3" href="$y_8tab_8h.html#a847a2de5c1c28c9d7055a2b89ed7dad7" title="yyparse" alt="" coords="307,132,375,159"/>
+<area shape="rect" id="node5" href="$ast_8h.html#a681f2943d0fc66a64fec574c26f650ea" title="createOperatorNode" alt="" coords="113,107,252,133"/>
+<area shape="rect" id="node6" href="$ast_8h.html#aa1a7dd6e141f15a68b8148d6e8053596" title="createIdentifierNode" alt="" coords="113,157,252,184"/>
+<area shape="rect" id="node7" href="$ast_8h.html#a9ba813acb7deef1f162c85cafbd94a29" title="pushRefEtape" alt="" coords="130,208,235,235"/>
+<area shape="rect" id="node8" href="$ast_8h.html#ad94fc48b92faaa7067d7ff8b8bd92a91" title="pushRefTransition" alt="" coords="119,259,247,285"/>
+<area shape="rect" id="node10" href="$lex_8yy_8c.html#ad4a65b873df5c05570846b5413b41dfd" title="if" alt="" coords="163,309,202,336"/>
+<area shape="rect" id="node4" href="$y_8tab_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="429,171,480,197"/>
+<area shape="rect" id="node9" href="$ast_8h.html#a76304605dc888b516fa1b253ddb84391" title="makeDual" alt="" coords="300,208,381,235"/>
+</map>

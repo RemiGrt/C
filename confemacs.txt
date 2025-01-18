@@ -1,0 +1,7 @@
+Google How to configure Emacs as a C/C++ IDE for windows OS?
+
+https://github.com/llvm/llvm-project/releases
+
+add to path (bin)
+
+install lsp mode packafe in emacs

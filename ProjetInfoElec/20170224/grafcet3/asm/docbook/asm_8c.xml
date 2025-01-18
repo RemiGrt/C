@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="asm_8c">
+    <title>asm.c File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;ctype.h&gt;</programlisting>
+    <programlisting>#include &quot;vm_codops.h&quot;</programlisting>
+    <programlisting>#include &quot;asm.h&quot;</programlisting>
+<para>Include dependency diagram for asm.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="asm_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for asm.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="asm_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Fonctions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1a79768c03b0a3a825aca8f66127a22a35">addCode</link> (
+int v)<para><emphasis>Complète le tableau codeSegment.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1adb68a5377b3fc4689743c5b060f7d08a">addInstructionName</link> (
+char * instname, int opcod, int type, char * format, int nbops)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8c_1af1248a22adfbfa85be10ed09b7570a3a">findLabel</link> (
+char * labelname)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1aa0b13c47db77611034e4b839b39e68ed">addLabel</link> (
+char * labelname, int addr)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1aaabafc3ddfe1c7c2768629e366907922">addReference</link> (
+char * labelname, int addrInCode)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1a64fd9559bd8aac7553d6e16593859fcb">resolveReferences</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1aab0fc8f69b5d21a640117e2425d6f24d">decodeInstruction</link> (
+char * line)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8c_1ac9247e4068e106aca0b16bb1b1b51835">parseAsm</link> (
+FILE * fin)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1afbf1f814881d73eefde6bccdde641db8">printLabels</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1a5a883df802289858d1693c2812f1fd96">dumpBinaryCode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8c_1a374b455749e0ea31debe4ef66805e564">generateBinary</link> (
+FILE * fout)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8c_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (
+int argc, char ** argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Description détaillée</title>
+    <para>Definition in file /media/sf_Remi/Dropbox/Work/UPMC/ProjetInfoElec/20170224/grafcet3/asm/asm.c</para>
+    </simplesect>
+</section>

@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ast_8c">
+    <title>ast.c File Reference</title>
+    <programlisting>#include &quot;ast.h&quot;</programlisting>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ast_8c_1ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="ast_8c_1a6746ca962c63d98c2b6595e140397aa2">compteurLabel</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="ast_8c_1a11d446af59098bf8b34eca9dff108b1f">compteurEtapes</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * <link linkend="ast_8c_1af24dffa4a76481eceaf07516479988b7">createNumericNode</link> (
+float v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * <link linkend="ast_8c_1a7b5dcac8e77c93a0063cc5cc89a5ff06">createOperatorNode</link> (
+int oper, int nops, ... )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * <link linkend="ast_8c_1aa1a7dd6e141f15a68b8148d6e8053596">createIdentifierNode</link> (
+char * id, int flag)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1a62f8c93065175a1e3e604b6fc2631c56">generateAsmExpression</link> (
+<link linkend="ast_8h_1a5107519e23f35648044d9a2300d4a609">nodeType</link> * n, FILE * fout)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1a9ba813acb7deef1f162c85cafbd94a29">pushRefEtape</link> (
+<link linkend="ast_8h_1a783fed330882669eab7bb82b2387504c">etapeRefNode</link> ** head, char * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1ad94fc48b92faaa7067d7ff8b8bd92a91">pushRefTransition</link> (
+<link linkend="ast_8h_1a67b6895182f914664b7fae2a669508e3">transitionRefNode</link> ** head, char * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1aca4967e85b3288533392e4d136604713">pushAction</link> (
+<link linkend="ast_8h_1aadd5a12e44d84c3ed461231ff4b6f001">actionNode</link> ** head, <link linkend="ast_8h_1aadd5a12e44d84c3ed461231ff4b6f001">actionNode</link> * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1aa46d913c59a0a4a5caa3a53bc5af834c">pushEtape</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> ** head, <link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1aaeb905ea8071a9664304e4f9f1f04f20">pushTransition</link> (
+<link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> ** head, <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1a72a3046f6b7c2b5d5f27fffe496f25d8">printRefEtapes</link> (
+<link linkend="ast_8h_1a783fed330882669eab7bb82b2387504c">etapeRefNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1ab977bf46a28dbfb71181eba6a5ad07a7">printRefTransitions</link> (
+<link linkend="ast_8h_1a67b6895182f914664b7fae2a669508e3">transitionRefNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="ast_8c_1ab846634f150247ddf5853ac8c01b88fe">nbEtapes</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="ast_8c_1ae0657925f57c22d15d5359a8de0cb890">nbTransitions</link> (
+<link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * head)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * <link linkend="ast_8c_1adec973bf53fb10e61f09148779f2e0e2">findEtapeByName</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * head, char * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * <link linkend="ast_8c_1a1ef6fdf0c149cac2dd1744f5572a1d45">findTransitionByName</link> (
+<link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * head, char * n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1a32827db69ed62cf87903524799d397ae">printEtapes</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * en)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1adc3777eca5ecb6367e2b617e92650eb7">printTransitions</link> (
+<link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * tn)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1a76304605dc888b516fa1b253ddb84391">makeDual</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * en, <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * tn)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="ast_8c_1a7b4949ede4068bb28ac511f53ebed370">generateCode</link> (
+<link linkend="ast_8h_1ab27be445acdf8e5bf407a55fdc849078">etapeNode</link> * en, <link linkend="ast_8h_1a931358a8be317923752cdaae1a8c09d8">transitionNode</link> * c)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/anais/Bureau/ProjetInfoElec-EI2I3-2606/ast/ast.c</para>
+    </simplesect>
+</section>

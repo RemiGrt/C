@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Assembleur</title>
+<section xml:id="index_1intro_sec">
+<title>Introduction</title>
+
+<para>Ce programme permet d&apos;assembler un fichier assembleur en bytecode Utilisation en console: : ./asm fichierIn.asm fichierOut.bin</para>
+</section>
+<section xml:id="index_1Compilation">
+<title>Compilation</title>
+
+<para>gcc <link linkend="asm_8c">asm.c</link> -o asm</para>
+<section xml:id="index_1step1">
+<title>Step 1: Blabla</title>
+
+<para>blabla etc... </para>
+</section>
+</section>
+
+</chapter>

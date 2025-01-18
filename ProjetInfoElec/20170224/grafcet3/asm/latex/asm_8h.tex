@@ -1,0 +1,391 @@
+\hypertarget{asm_8h}{}\section{Référence du fichier asm.\+h}
+\label{asm_8h}\index{asm.\+h@{asm.\+h}}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{asm_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structinstructionName}{instruction\+Name}
+\item 
+struct \hyperlink{structlabel}{label}
+\item 
+struct \hyperlink{structref}{ref}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}~1000
+\item 
+\#define \hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}~100
+\item 
+\#define \hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}~100
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{asm_8h_a79768c03b0a3a825aca8f66127a22a35}{add\+Code} (int v)
+\begin{DoxyCompactList}\small\item\em Complète le tableau code\+Segment. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_adb68a5377b3fc4689743c5b060f7d08a}{add\+Instruction\+Name} (char $\ast$instname, int opcod, int type, char $\ast$format, int nbops)
+\item 
+int \hyperlink{asm_8h_af1248a22adfbfa85be10ed09b7570a3a}{find\+Label} (char $\ast$labelname)
+\item 
+void \hyperlink{asm_8h_aa0b13c47db77611034e4b839b39e68ed}{add\+Label} (char $\ast$labelname, int addr)
+\item 
+void \hyperlink{asm_8h_aaabafc3ddfe1c7c2768629e366907922}{add\+Reference} (char $\ast$labelname, int addr\+In\+Code)
+\item 
+void \hyperlink{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}{resolve\+References} ()
+\item 
+void \hyperlink{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction} (char $\ast$line)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction(char $\ast$line)} est appelee par la boucle principale d\textquotesingle{}analyse lorsque la ligne d\textquotesingle{}assembleur lue n\textquotesingle{}est pas une (pas de \+: dans la ligne). Cette fonction fait le gros du travail de la passe 1, en identifiant le type de l\textquotesingle{}instruction, en faisant le decodage supplementaire, en appelant \hyperlink{asm_8c_a79768c03b0a3a825aca8f66127a22a35}{add\+Code()} pour remplir code\+Segment et en ajoutant des references si l\textquotesingle{}instruction decodee fait reference a une etiquette encore inconnue. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm} (F\+I\+LE $\ast$fin)
+\begin{DoxyCompactList}\small\item\em Cette fonction \hyperlink{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm(\+F\+I\+L\+E $\ast$fin)} parcourt les lignes du fichier source assembleur tant qu\textquotesingle{}elle n\textquotesingle{}a pas rencontre de ligne avec \char`\"{}end\char`\"{} a l\textquotesingle{}interieur. Pour chaque ligne il y a deux cas de figure\+: \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_afbf1f814881d73eefde6bccdde641db8}{print\+Labels} ()
+\item 
+void \hyperlink{asm_8h_a5a883df802289858d1693c2812f1fd96}{dump\+Binary\+Code} ()
+\item 
+void \hyperlink{asm_8h_a374b455749e0ea31debe4ef66805e564}{generate\+Binary} (F\+I\+LE $\ast$fout)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{asm_8h_a2e7cc742f3dac64591e576dbc07ff026}{code\+Segment} \mbox{[}\hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variable globale stockant les O\+P\+C\+O\+D\+ES. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}{current\+Inst}
+\begin{DoxyCompactList}\small\item\em Variable globale indiquant le nombre courant de O\+P\+C\+O\+D\+ES dans code\+Segment. \end{DoxyCompactList}\item 
+struct \hyperlink{structinstructionName}{instruction\+Name} \hyperlink{asm_8h_aa6283a3a3e3bd95373d2dafcf0aec96b}{tab\+Instruction\+Names} \mbox{[}\hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}{current\+Instruction\+Name}
+\item 
+struct \hyperlink{structlabel}{label} \hyperlink{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}{tab\+Labels} \mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{asm_8h_a305e1a498e970935554afae3ec49f78a}{current\+Label}
+\item 
+struct \hyperlink{structref}{ref} \hyperlink{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}{tab\+References} \mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{current\+Ref}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\index{asm.\+h@{asm.\+h}!M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}{MAX_CODESEGMENT_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE~1000}\hypertarget{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{}\label{asm_8h_af4c0f18024ae80530be0c34f53b9e265}
+\index{asm.\+h@{asm.\+h}!M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}{MAX_IDENTS_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE~100}\hypertarget{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{}\label{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}
+\index{asm.\+h@{asm.\+h}!M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}{MAX_LABELS_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE~100}\hypertarget{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{}\label{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}
+
+
+\subsection{Documentation des fonctions}
+\index{asm.\+h@{asm.\+h}!add\+Code@{add\+Code}}
+\index{add\+Code@{add\+Code}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{add\+Code(int v)}{addCode(int v)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Code (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_a79768c03b0a3a825aca8f66127a22a35}{}\label{asm_8h_a79768c03b0a3a825aca8f66127a22a35}
+
+
+Complète le tableau code\+Segment. 
+
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h_a79768c03b0a3a825aca8f66127a22a35_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!add\+Instruction\+Name@{add\+Instruction\+Name}}
+\index{add\+Instruction\+Name@{add\+Instruction\+Name}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{add\+Instruction\+Name(char $\ast$instname, int opcod, int type, char $\ast$format, int nbops)}{addInstructionName(char *instname, int opcod, int type, char *format, int nbops)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Instruction\+Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{instname, }
+\item[{int}]{opcod, }
+\item[{int}]{type, }
+\item[{char $\ast$}]{format, }
+\item[{int}]{nbops}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_adb68a5377b3fc4689743c5b060f7d08a}{}\label{asm_8h_adb68a5377b3fc4689743c5b060f7d08a}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{asm_8h_adb68a5377b3fc4689743c5b060f7d08a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!add\+Label@{add\+Label}}
+\index{add\+Label@{add\+Label}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{add\+Label(char $\ast$labelname, int addr)}{addLabel(char *labelname, int addr)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Label (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname, }
+\item[{int}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_aa0b13c47db77611034e4b839b39e68ed}{}\label{asm_8h_aa0b13c47db77611034e4b839b39e68ed}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{asm_8h_aa0b13c47db77611034e4b839b39e68ed_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{asm_8h_aa0b13c47db77611034e4b839b39e68ed_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!add\+Reference@{add\+Reference}}
+\index{add\+Reference@{add\+Reference}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{add\+Reference(char $\ast$labelname, int addr\+In\+Code)}{addReference(char *labelname, int addrInCode)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Reference (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname, }
+\item[{int}]{addr\+In\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_aaabafc3ddfe1c7c2768629e366907922}{}\label{asm_8h_aaabafc3ddfe1c7c2768629e366907922}
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h_aaabafc3ddfe1c7c2768629e366907922_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!decode\+Instruction@{decode\+Instruction}}
+\index{decode\+Instruction@{decode\+Instruction}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{decode\+Instruction(char $\ast$line)}{decodeInstruction(char *line)}}]{\setlength{\rightskip}{0pt plus 5cm}void decode\+Instruction (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d}{}\label{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d}
+
+
+La fonction \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction(char $\ast$line)} est appelee par la boucle principale d\textquotesingle{}analyse lorsque la ligne d\textquotesingle{}assembleur lue n\textquotesingle{}est pas une (pas de \+: dans la ligne). Cette fonction fait le gros du travail de la passe 1, en identifiant le type de l\textquotesingle{}instruction, en faisant le decodage supplementaire, en appelant \hyperlink{asm_8c_a79768c03b0a3a825aca8f66127a22a35}{add\+Code()} pour remplir code\+Segment et en ajoutant des references si l\textquotesingle{}instruction decodee fait reference a une etiquette encore inconnue. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!dump\+Binary\+Code@{dump\+Binary\+Code}}
+\index{dump\+Binary\+Code@{dump\+Binary\+Code}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{dump\+Binary\+Code()}{dumpBinaryCode()}}]{\setlength{\rightskip}{0pt plus 5cm}void dump\+Binary\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_a5a883df802289858d1693c2812f1fd96}{}\label{asm_8h_a5a883df802289858d1693c2812f1fd96}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{asm_8h_a5a883df802289858d1693c2812f1fd96_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!find\+Label@{find\+Label}}
+\index{find\+Label@{find\+Label}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{find\+Label(char $\ast$labelname)}{findLabel(char *labelname)}}]{\setlength{\rightskip}{0pt plus 5cm}int find\+Label (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_af1248a22adfbfa85be10ed09b7570a3a}{}\label{asm_8h_af1248a22adfbfa85be10ed09b7570a3a}
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h_af1248a22adfbfa85be10ed09b7570a3a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!generate\+Binary@{generate\+Binary}}
+\index{generate\+Binary@{generate\+Binary}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{generate\+Binary(\+F\+I\+L\+E $\ast$fout)}{generateBinary(FILE *fout)}}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Binary (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fout}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_a374b455749e0ea31debe4ef66805e564}{}\label{asm_8h_a374b455749e0ea31debe4ef66805e564}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{asm_8h_a374b455749e0ea31debe4ef66805e564_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!parse\+Asm@{parse\+Asm}}
+\index{parse\+Asm@{parse\+Asm}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{parse\+Asm(\+F\+I\+L\+E $\ast$fin)}{parseAsm(FILE *fin)}}]{\setlength{\rightskip}{0pt plus 5cm}int parse\+Asm (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fin}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_ac9247e4068e106aca0b16bb1b1b51835}{}\label{asm_8h_ac9247e4068e106aca0b16bb1b1b51835}
+
+
+Cette fonction \hyperlink{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm(\+F\+I\+L\+E $\ast$fin)} parcourt les lignes du fichier source assembleur tant qu\textquotesingle{}elle n\textquotesingle{}a pas rencontre de ligne avec \char`\"{}end\char`\"{} a l\textquotesingle{}interieur. Pour chaque ligne il y a deux cas de figure\+: 
+
+
+\begin{DoxyItemize}
+\item si la ligne de texte contient un \+:, il s\textquotesingle{}agit d\textquotesingle{}une etiquette et on la declare
+\item sinon, il s\textquotesingle{}agit d\textquotesingle{}une instruction et on appelle \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction()} 
+\end{DoxyItemize}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h_ac9247e4068e106aca0b16bb1b1b51835_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{asm_8h_ac9247e4068e106aca0b16bb1b1b51835_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!print\+Labels@{print\+Labels}}
+\index{print\+Labels@{print\+Labels}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{print\+Labels()}{printLabels()}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_afbf1f814881d73eefde6bccdde641db8}{}\label{asm_8h_afbf1f814881d73eefde6bccdde641db8}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{asm_8h_afbf1f814881d73eefde6bccdde641db8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+h@{asm.\+h}!resolve\+References@{resolve\+References}}
+\index{resolve\+References@{resolve\+References}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{resolve\+References()}{resolveReferences()}}]{\setlength{\rightskip}{0pt plus 5cm}void resolve\+References (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}{}\label{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{asm_8h_a64fd9559bd8aac7553d6e16593859fcb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{asm_8h_a64fd9559bd8aac7553d6e16593859fcb_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des variables}
+\index{asm.\+h@{asm.\+h}!code\+Segment@{code\+Segment}}
+\index{code\+Segment@{code\+Segment}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{code\+Segment}{codeSegment}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int code\+Segment\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}\mbox{]}}\hypertarget{asm_8h_a2e7cc742f3dac64591e576dbc07ff026}{}\label{asm_8h_a2e7cc742f3dac64591e576dbc07ff026}
+
+
+Variable globale stockant les O\+P\+C\+O\+D\+ES. 
+
+\index{asm.\+h@{asm.\+h}!current\+Inst@{current\+Inst}}
+\index{current\+Inst@{current\+Inst}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{current\+Inst}{currentInst}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Inst}\hypertarget{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}{}\label{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}
+
+
+Variable globale indiquant le nombre courant de O\+P\+C\+O\+D\+ES dans code\+Segment. 
+
+\index{asm.\+h@{asm.\+h}!current\+Instruction\+Name@{current\+Instruction\+Name}}
+\index{current\+Instruction\+Name@{current\+Instruction\+Name}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{current\+Instruction\+Name}{currentInstructionName}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Instruction\+Name}\hypertarget{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}{}\label{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}
+\index{asm.\+h@{asm.\+h}!current\+Label@{current\+Label}}
+\index{current\+Label@{current\+Label}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{current\+Label}{currentLabel}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Label}\hypertarget{asm_8h_a305e1a498e970935554afae3ec49f78a}{}\label{asm_8h_a305e1a498e970935554afae3ec49f78a}
+\index{asm.\+h@{asm.\+h}!current\+Ref@{current\+Ref}}
+\index{current\+Ref@{current\+Ref}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{current\+Ref}{currentRef}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Ref}\hypertarget{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{}\label{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}
+\index{asm.\+h@{asm.\+h}!tab\+Instruction\+Names@{tab\+Instruction\+Names}}
+\index{tab\+Instruction\+Names@{tab\+Instruction\+Names}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{tab\+Instruction\+Names}{tabInstructionNames}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf instruction\+Name}  tab\+Instruction\+Names\mbox{[}{\bf M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}\mbox{]}}\hypertarget{asm_8h_aa6283a3a3e3bd95373d2dafcf0aec96b}{}\label{asm_8h_aa6283a3a3e3bd95373d2dafcf0aec96b}
+\index{asm.\+h@{asm.\+h}!tab\+Labels@{tab\+Labels}}
+\index{tab\+Labels@{tab\+Labels}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{tab\+Labels}{tabLabels}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf label}  tab\+Labels\mbox{[}{\bf M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}}\hypertarget{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}{}\label{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}
+\index{asm.\+h@{asm.\+h}!tab\+References@{tab\+References}}
+\index{tab\+References@{tab\+References}!asm.\+h@{asm.\+h}}
+\subsubsection[{\texorpdfstring{tab\+References}{tabReferences}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ref}  tab\+References\mbox{[}{\bf M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}}\hypertarget{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}{}\label{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}

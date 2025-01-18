@@ -1,0 +1,5 @@
+step e0(tor0=1, tor1=0) active
+step e1(tor0=0, tor1=1)
+
+transition t0({e0},{e1},but0'rise.(ana0>127))
+transition t1({e1},{e0},but1'fall.(ana1<127))

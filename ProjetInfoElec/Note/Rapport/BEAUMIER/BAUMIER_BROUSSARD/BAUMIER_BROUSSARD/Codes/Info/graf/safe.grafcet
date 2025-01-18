@@ -1,0 +1,9 @@
+active step e0(led0=0)
+step e1(led0=0)
+step e2(led0=0)
+step e3(led0=1)
+
+transition t0({e0},{e1},but0'rise.(ana0<2048))
+transition t1({e1},{e2},but0'rise.(ana0>2048))
+transition t2({e2},{e3},but0'rise.(ana0<2048))
+transition t3({e3},{e0},but1'rise)

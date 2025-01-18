@@ -1,0 +1,131 @@
+.TH "ast/ast.c" 3 "Fri Jun 30 2017" "Project_C_Elec" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ast/ast.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ast\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBnodeType\fP * \fBcreateNumericNode\fP (float v)"
+.br
+.ti -1c
+.RI "\fBnodeType\fP * \fBcreateOperatorNode\fP (int oper, int nops,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBnodeType\fP * \fBcreateIdentifierNode\fP (char *id, int flag)"
+.br
+.ti -1c
+.RI "void \fBgenerateAsmExpression\fP (\fBnodeType\fP *n, FILE *fout)"
+.br
+.ti -1c
+.RI "void \fBpushRefEtape\fP (\fBetapeRefNode\fP **head, char *n)"
+.br
+.ti -1c
+.RI "void \fBpushRefTransition\fP (\fBtransitionRefNode\fP **head, char *n)"
+.br
+.ti -1c
+.RI "void \fBpushAction\fP (\fBactionNode\fP **head, \fBactionNode\fP *n)"
+.br
+.ti -1c
+.RI "void \fBpushEtape\fP (\fBetapeNode\fP **head, \fBetapeNode\fP *n)"
+.br
+.ti -1c
+.RI "void \fBpushTransition\fP (\fBtransitionNode\fP **head, \fBtransitionNode\fP *n)"
+.br
+.ti -1c
+.RI "void \fBprintRefEtapes\fP (\fBetapeRefNode\fP *head)"
+.br
+.ti -1c
+.RI "void \fBprintRefTransitions\fP (\fBtransitionRefNode\fP *head)"
+.br
+.ti -1c
+.RI "int \fBnbEtapes\fP (\fBetapeNode\fP *head)"
+.br
+.ti -1c
+.RI "int \fBnbTransitions\fP (\fBtransitionNode\fP *head)"
+.br
+.ti -1c
+.RI "\fBetapeNode\fP * \fBfindEtapeByName\fP (\fBetapeNode\fP *head, char *n)"
+.br
+.ti -1c
+.RI "\fBtransitionNode\fP * \fBfindTransitionByName\fP (\fBtransitionNode\fP *head, char *n)"
+.br
+.ti -1c
+.RI "void \fBprintEtapes\fP (\fBetapeNode\fP *en)"
+.br
+.ti -1c
+.RI "void \fBprintTransitions\fP (\fBtransitionNode\fP *tn)"
+.br
+.ti -1c
+.RI "void \fBmakeDual\fP (\fBetapeNode\fP *en, \fBtransitionNode\fP *tn)"
+.br
+.ti -1c
+.RI "void \fBgenerateCode\fP (\fBetapeNode\fP *en, \fBtransitionNode\fP *tn)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBcompteurLabel\fP =0"
+.br
+.ti -1c
+.RI "int \fBcompteurEtapes\fP =0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBnodeType\fP* createIdentifierNode (char * id, int flag)"
+
+.SS "\fBnodeType\fP* createNumericNode (float v)"
+
+.SS "\fBnodeType\fP* createOperatorNode (int oper, int nops,  \&.\&.\&.)"
+
+.SS "\fBetapeNode\fP* findEtapeByName (\fBetapeNode\fP * head, char * n)"
+
+.SS "\fBtransitionNode\fP* findTransitionByName (\fBtransitionNode\fP * head, char * n)"
+
+.SS "void generateAsmExpression (\fBnodeType\fP * n, FILE * fout)"
+
+.SS "void generateCode (\fBetapeNode\fP * en, \fBtransitionNode\fP * tn)"
+
+.SS "void makeDual (\fBetapeNode\fP * en, \fBtransitionNode\fP * tn)"
+
+.SS "int nbEtapes (\fBetapeNode\fP * head)"
+
+.SS "int nbTransitions (\fBtransitionNode\fP * head)"
+
+.SS "void printEtapes (\fBetapeNode\fP * en)"
+
+.SS "void printRefEtapes (\fBetapeRefNode\fP * head)"
+
+.SS "void printRefTransitions (\fBtransitionRefNode\fP * head)"
+
+.SS "void printTransitions (\fBtransitionNode\fP * tn)"
+
+.SS "void pushAction (\fBactionNode\fP ** head, \fBactionNode\fP * n)"
+
+.SS "void pushEtape (\fBetapeNode\fP ** head, \fBetapeNode\fP * n)"
+
+.SS "void pushRefEtape (\fBetapeRefNode\fP ** head, char * n)"
+
+.SS "void pushRefTransition (\fBtransitionRefNode\fP ** head, char * n)"
+
+.SS "void pushTransition (\fBtransitionNode\fP ** head, \fBtransitionNode\fP * n)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "int compteurEtapes =0"
+
+.SS "int compteurLabel =0"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project_C_Elec from the source code\&.

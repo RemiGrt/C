@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vm__codops_8h">
+    <title>vm_codops.h File Reference</title>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a874a725c9e123805462ce2fbda26e7e7">I_PUSHI</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a2dfc383288854adb91b7ef06a49f684a">I_MULT</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a7b8300ad043f380d0f303f5d87be1ce5">I_ADD</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a93529541d40785b77f72cc7b10e3d974">I_HALT</link> 400</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a3d2cfe1ec3f7a64271183f76607703cb">I_PUSH</link> 101</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1aab5e2d50f642e5917b7aa4954ae6dd4b">I_POP</link> 102</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1ad9da203cfd1b05af15ad6f235f89b473">I_EQ</link> 202</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1ab271450ff4af18af4b1e8d6f53355fbc">I_JF</link> 200</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1aa23a69db29128c463348448d76ee89af">I_J</link> 201</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a788df5f2d220e4c0eea710bbd4969e7d">I_GT</link> 13</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1a85a835cbec2c2963eceb07cfe6e884e7">I_LS</link> 12</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1adf4334b20b3da95fbe7ef3cb255c146c">I_OR</link> 14</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vm__codops_8h_1ae99737aebeb535a111509cd9f579a8d1">I_AND</link> 8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/anais/Bureau/ProjetInfoElec-EI2I3-2606/asm/vm_codops.h</para>
+    </simplesect>
+</section>

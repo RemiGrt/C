@@ -1,0 +1,103 @@
+\hypertarget{evm_8c}{}\section{vm/evm.c File Reference}
+\label{evm_8c}\index{vm/evm.\+c@{vm/evm.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vm\+\_\+codeops.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{evm_8c_a52037c938e3c1b126c6277da5ca689d0}{M}~1000
+\item 
+\#define \hyperlink{evm_8c_a0240ac851181b84ac374872dc5434ee4}{N}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{evm_8c_a13a43e6d814de94978c515cb084873b1}{run} ()
+\item 
+int $\ast$ \hyperlink{evm_8c_a296eef50da0b59c28478b0b539827045}{read\+Bin} (char $\ast$filename, int $\ast$\hyperlink{evm_8c_a975a1a53c0e3f82520fd5b8652101f31}{code})
+\item 
+int \hyperlink{evm_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{evm_8c_ac8c81e61335635fa4709d82412b31f06}{pc} = 0
+\item 
+int \hyperlink{evm_8c_a024603cda52d9847e8d8df3c2e884b8c}{sp} = -\/1
+\item 
+int \hyperlink{evm_8c_a975a1a53c0e3f82520fd5b8652101f31}{code} \mbox{[}\hyperlink{evm_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]}
+\item 
+int \hyperlink{evm_8c_abd0d4ae3a5bf7a7affb4681a3ac80cea}{stack} \mbox{[}\hyperlink{evm_8c_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}
+\item 
+int \hyperlink{evm_8c_ad6279ac83777b9fad537fad5841913ed}{variable} \mbox{[}\hyperlink{evm_8c_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]} =\{But0,But1,an0,stable,Old\+\_\+\+But0,Old\+\_\+\+But1,Appel\+\_\+e0,Appel\+\_\+e1,Appel\+\_\+e2,Appel\+\_\+e3,Reponse\+\_\+e0,Reponse\+\_\+e1,Reponse\+\_\+e2,Reponse\+\_\+e3,Old\+\_\+e0,Old\+\_\+e1,Old\+\_\+e2,Old\+\_\+e3,e0,e1,e2,e3,rise\+But0,rise\+But1\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{evm_8c_a52037c938e3c1b126c6277da5ca689d0}\label{evm_8c_a52037c938e3c1b126c6277da5ca689d0}} 
+\index{evm.\+c@{evm.\+c}!M@{M}}
+\index{M@{M}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \#define M~1000}
+
+\mbox{\Hypertarget{evm_8c_a0240ac851181b84ac374872dc5434ee4}\label{evm_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{evm.\+c@{evm.\+c}!N@{N}}
+\index{N@{N}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~100}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{evm_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{evm_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{evm.\+c@{evm.\+c}!main@{main}}
+\index{main@{main}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evm_8c_a296eef50da0b59c28478b0b539827045}\label{evm_8c_a296eef50da0b59c28478b0b539827045}} 
+\index{evm.\+c@{evm.\+c}!read\+Bin@{read\+Bin}}
+\index{read\+Bin@{read\+Bin}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{read\+Bin()}{readBin()}}
+{\footnotesize\ttfamily int$\ast$ read\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int $\ast$}]{code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evm_8c_a13a43e6d814de94978c515cb084873b1}\label{evm_8c_a13a43e6d814de94978c515cb084873b1}} 
+\index{evm.\+c@{evm.\+c}!run@{run}}
+\index{run@{run}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{evm_8c_a975a1a53c0e3f82520fd5b8652101f31}\label{evm_8c_a975a1a53c0e3f82520fd5b8652101f31}} 
+\index{evm.\+c@{evm.\+c}!code@{code}}
+\index{code@{code}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily int code\mbox{[}\hyperlink{evm_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]}}
+
+\mbox{\Hypertarget{evm_8c_ac8c81e61335635fa4709d82412b31f06}\label{evm_8c_ac8c81e61335635fa4709d82412b31f06}} 
+\index{evm.\+c@{evm.\+c}!pc@{pc}}
+\index{pc@{pc}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{pc}{pc}}
+{\footnotesize\ttfamily int pc = 0}
+
+\mbox{\Hypertarget{evm_8c_a024603cda52d9847e8d8df3c2e884b8c}\label{evm_8c_a024603cda52d9847e8d8df3c2e884b8c}} 
+\index{evm.\+c@{evm.\+c}!sp@{sp}}
+\index{sp@{sp}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{sp}{sp}}
+{\footnotesize\ttfamily int sp = -\/1}
+
+\mbox{\Hypertarget{evm_8c_abd0d4ae3a5bf7a7affb4681a3ac80cea}\label{evm_8c_abd0d4ae3a5bf7a7affb4681a3ac80cea}} 
+\index{evm.\+c@{evm.\+c}!stack@{stack}}
+\index{stack@{stack}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily int stack\mbox{[}\hyperlink{evm_8c_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}}
+
+\mbox{\Hypertarget{evm_8c_ad6279ac83777b9fad537fad5841913ed}\label{evm_8c_ad6279ac83777b9fad537fad5841913ed}} 
+\index{evm.\+c@{evm.\+c}!variable@{variable}}
+\index{variable@{variable}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{variable}{variable}}
+{\footnotesize\ttfamily int variable\mbox{[}\hyperlink{evm_8c_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]} =\{But0,But1,an0,stable,Old\+\_\+\+But0,Old\+\_\+\+But1,Appel\+\_\+e0,Appel\+\_\+e1,Appel\+\_\+e2,Appel\+\_\+e3,Reponse\+\_\+e0,Reponse\+\_\+e1,Reponse\+\_\+e2,Reponse\+\_\+e3,Old\+\_\+e0,Old\+\_\+e1,Old\+\_\+e2,Old\+\_\+e3,e0,e1,e2,e3,rise\+But0,rise\+But1\}}
+

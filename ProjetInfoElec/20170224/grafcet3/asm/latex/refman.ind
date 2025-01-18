@@ -1,0 +1,163 @@
+\begin{theindex}
+
+  \item {add\+Code}
+    \subitem {asm.\+c}, \hyperpage{10}
+    \subitem {asm.\+h}, \hyperpage{16}
+  \item {add\+Instruction\+Name}
+    \subitem {asm.\+c}, \hyperpage{10}
+    \subitem {asm.\+h}, \hyperpage{16}
+  \item {add\+Label}
+    \subitem {asm.\+c}, \hyperpage{10}
+    \subitem {asm.\+h}, \hyperpage{16}
+  \item {add\+Reference}
+    \subitem {asm.\+c}, \hyperpage{11}
+    \subitem {asm.\+h}, \hyperpage{17}
+  \item {addr}
+    \subitem {label}, \hyperpage{8}
+  \item {addr\+In\+Code}
+    \subitem {ref}, \hyperpage{8}
+  \item {asm.\+c}, \hyperpage{9}
+    \subitem {add\+Code}, \hyperpage{10}
+    \subitem {add\+Instruction\+Name}, \hyperpage{10}
+    \subitem {add\+Label}, \hyperpage{10}
+    \subitem {add\+Reference}, \hyperpage{11}
+    \subitem {decode\+Instruction}, \hyperpage{11}
+    \subitem {dump\+Binary\+Code}, \hyperpage{11}
+    \subitem {find\+Label}, \hyperpage{12}
+    \subitem {generate\+Binary}, \hyperpage{12}
+    \subitem {main}, \hyperpage{12}
+    \subitem {parse\+Asm}, \hyperpage{13}
+    \subitem {print\+Labels}, \hyperpage{14}
+    \subitem {resolve\+References}, \hyperpage{14}
+  \item {asm.\+h}, \hyperpage{15}
+    \subitem {add\+Code}, \hyperpage{16}
+    \subitem {add\+Instruction\+Name}, \hyperpage{16}
+    \subitem {add\+Label}, \hyperpage{16}
+    \subitem {add\+Reference}, \hyperpage{17}
+    \subitem {code\+Segment}, \hyperpage{21}
+    \subitem {current\+Inst}, \hyperpage{21}
+    \subitem {current\+Instruction\+Name}, \hyperpage{21}
+    \subitem {current\+Label}, \hyperpage{21}
+    \subitem {current\+Ref}, \hyperpage{21}
+    \subitem {decode\+Instruction}, \hyperpage{17}
+    \subitem {dump\+Binary\+Code}, \hyperpage{18}
+    \subitem {find\+Label}, \hyperpage{18}
+    \subitem {generate\+Binary}, \hyperpage{19}
+    \subitem {M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}, 
+		\hyperpage{16}
+    \subitem {M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}, 
+		\hyperpage{16}
+    \subitem {M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}, 
+		\hyperpage{16}
+    \subitem {parse\+Asm}, \hyperpage{19}
+    \subitem {print\+Labels}, \hyperpage{20}
+    \subitem {resolve\+References}, \hyperpage{20}
+    \subitem {tab\+Instruction\+Names}, \hyperpage{21}
+    \subitem {tab\+Labels}, \hyperpage{21}
+    \subitem {tab\+References}, \hyperpage{21}
+
+  \indexspace
+
+  \item {code\+Segment}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {current\+Inst}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {current\+Instruction\+Name}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {current\+Label}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {current\+Ref}
+    \subitem {asm.\+h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {decode\+Instruction}
+    \subitem {asm.\+c}, \hyperpage{11}
+    \subitem {asm.\+h}, \hyperpage{17}
+  \item {dump\+Binary\+Code}
+    \subitem {asm.\+c}, \hyperpage{11}
+    \subitem {asm.\+h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {find\+Label}
+    \subitem {asm.\+c}, \hyperpage{12}
+    \subitem {asm.\+h}, \hyperpage{18}
+  \item {format}
+    \subitem {instruction\+Name}, \hyperpage{7}
+
+  \indexspace
+
+  \item {generate\+Binary}
+    \subitem {asm.\+c}, \hyperpage{12}
+    \subitem {asm.\+h}, \hyperpage{19}
+
+  \indexspace
+
+  \item {instruction\+Name}, \hyperpage{7}
+    \subitem {format}, \hyperpage{7}
+    \subitem {name}, \hyperpage{7}
+    \subitem {nbops}, \hyperpage{7}
+    \subitem {opcod}, \hyperpage{7}
+    \subitem {type}, \hyperpage{7}
+
+  \indexspace
+
+  \item {label}, \hyperpage{7}
+    \subitem {addr}, \hyperpage{8}
+    \subitem {label}, \hyperpage{8}
+    \subitem {ref}, \hyperpage{8}
+
+  \indexspace
+
+  \item {M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}
+    \subitem {asm.\+h}, \hyperpage{16}
+  \item {M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}
+    \subitem {asm.\+h}, \hyperpage{16}
+  \item {M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}
+    \subitem {asm.\+h}, \hyperpage{16}
+  \item {main}
+    \subitem {asm.\+c}, \hyperpage{12}
+
+  \indexspace
+
+  \item {name}
+    \subitem {instruction\+Name}, \hyperpage{7}
+  \item {nbops}
+    \subitem {instruction\+Name}, \hyperpage{7}
+
+  \indexspace
+
+  \item {opcod}
+    \subitem {instruction\+Name}, \hyperpage{7}
+
+  \indexspace
+
+  \item {parse\+Asm}
+    \subitem {asm.\+c}, \hyperpage{13}
+    \subitem {asm.\+h}, \hyperpage{19}
+  \item {print\+Labels}
+    \subitem {asm.\+c}, \hyperpage{14}
+    \subitem {asm.\+h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {ref}, \hyperpage{8}
+    \subitem {addr\+In\+Code}, \hyperpage{8}
+    \subitem {label}, \hyperpage{8}
+  \item {resolve\+References}
+    \subitem {asm.\+c}, \hyperpage{14}
+    \subitem {asm.\+h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {tab\+Instruction\+Names}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {tab\+Labels}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {tab\+References}
+    \subitem {asm.\+h}, \hyperpage{21}
+  \item {type}
+    \subitem {instruction\+Name}, \hyperpage{7}
+
+\end{theindex}

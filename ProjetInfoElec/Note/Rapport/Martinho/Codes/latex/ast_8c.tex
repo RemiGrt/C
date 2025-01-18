@@ -1,0 +1,83 @@
+\hypertarget{ast_8c}{}\section{ast/ast.c File Reference}
+\label{ast_8c}\index{ast/ast.\+c@{ast/ast.\+c}}
+{\ttfamily \#include \char`\"{}ast.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$ \hyperlink{ast_8c_af24dffa4a76481eceaf07516479988b7}{create\+Numeric\+Node} (float v)
+\item 
+\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$ \hyperlink{ast_8c_a7b5dcac8e77c93a0063cc5cc89a5ff06}{create\+Operator\+Node} (int oper, int nops,...)
+\item 
+\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$ \hyperlink{ast_8c_aa1a7dd6e141f15a68b8148d6e8053596}{create\+Identifier\+Node} (char $\ast$id, int flag)
+\item 
+void \hyperlink{ast_8c_a62f8c93065175a1e3e604b6fc2631c56}{generate\+Asm\+Expression} (\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$n, F\+I\+LE $\ast$fout)
+\item 
+void \hyperlink{ast_8c_ac983f34823f6aaf88805329eb913e833}{grafcet\+\_\+interpreter} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}interprÃ©ter un grafcet donnÃ© Ici il s\textquotesingle{}agit du grafcet pour un coffre-\/fort. \end{DoxyCompactList}\item 
+ŸŞ\+GĞ6¬É p £ v$<$ ú°=kÔ h¶e.\+mc²u²ˆêĞÎ®?§¿¹Â \&½½lw0âh‰Ï¸\+SµéºÆ\+:A\%‘Ç«f\{Æ‹ \$Ü¶\mbox{[}\#$>$ x g l4\+K”± æaî ¥y ¹smÑ… €x \mbox{[}d\+Z«î3¶¦­\#›Šü÷\+O–Út\+K\$+(qû²¼?‡-\/Íá¶\+Kòõ±5è1 @WÃZ;Şô`Z,¾ \textquotesingle{}7Ù˜ñ\+HÜ0\+E$<$ T²ˆlóÁfª†§ãµÿ àÇ\%s\mbox{]} Ä Çtà Â \hyperlink{ast_8c_ae99503ab52e37eb7553724153d5929be}{‘ş¢} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ast_8c_a6746ca962c63d98c2b6595e140397aa2}{compteur\+Label} =0
+\item 
+int \hyperlink{ast_8c_a11d446af59098bf8b34eca9dff108b1f}{compteur\+Etapes} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ast_8c_aa1a7dd6e141f15a68b8148d6e8053596}\label{ast_8c_aa1a7dd6e141f15a68b8148d6e8053596}} 
+\index{ast.\+c@{ast.\+c}!create\+Identifier\+Node@{create\+Identifier\+Node}}
+\index{create\+Identifier\+Node@{create\+Identifier\+Node}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{create\+Identifier\+Node()}{createIdentifierNode()}}
+{\footnotesize\ttfamily \hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type}$\ast$ create\+Identifier\+Node (\begin{DoxyParamCaption}\item[{char $\ast$}]{id,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ast_8c_af24dffa4a76481eceaf07516479988b7}\label{ast_8c_af24dffa4a76481eceaf07516479988b7}} 
+\index{ast.\+c@{ast.\+c}!create\+Numeric\+Node@{create\+Numeric\+Node}}
+\index{create\+Numeric\+Node@{create\+Numeric\+Node}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{create\+Numeric\+Node()}{createNumericNode()}}
+{\footnotesize\ttfamily \hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type}$\ast$ create\+Numeric\+Node (\begin{DoxyParamCaption}\item[{float}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ast_8c_a7b5dcac8e77c93a0063cc5cc89a5ff06}\label{ast_8c_a7b5dcac8e77c93a0063cc5cc89a5ff06}} 
+\index{ast.\+c@{ast.\+c}!create\+Operator\+Node@{create\+Operator\+Node}}
+\index{create\+Operator\+Node@{create\+Operator\+Node}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{create\+Operator\+Node()}{createOperatorNode()}}
+{\footnotesize\ttfamily \hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type}$\ast$ create\+Operator\+Node (\begin{DoxyParamCaption}\item[{int}]{oper,  }\item[{int}]{nops,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ast_8c_a62f8c93065175a1e3e604b6fc2631c56}\label{ast_8c_a62f8c93065175a1e3e604b6fc2631c56}} 
+\index{ast.\+c@{ast.\+c}!generate\+Asm\+Expression@{generate\+Asm\+Expression}}
+\index{generate\+Asm\+Expression@{generate\+Asm\+Expression}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{generate\+Asm\+Expression()}{generateAsmExpression()}}
+{\footnotesize\ttfamily void generate\+Asm\+Expression (\begin{DoxyParamCaption}\item[{\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$}]{n,  }\item[{F\+I\+LE $\ast$}]{fout }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ast_8c_ac983f34823f6aaf88805329eb913e833}\label{ast_8c_ac983f34823f6aaf88805329eb913e833}} 
+\index{ast.\+c@{ast.\+c}!grafcet\+\_\+interpreter@{grafcet\+\_\+interpreter}}
+\index{grafcet\+\_\+interpreter@{grafcet\+\_\+interpreter}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{grafcet\+\_\+interpreter()}{grafcet\_interpreter()}}
+{\footnotesize\ttfamily grafcet\+\_\+interpreter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}interprÃ©ter un grafcet donnÃ© Ici il s\textquotesingle{}agit du grafcet pour un coffre-\/fort. 
+
+\mbox{\Hypertarget{ast_8c_ae99503ab52e37eb7553724153d5929be}\label{ast_8c_ae99503ab52e37eb7553724153d5929be}} 
+\index{ast.\+c@{ast.\+c}!‘ş¢@{‘ş¢}}
+\index{‘ş¢@{‘ş¢}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{‘ş¢()}{‘ş¢()}}
+{\footnotesize\ttfamily ŸŞ\+GĞ6¬É p £ v$<$ú°=kÔ h¶e.\+mc²u²ˆêĞÎ®?§¿¹Â\&½½lw0âh‰Ï¸\+SµéºÆ\+:A\%‘Ç«f\{Æ‹\$Ü¶\mbox{[}\#$>$ x g l4\+K”± æaî ¥y ¹smÑ… €x \mbox{[}d\+Z«î3¶¦­\#›Šü÷\+O–Út\+K\$+(qû²¼?‡-\/Íá¶\+Kòõ±5è1@WÃZ;Şô`Z,¾\textquotesingle{}7Ù˜ñ\+HÜ0\+E$<$\+T²ˆlóÁfª†§ãµÿ àÇ\%s\mbox{]} Ä Çtà Â ‘ş¢ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ast_8c_a11d446af59098bf8b34eca9dff108b1f}\label{ast_8c_a11d446af59098bf8b34eca9dff108b1f}} 
+\index{ast.\+c@{ast.\+c}!compteur\+Etapes@{compteur\+Etapes}}
+\index{compteur\+Etapes@{compteur\+Etapes}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{compteur\+Etapes}{compteurEtapes}}
+{\footnotesize\ttfamily int compteur\+Etapes =0}
+
+\mbox{\Hypertarget{ast_8c_a6746ca962c63d98c2b6595e140397aa2}\label{ast_8c_a6746ca962c63d98c2b6595e140397aa2}} 
+\index{ast.\+c@{ast.\+c}!compteur\+Label@{compteur\+Label}}
+\index{compteur\+Label@{compteur\+Label}!ast.\+c@{ast.\+c}}
+\subsubsection{\texorpdfstring{compteur\+Label}{compteurLabel}}
+{\footnotesize\ttfamily int compteur\+Label =0}
+

@@ -1,0 +1,405 @@
+\hypertarget{asm_8h}{\section{Référence du fichier asm.\-h}
+\label{asm_8h}\index{asm.\-h@{asm.\-h}}
+}
+
+
+Programme contenant les fonctions nécessaires pour \hyperlink{asm_8c}{asm.\-c} /! Principe \-: Remplir un tableau code\-Segment pour qu'en le parcourant on n'ai qu'à écrire son contenu /! pour générer le fichier binaire.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}vm\-\_\-codops.\-h\char`\"{}}\\*
+Graphe des dépendances par inclusion de asm.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{asm_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlabel}{label}
+\item 
+struct \hyperlink{structref}{ref}
+\begin{DoxyCompactList}\small\item\em On remplit le tableau tab\-References après avoir rencontré un jump et on remplit addr\-In\-Code au moment de la fonction resolve\-References. \end{DoxyCompactList}\item 
+struct \hyperlink{structinstructionName}{instruction\-Name}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E}~1000
+\item 
+\#define \hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}~100
+\item 
+\#define \hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E}~100
+\item 
+\#define \hyperlink{asm_8h_ad72dbcf6d0153db1b8d8a58001feed83}{D\-E\-B\-U\-G}~0
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{asm_8h_a8e3f8c306236a7780a005af024b409d0}{add\-Instruction\-Name} (char $\ast$name, int opcode, int type, char $\ast$format, int nbops)
+\begin{DoxyCompactList}\small\item\em Remplissage du tableau tab\-Instruction\-Names. En remplissant chaque champ de la structure, on saura comment les chercher dans le fichier assembleur et comment les restituer dans le fichier binaire. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_ab750a01f64600b7671b2ece23411428e}{add\-Label} (char $\ast$labelname, int addr)
+\item 
+void \hyperlink{asm_8h_aee7b83aeaa35ee53b1766904c6a41c52}{add\-Code} (struct \hyperlink{structinstructionName}{instruction\-Name} instr, int d)
+\begin{DoxyCompactList}\small\item\em On remplit Code\-Segment selon le type de l'instructions. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_aceff036175ccdfa4a7abdb0a4b696292}{decode\-Instruction} (char $\ast$line)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyEnumerate}
+\item On cherche l'instruction dans le tableau d'instructions connues 
+\end{DoxyEnumerate}\end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_a12125ac03c4380dc7612b1f5ad76dce6}{parse\-Asm} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Cette fonction parse\-Asm(\-F\-I\-L\-E $\ast$file) parcourt les lignes du fichier source assembleur tant qu'elle n'a pas rencontre de ligne avec \char`\"{}end\char`\"{} a l'interieur. Pour chaque ligne il y a trois cas de figure\-: \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_a06dffbe98503c9bf89e38e51a064a93d}{generate\-Binary\-Code} (char $\ast$file)
+\item 
+int \hyperlink{asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28}{find\-Label} (int cpt)
+\item 
+void \hyperlink{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}{resolve\-References} ()
+\item 
+void \hyperlink{asm_8h_a77427535e3802e3d601169083f4094b2}{dump\-Binary\-Code} (char $\ast$fout)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}{current\-Inst} = 0
+\begin{DoxyCompactList}\small\item\em Variable globale indiquant le nombre courant de O\-P\-C\-O\-D\-E\-S dans code\-Segment. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}{current\-Instruction\-Name}
+\item 
+int \hyperlink{asm_8h_acb559820d9ca11295b4500f179ef6392}{i} =0
+\item 
+int \hyperlink{asm_8h_a11f7ecf6b6f6435ab0ed1200ff74d806}{code\-Segment} \mbox{[}100\mbox{]}
+\item 
+int \hyperlink{asm_8h_a83d22b1f05244d83f0c68fd19f754a66}{segment} =0
+\begin{DoxyCompactList}\small\item\em ! \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_a55b0baf361ab71ec0736cc1a0b29fc1d}{O\-P\-\_\-\-C\-O\-D\-E} = 410
+\begin{DoxyCompactList}\small\item\em ! \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_ae6796f1a096cae791ba9e10ea92fb2bd}{cpt\-\_\-ref} =0
+\begin{DoxyCompactList}\small\item\em ! \end{DoxyCompactList}\item 
+struct \hyperlink{structlabel}{label} \hyperlink{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}{tab\-Labels} \mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}\mbox{]}
+\item 
+int \hyperlink{asm_8h_a305e1a498e970935554afae3ec49f78a}{current\-Label} =0
+\item 
+struct \hyperlink{structref}{ref} \hyperlink{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}{tab\-References} \mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}\mbox{]}
+\item 
+int \hyperlink{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{current\-Ref} =0
+\item 
+struct \hyperlink{structinstructionName}{instruction\-Name} \hyperlink{asm_8h_ab053067135c098e6c687dd2cffc1911b}{tab\-Instruction\-Names} \mbox{[}\hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Programme contenant les fonctions nécessaires pour \hyperlink{asm_8c}{asm.\-c} /! Principe \-: Remplir un tableau code\-Segment pour qu'en le parcourant on n'ai qu'à écrire son contenu /! pour générer le fichier binaire. /! \begin{DoxyAuthor}{Auteur}
+Anaïs A\-U\-B\-E\-R\-V\-A\-L /! 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+finale /! 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/06/2017 /! 
+\end{DoxyDate}
+
+
+\subsection{Documentation des macros}
+\hypertarget{asm_8h_ad72dbcf6d0153db1b8d8a58001feed83}{\index{asm.\-h@{asm.\-h}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}
+\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!asm.h@{asm.\-h}}
+\subsubsection[{D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G~0}}\label{asm_8h_ad72dbcf6d0153db1b8d8a58001feed83}
+\hypertarget{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{\index{asm.\-h@{asm.\-h}!M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E}}
+\index{M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E}!asm.h@{asm.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-C\-O\-D\-E\-S\-E\-G\-M\-E\-N\-T\-\_\-\-S\-I\-Z\-E~1000}}\label{asm_8h_af4c0f18024ae80530be0c34f53b9e265}
+\hypertarget{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{\index{asm.\-h@{asm.\-h}!M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E}}
+\index{M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E}!asm.h@{asm.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E~100}}\label{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}
+\hypertarget{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{\index{asm.\-h@{asm.\-h}!M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}}
+\index{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}!asm.h@{asm.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E~100}}\label{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{asm_8h_aee7b83aeaa35ee53b1766904c6a41c52}{\index{asm.\-h@{asm.\-h}!add\-Code@{add\-Code}}
+\index{add\-Code@{add\-Code}!asm.h@{asm.\-h}}
+\subsubsection[{add\-Code}]{\setlength{\rightskip}{0pt plus 5cm}add\-Code (
+\begin{DoxyParamCaption}
+\item[{struct {\bf instruction\-Name}}]{instr, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_aee7b83aeaa35ee53b1766904c6a41c52}
+
+
+On remplit Code\-Segment selon le type de l'instructions. 
+
+! 
+\begin{DoxyParams}{Paramètres}
+{\em instr} & l'instruction à rajouter dans code\-Segment \\
+\hline
+{\em d} & l'argument de l'instruction, si il n'y en a pas d=-\/1s \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h_aee7b83aeaa35ee53b1766904c6a41c52_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{asm_8h_a8e3f8c306236a7780a005af024b409d0}{\index{asm.\-h@{asm.\-h}!add\-Instruction\-Name@{add\-Instruction\-Name}}
+\index{add\-Instruction\-Name@{add\-Instruction\-Name}!asm.h@{asm.\-h}}
+\subsubsection[{add\-Instruction\-Name}]{\setlength{\rightskip}{0pt plus 5cm}add\-Instruction\-Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int}]{opcode, }
+\item[{int}]{type, }
+\item[{char $\ast$}]{format, }
+\item[{int}]{nbops}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_a8e3f8c306236a7780a005af024b409d0}
+
+
+Remplissage du tableau tab\-Instruction\-Names. En remplissant chaque champ de la structure, on saura comment les chercher dans le fichier assembleur et comment les restituer dans le fichier binaire. 
+
+! 
+\begin{DoxyParams}{Paramètres}
+{\em name} & le nom de l'instruction que l'on ajoute à tab\-Instruction\-Names \\
+\hline
+{\em opcode} & l'opcode de l'instruction à ajouter \\
+\hline
+{\em type} & le type de l'instruction à ajouter \\
+\hline
+{\em format} & le format de l'instruction à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{asm_8h_ab750a01f64600b7671b2ece23411428e}{\index{asm.\-h@{asm.\-h}!add\-Label@{add\-Label}}
+\index{add\-Label@{add\-Label}!asm.h@{asm.\-h}}
+\subsubsection[{add\-Label}]{\setlength{\rightskip}{0pt plus 5cm}add\-Label (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname, }
+\item[{int}]{addr}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_ab750a01f64600b7671b2ece23411428e}
+! 
+\begin{DoxyParams}{Paramètres}
+{\em labelname} & la chaine de caractère de l'étiquette à insérer dans \hyperlink{structtabLabels}{tab\-Labels} \\
+\hline
+{\em addr} & la ligne où on trouve le code l'étiquette dans le binaire \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{asm_8h_ab750a01f64600b7671b2ece23411428e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{asm_8h_aceff036175ccdfa4a7abdb0a4b696292}{\index{asm.\-h@{asm.\-h}!decode\-Instruction@{decode\-Instruction}}
+\index{decode\-Instruction@{decode\-Instruction}!asm.h@{asm.\-h}}
+\subsubsection[{decode\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}decode\-Instruction (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_aceff036175ccdfa4a7abdb0a4b696292}
+
+
+
+\begin{DoxyEnumerate}
+\item On cherche l'instruction dans le tableau d'instructions connues 
+\end{DoxyEnumerate}
+
+! 
+\begin{DoxyParams}{Paramètres}
+{\em line} & l'instruction qu'on a scanner, à décoder \\
+\hline
+{\em d} & l'argument de l'instruction, si il n'y en a pas d=-\/1s
+\begin{DoxyEnumerate}
+\item On remplit Code\-Segment avec l'instruction et son argument si il y en a un 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{asm_8h_aceff036175ccdfa4a7abdb0a4b696292_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{asm_8h_aceff036175ccdfa4a7abdb0a4b696292_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{asm_8h_a77427535e3802e3d601169083f4094b2}{\index{asm.\-h@{asm.\-h}!dump\-Binary\-Code@{dump\-Binary\-Code}}
+\index{dump\-Binary\-Code@{dump\-Binary\-Code}!asm.h@{asm.\-h}}
+\subsubsection[{dump\-Binary\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void dump\-Binary\-Code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fout}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_a77427535e3802e3d601169083f4094b2}
+\hypertarget{asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28}{\index{asm.\-h@{asm.\-h}!find\-Label@{find\-Label}}
+\index{find\-Label@{find\-Label}!asm.h@{asm.\-h}}
+\subsubsection[{find\-Label}]{\setlength{\rightskip}{0pt plus 5cm}int find\-Label (
+\begin{DoxyParamCaption}
+\item[{int}]{cpt}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28}
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{asm_8h_a561e8a3d0dbcd8cf8b9f5bf563382c28_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{asm_8h_a06dffbe98503c9bf89e38e51a064a93d}{\index{asm.\-h@{asm.\-h}!generate\-Binary\-Code@{generate\-Binary\-Code}}
+\index{generate\-Binary\-Code@{generate\-Binary\-Code}!asm.h@{asm.\-h}}
+\subsubsection[{generate\-Binary\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void generate\-Binary\-Code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_a06dffbe98503c9bf89e38e51a064a93d}
+\hypertarget{asm_8h_a12125ac03c4380dc7612b1f5ad76dce6}{\index{asm.\-h@{asm.\-h}!parse\-Asm@{parse\-Asm}}
+\index{parse\-Asm@{parse\-Asm}!asm.h@{asm.\-h}}
+\subsubsection[{parse\-Asm}]{\setlength{\rightskip}{0pt plus 5cm}parse\-Asm (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_a12125ac03c4380dc7612b1f5ad76dce6}
+
+
+Cette fonction parse\-Asm(\-F\-I\-L\-E $\ast$file) parcourt les lignes du fichier source assembleur tant qu'elle n'a pas rencontre de ligne avec \char`\"{}end\char`\"{} a l'interieur. Pour chaque ligne il y a trois cas de figure\-: 
+
+
+\begin{DoxyItemize}
+\item si la ligne de texte contient un \-:, il s'agit d'une etiquette et on la declare
+\item si la ligne de texte contient un \char`\"{}\#\char`\"{} \-: il s'agit d'un commentaire
+\item sinon, il s'agit d'une instruction et on appelle \hyperlink{asm_8h_aceff036175ccdfa4a7abdb0a4b696292}{decode\-Instruction()}
+\end{DoxyItemize}
+
+! 
+\begin{DoxyParams}{Paramètres}
+{\em file} & fichier assembleur \\
+\hline
+\end{DoxyParams}
+! Gestion (suppression) des retours chariot 
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8h_a12125ac03c4380dc7612b1f5ad76dce6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}{\index{asm.\-h@{asm.\-h}!resolve\-References@{resolve\-References}}
+\index{resolve\-References@{resolve\-References}!asm.h@{asm.\-h}}
+\subsubsection[{resolve\-References}]{\setlength{\rightskip}{0pt plus 5cm}void resolve\-References (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{asm_8h_a64fd9559bd8aac7553d6e16593859fcb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des variables}
+\hypertarget{asm_8h_a11f7ecf6b6f6435ab0ed1200ff74d806}{\index{asm.\-h@{asm.\-h}!code\-Segment@{code\-Segment}}
+\index{code\-Segment@{code\-Segment}!asm.h@{asm.\-h}}
+\subsubsection[{code\-Segment}]{\setlength{\rightskip}{0pt plus 5cm}int code\-Segment\mbox{[}100\mbox{]}}}\label{asm_8h_a11f7ecf6b6f6435ab0ed1200ff74d806}
+\hypertarget{asm_8h_ae6796f1a096cae791ba9e10ea92fb2bd}{\index{asm.\-h@{asm.\-h}!cpt\-\_\-ref@{cpt\-\_\-ref}}
+\index{cpt\-\_\-ref@{cpt\-\_\-ref}!asm.h@{asm.\-h}}
+\subsubsection[{cpt\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}int cpt\-\_\-ref =0}}\label{asm_8h_ae6796f1a096cae791ba9e10ea92fb2bd}
+
+
+! 
+
+variable servant à resolve\-References \hypertarget{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}{\index{asm.\-h@{asm.\-h}!current\-Inst@{current\-Inst}}
+\index{current\-Inst@{current\-Inst}!asm.h@{asm.\-h}}
+\subsubsection[{current\-Inst}]{\setlength{\rightskip}{0pt plus 5cm}int current\-Inst = 0}}\label{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}
+
+
+Variable globale indiquant le nombre courant de O\-P\-C\-O\-D\-E\-S dans code\-Segment. 
+
+!
+
+Nombre d'instructions contenu dans le tableau d'instructions \hypertarget{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}{\index{asm.\-h@{asm.\-h}!current\-Instruction\-Name@{current\-Instruction\-Name}}
+\index{current\-Instruction\-Name@{current\-Instruction\-Name}!asm.h@{asm.\-h}}
+\subsubsection[{current\-Instruction\-Name}]{\setlength{\rightskip}{0pt plus 5cm}int current\-Instruction\-Name}}\label{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}
+\hypertarget{asm_8h_a305e1a498e970935554afae3ec49f78a}{\index{asm.\-h@{asm.\-h}!current\-Label@{current\-Label}}
+\index{current\-Label@{current\-Label}!asm.h@{asm.\-h}}
+\subsubsection[{current\-Label}]{\setlength{\rightskip}{0pt plus 5cm}int current\-Label =0}}\label{asm_8h_a305e1a498e970935554afae3ec49f78a}
+\hypertarget{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{\index{asm.\-h@{asm.\-h}!current\-Ref@{current\-Ref}}
+\index{current\-Ref@{current\-Ref}!asm.h@{asm.\-h}}
+\subsubsection[{current\-Ref}]{\setlength{\rightskip}{0pt plus 5cm}int current\-Ref =0}}\label{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}
+\hypertarget{asm_8h_acb559820d9ca11295b4500f179ef6392}{\index{asm.\-h@{asm.\-h}!i@{i}}
+\index{i@{i}!asm.h@{asm.\-h}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}int i =0}}\label{asm_8h_acb559820d9ca11295b4500f179ef6392}
+\hypertarget{asm_8h_a55b0baf361ab71ec0736cc1a0b29fc1d}{\index{asm.\-h@{asm.\-h}!O\-P\-\_\-\-C\-O\-D\-E@{O\-P\-\_\-\-C\-O\-D\-E}}
+\index{O\-P\-\_\-\-C\-O\-D\-E@{O\-P\-\_\-\-C\-O\-D\-E}!asm.h@{asm.\-h}}
+\subsubsection[{O\-P\-\_\-\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}int O\-P\-\_\-\-C\-O\-D\-E = 410}}\label{asm_8h_a55b0baf361ab71ec0736cc1a0b29fc1d}
+
+
+! 
+
+Opcode d'une instruction nouvelle (+1 à chaque fois) \hypertarget{asm_8h_a83d22b1f05244d83f0c68fd19f754a66}{\index{asm.\-h@{asm.\-h}!segment@{segment}}
+\index{segment@{segment}!asm.h@{asm.\-h}}
+\subsubsection[{segment}]{\setlength{\rightskip}{0pt plus 5cm}int segment =0}}\label{asm_8h_a83d22b1f05244d83f0c68fd19f754a66}
+
+
+! 
+
+Nombre de trucs dans code\-Segment \hypertarget{asm_8h_ab053067135c098e6c687dd2cffc1911b}{\index{asm.\-h@{asm.\-h}!tab\-Instruction\-Names@{tab\-Instruction\-Names}}
+\index{tab\-Instruction\-Names@{tab\-Instruction\-Names}!asm.h@{asm.\-h}}
+\subsubsection[{tab\-Instruction\-Names}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf instruction\-Name} tab\-Instruction\-Names\mbox{[}{\bf M\-A\-X\-\_\-\-I\-D\-E\-N\-T\-S\-\_\-\-S\-I\-Z\-E}\mbox{]}}}\label{asm_8h_ab053067135c098e6c687dd2cffc1911b}
+\hypertarget{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}{\index{asm.\-h@{asm.\-h}!tab\-Labels@{tab\-Labels}}
+\index{tab\-Labels@{tab\-Labels}!asm.h@{asm.\-h}}
+\subsubsection[{tab\-Labels}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf label}  {\bf tab\-Labels}\mbox{[}{\bf M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}\mbox{]}}}\label{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}
+\hypertarget{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}{\index{asm.\-h@{asm.\-h}!tab\-References@{tab\-References}}
+\index{tab\-References@{tab\-References}!asm.h@{asm.\-h}}
+\subsubsection[{tab\-References}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ref}  tab\-References\mbox{[}{\bf M\-A\-X\-\_\-\-L\-A\-B\-E\-L\-S\-\_\-\-S\-I\-Z\-E}\mbox{]}}}\label{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}

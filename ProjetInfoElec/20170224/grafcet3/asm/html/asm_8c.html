@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Assembleur: Référence du fichier asm.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Assembleur
+   </div>
+   <div id="projectbrief">ASM in, ByteCode out</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier asm.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &quot;vm_codops.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="asm_8h_source.html">asm.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de asm.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c__incl.png" border="0" usemap="#asm_8c" alt=""/></div>
+<map name="asm_8c" id="asm_8c">
+<area shape="rect" id="node7" href="asm_8h.html" title="asm.h" alt="" coords="483,80,541,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a79768c03b0a3a825aca8f66127a22a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#a79768c03b0a3a825aca8f66127a22a35">addCode</a> (int v)</td></tr>
+<tr class="memdesc:a79768c03b0a3a825aca8f66127a22a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complète le tableau codeSegment.  <a href="#a79768c03b0a3a825aca8f66127a22a35">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a79768c03b0a3a825aca8f66127a22a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb68a5377b3fc4689743c5b060f7d08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#adb68a5377b3fc4689743c5b060f7d08a">addInstructionName</a> (char *instname, int opcod, int type, char *format, int nbops)</td></tr>
+<tr class="separator:adb68a5377b3fc4689743c5b060f7d08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1248a22adfbfa85be10ed09b7570a3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#af1248a22adfbfa85be10ed09b7570a3a">findLabel</a> (char *labelname)</td></tr>
+<tr class="separator:af1248a22adfbfa85be10ed09b7570a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b13c47db77611034e4b839b39e68ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#aa0b13c47db77611034e4b839b39e68ed">addLabel</a> (char *labelname, int addr)</td></tr>
+<tr class="separator:aa0b13c47db77611034e4b839b39e68ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabafc3ddfe1c7c2768629e366907922"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#aaabafc3ddfe1c7c2768629e366907922">addReference</a> (char *labelname, int addrInCode)</td></tr>
+<tr class="separator:aaabafc3ddfe1c7c2768629e366907922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64fd9559bd8aac7553d6e16593859fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#a64fd9559bd8aac7553d6e16593859fcb">resolveReferences</a> ()</td></tr>
+<tr class="separator:a64fd9559bd8aac7553d6e16593859fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0fc8f69b5d21a640117e2425d6f24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#aab0fc8f69b5d21a640117e2425d6f24d">decodeInstruction</a> (char *line)</td></tr>
+<tr class="memdesc:aab0fc8f69b5d21a640117e2425d6f24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fonction <a class="el" href="asm_8c.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l...">decodeInstruction(char *line)</a> est appelee par la boucle principale d'analyse lorsque la ligne d'assembleur lue n'est pas une (pas de : dans la ligne). Cette fonction fait le gros du travail de la passe 1, en identifiant le type de l'instruction, en faisant le decodage supplementaire, en appelant <a class="el" href="asm_8c.html#a79768c03b0a3a825aca8f66127a22a35" title="Complète le tableau codeSegment. ">addCode()</a> pour remplir codeSegment et en ajoutant des references si l'instruction decodee fait reference a une etiquette encore inconnue.  <a href="#aab0fc8f69b5d21a640117e2425d6f24d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aab0fc8f69b5d21a640117e2425d6f24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9247e4068e106aca0b16bb1b1b51835"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#ac9247e4068e106aca0b16bb1b1b51835">parseAsm</a> (FILE *fin)</td></tr>
+<tr class="memdesc:ac9247e4068e106aca0b16bb1b1b51835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction <a class="el" href="asm_8c.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ...">parseAsm(FILE *fin)</a> parcourt les lignes du fichier source assembleur tant qu'elle n'a pas rencontre de ligne avec "end" a l'interieur. Pour chaque ligne il y a deux cas de figure:  <a href="#ac9247e4068e106aca0b16bb1b1b51835">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac9247e4068e106aca0b16bb1b1b51835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf1f814881d73eefde6bccdde641db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#afbf1f814881d73eefde6bccdde641db8">printLabels</a> ()</td></tr>
+<tr class="separator:afbf1f814881d73eefde6bccdde641db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a883df802289858d1693c2812f1fd96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#a5a883df802289858d1693c2812f1fd96">dumpBinaryCode</a> ()</td></tr>
+<tr class="separator:a5a883df802289858d1693c2812f1fd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374b455749e0ea31debe4ef66805e564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#a374b455749e0ea31debe4ef66805e564">generateBinary</a> (FILE *fout)</td></tr>
+<tr class="separator:a374b455749e0ea31debe4ef66805e564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a79768c03b0a3a825aca8f66127a22a35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addCode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Complète le tableau codeSegment. </p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_a79768c03b0a3a825aca8f66127a22a35_icgraph.png" border="0" usemap="#asm_8c_a79768c03b0a3a825aca8f66127a22a35_icgraph" alt=""/></div>
+<map name="asm_8c_a79768c03b0a3a825aca8f66127a22a35_icgraph" id="asm_8c_a79768c03b0a3a825aca8f66127a22a35_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l..." alt="" coords="128,5,253,32"/>
+<area shape="rect" id="node3" href="asm_8h.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ..." alt="" coords="301,5,383,32"/>
+<area shape="rect" id="node4" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="431,5,481,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adb68a5377b3fc4689743c5b060f7d08a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addInstructionName </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>instname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>opcod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbops</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_adb68a5377b3fc4689743c5b060f7d08a_icgraph.png" border="0" usemap="#asm_8c_adb68a5377b3fc4689743c5b060f7d08a_icgraph" alt=""/></div>
+<map name="asm_8c_adb68a5377b3fc4689743c5b060f7d08a_icgraph" id="asm_8c_adb68a5377b3fc4689743c5b060f7d08a_icgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="192,5,243,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0b13c47db77611034e4b839b39e68ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addLabel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>labelname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_aa0b13c47db77611034e4b839b39e68ed_cgraph.png" border="0" usemap="#asm_8c_aa0b13c47db77611034e4b839b39e68ed_cgraph" alt=""/></div>
+<map name="asm_8c_aa0b13c47db77611034e4b839b39e68ed_cgraph" id="asm_8c_aa0b13c47db77611034e4b839b39e68ed_cgraph">
+<area shape="rect" id="node2" href="structlabel.html#a23bae4982501f1331a7e61c2b22ed4f3" title="label::label" alt="" coords="128,5,212,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_aa0b13c47db77611034e4b839b39e68ed_icgraph.png" border="0" usemap="#asm_8c_aa0b13c47db77611034e4b839b39e68ed_icgraph" alt=""/></div>
+<map name="asm_8c_aa0b13c47db77611034e4b839b39e68ed_icgraph" id="asm_8c_aa0b13c47db77611034e4b839b39e68ed_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ..." alt="" coords="128,5,209,32"/>
+<area shape="rect" id="node3" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="257,5,308,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaabafc3ddfe1c7c2768629e366907922"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addReference </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>labelname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addrInCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_aaabafc3ddfe1c7c2768629e366907922_icgraph.png" border="0" usemap="#asm_8c_aaabafc3ddfe1c7c2768629e366907922_icgraph" alt=""/></div>
+<map name="asm_8c_aaabafc3ddfe1c7c2768629e366907922_icgraph" id="asm_8c_aaabafc3ddfe1c7c2768629e366907922_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l..." alt="" coords="156,5,281,32"/>
+<area shape="rect" id="node3" href="asm_8h.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ..." alt="" coords="329,5,411,32"/>
+<area shape="rect" id="node4" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="459,5,509,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aab0fc8f69b5d21a640117e2425d6f24d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decodeInstruction </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fonction <a class="el" href="asm_8c.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l...">decodeInstruction(char *line)</a> est appelee par la boucle principale d'analyse lorsque la ligne d'assembleur lue n'est pas une (pas de : dans la ligne). Cette fonction fait le gros du travail de la passe 1, en identifiant le type de l'instruction, en faisant le decodage supplementaire, en appelant <a class="el" href="asm_8c.html#a79768c03b0a3a825aca8f66127a22a35" title="Complète le tableau codeSegment. ">addCode()</a> pour remplir codeSegment et en ajoutant des references si l'instruction decodee fait reference a une etiquette encore inconnue. </p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_cgraph.png" border="0" usemap="#asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_cgraph" alt=""/></div>
+<map name="asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_cgraph" id="asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_cgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a79768c03b0a3a825aca8f66127a22a35" title="Complète le tableau codeSegment. " alt="" coords="193,5,267,32"/>
+<area shape="rect" id="node3" href="asm_8c.html#af1248a22adfbfa85be10ed09b7570a3a" title="findLabel" alt="" coords="193,56,267,83"/>
+<area shape="rect" id="node4" href="asm_8c.html#aaabafc3ddfe1c7c2768629e366907922" title="addReference" alt="" coords="179,107,281,133"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_icgraph.png" border="0" usemap="#asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_icgraph" alt=""/></div>
+<map name="asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_icgraph" id="asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ..." alt="" coords="179,5,260,32"/>
+<area shape="rect" id="node3" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="308,5,359,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a883df802289858d1693c2812f1fd96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dumpBinaryCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_a5a883df802289858d1693c2812f1fd96_icgraph.png" border="0" usemap="#asm_8c_a5a883df802289858d1693c2812f1fd96_icgraph" alt=""/></div>
+<map name="asm_8c_a5a883df802289858d1693c2812f1fd96_icgraph" id="asm_8c_a5a883df802289858d1693c2812f1fd96_icgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="176,5,227,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af1248a22adfbfa85be10ed09b7570a3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int findLabel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>labelname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_af1248a22adfbfa85be10ed09b7570a3a_icgraph.png" border="0" usemap="#asm_8c_af1248a22adfbfa85be10ed09b7570a3a_icgraph" alt=""/></div>
+<map name="asm_8c_af1248a22adfbfa85be10ed09b7570a3a_icgraph" id="asm_8c_af1248a22adfbfa85be10ed09b7570a3a_icgraph">
+<area shape="rect" id="node2" href="asm_8h.html#a64fd9559bd8aac7553d6e16593859fcb" title="resolveReferences" alt="" coords="301,5,432,32"/>
+<area shape="rect" id="node4" href="asm_8h.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l..." alt="" coords="128,56,253,83"/>
+<area shape="rect" id="node3" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="480,31,531,57"/>
+<area shape="rect" id="node5" href="asm_8h.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ..." alt="" coords="326,56,407,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a374b455749e0ea31debe4ef66805e564"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateBinary </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_a374b455749e0ea31debe4ef66805e564_icgraph.png" border="0" usemap="#asm_8c_a374b455749e0ea31debe4ef66805e564_icgraph" alt=""/></div>
+<map name="asm_8c_a374b455749e0ea31debe4ef66805e564_icgraph" id="asm_8c_a374b455749e0ea31debe4ef66805e564_icgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="163,5,213,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#asm_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="asm_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="asm_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" id="node2" href="asm_8c.html#adb68a5377b3fc4689743c5b060f7d08a" title="addInstructionName" alt="" coords="104,56,243,83"/>
+<area shape="rect" id="node3" href="asm_8c.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ..." alt="" coords="133,107,214,133"/>
+<area shape="rect" id="node10" href="asm_8c.html#a64fd9559bd8aac7553d6e16593859fcb" title="resolveReferences" alt="" coords="291,157,421,184"/>
+<area shape="rect" id="node11" href="asm_8c.html#afbf1f814881d73eefde6bccdde641db8" title="printLabels" alt="" coords="131,208,216,235"/>
+<area shape="rect" id="node12" href="asm_8c.html#a5a883df802289858d1693c2812f1fd96" title="dumpBinaryCode" alt="" coords="112,259,235,285"/>
+<area shape="rect" id="node13" href="asm_8c.html#a374b455749e0ea31debe4ef66805e564" title="generateBinary" alt="" coords="119,309,228,336"/>
+<area shape="rect" id="node4" href="asm_8c.html#aa0b13c47db77611034e4b839b39e68ed" title="addLabel" alt="" coords="319,31,393,57"/>
+<area shape="rect" id="node6" href="asm_8c.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l..." alt="" coords="293,107,419,133"/>
+<area shape="rect" id="node5" href="structlabel.html#a23bae4982501f1331a7e61c2b22ed4f3" title="label::label" alt="" coords="479,5,563,32"/>
+<area shape="rect" id="node7" href="asm_8c.html#a79768c03b0a3a825aca8f66127a22a35" title="Complète le tableau codeSegment. " alt="" coords="483,56,558,83"/>
+<area shape="rect" id="node8" href="asm_8c.html#af1248a22adfbfa85be10ed09b7570a3a" title="findLabel" alt="" coords="483,157,558,184"/>
+<area shape="rect" id="node9" href="asm_8c.html#aaabafc3ddfe1c7c2768629e366907922" title="addReference" alt="" coords="469,107,572,133"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9247e4068e106aca0b16bb1b1b51835"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseAsm </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction <a class="el" href="asm_8c.html#ac9247e4068e106aca0b16bb1b1b51835" title="Cette fonction parseAsm(FILE *fin) parcourt les lignes du fichier source assembleur tant qu&#39;elle n&#39;a ...">parseAsm(FILE *fin)</a> parcourt les lignes du fichier source assembleur tant qu'elle n'a pas rencontre de ligne avec "end" a l'interieur. Pour chaque ligne il y a deux cas de figure: </p>
+<ul>
+<li>si la ligne de texte contient un :, il s'agit d'une etiquette et on la declare</li>
+<li>sinon, il s'agit d'une instruction et on appelle <a class="el" href="asm_8c.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l...">decodeInstruction()</a> </li>
+</ul>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_ac9247e4068e106aca0b16bb1b1b51835_cgraph.png" border="0" usemap="#asm_8c_ac9247e4068e106aca0b16bb1b1b51835_cgraph" alt=""/></div>
+<map name="asm_8c_ac9247e4068e106aca0b16bb1b1b51835_cgraph" id="asm_8c_ac9247e4068e106aca0b16bb1b1b51835_cgraph">
+<area shape="rect" id="node2" href="asm_8c.html#aa0b13c47db77611034e4b839b39e68ed" title="addLabel" alt="" coords="160,19,235,45"/>
+<area shape="rect" id="node4" href="asm_8c.html#aab0fc8f69b5d21a640117e2425d6f24d" title="La fonction decodeInstruction(char *line) est appelee par la boucle principale d&#39;analyse lorsque la l..." alt="" coords="135,95,260,121"/>
+<area shape="rect" id="node3" href="structlabel.html#a23bae4982501f1331a7e61c2b22ed4f3" title="label::label" alt="" coords="317,5,401,32"/>
+<area shape="rect" id="node5" href="asm_8c.html#a79768c03b0a3a825aca8f66127a22a35" title="Complète le tableau codeSegment. " alt="" coords="322,56,397,83"/>
+<area shape="rect" id="node6" href="asm_8c.html#af1248a22adfbfa85be10ed09b7570a3a" title="findLabel" alt="" coords="322,107,397,133"/>
+<area shape="rect" id="node7" href="asm_8c.html#aaabafc3ddfe1c7c2768629e366907922" title="addReference" alt="" coords="308,157,411,184"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_ac9247e4068e106aca0b16bb1b1b51835_icgraph.png" border="0" usemap="#asm_8c_ac9247e4068e106aca0b16bb1b1b51835_icgraph" alt=""/></div>
+<map name="asm_8c_ac9247e4068e106aca0b16bb1b1b51835_icgraph" id="asm_8c_ac9247e4068e106aca0b16bb1b1b51835_icgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="135,5,185,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afbf1f814881d73eefde6bccdde641db8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printLabels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_afbf1f814881d73eefde6bccdde641db8_icgraph.png" border="0" usemap="#asm_8c_afbf1f814881d73eefde6bccdde641db8_icgraph" alt=""/></div>
+<map name="asm_8c_afbf1f814881d73eefde6bccdde641db8_icgraph" id="asm_8c_afbf1f814881d73eefde6bccdde641db8_icgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="139,5,189,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a64fd9559bd8aac7553d6e16593859fcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resolveReferences </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_a64fd9559bd8aac7553d6e16593859fcb_cgraph.png" border="0" usemap="#asm_8c_a64fd9559bd8aac7553d6e16593859fcb_cgraph" alt=""/></div>
+<map name="asm_8c_a64fd9559bd8aac7553d6e16593859fcb_cgraph" id="asm_8c_a64fd9559bd8aac7553d6e16593859fcb_cgraph">
+<area shape="rect" id="node2" href="asm_8c.html#af1248a22adfbfa85be10ed09b7570a3a" title="findLabel" alt="" coords="184,5,259,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="asm_8c_a64fd9559bd8aac7553d6e16593859fcb_icgraph.png" border="0" usemap="#asm_8c_a64fd9559bd8aac7553d6e16593859fcb_icgraph" alt=""/></div>
+<map name="asm_8c_a64fd9559bd8aac7553d6e16593859fcb_icgraph" id="asm_8c_a64fd9559bd8aac7553d6e16593859fcb_icgraph">
+<area shape="rect" id="node2" href="asm_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="184,5,235,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

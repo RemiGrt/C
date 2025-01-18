@@ -1,0 +1,5 @@
+<map id="makeDual" name="makeDual">
+<area shape="rect" id="node2" href="$ast_8c.html#adec973bf53fb10e61f09148779f2e0e2" title="findEtapeByName" alt="" coords="146,5,274,32"/>
+<area shape="rect" id="node3" href="$ast_8c.html#ad94fc48b92faaa7067d7ff8b8bd92a91" title="pushRefTransition" alt="" coords="146,56,274,83"/>
+<area shape="rect" id="node4" href="$ast_8c.html#a1ef6fdf0c149cac2dd1744f5572a1d45" title="findTransitionByName" alt="" coords="135,107,285,133"/>
+</map>

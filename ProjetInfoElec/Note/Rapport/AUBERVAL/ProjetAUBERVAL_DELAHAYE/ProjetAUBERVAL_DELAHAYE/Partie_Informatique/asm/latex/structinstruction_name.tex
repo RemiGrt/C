@@ -1,0 +1,45 @@
+\section{instruction\-Name Struct Reference}
+\label{structinstruction_name}\index{instruction\-Name@{instruction\-Name}}
+
+
+{\ttfamily \#include $<$asm.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char {\bfseries name} [20]\label{structinstruction_name_a9997d8ee2df51d18efed254a5aa016fd}
+
+\item 
+int {\bfseries opcode}\label{structinstruction_name_aff3af4fae5174de7c7e40ec004999ca0}
+
+\item 
+int {\bfseries type}\label{structinstruction_name_ac765329451135abec74c45e1897abf26}
+
+\item 
+char {\bfseries format} [20]\label{structinstruction_name_adc90e59b2cbaeed86c8a6ac1015c4f85}
+
+\item 
+int {\bfseries nbops}\label{structinstruction_name_a34aaf7e4790814fce09b357e1de1a4da}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+! 
+\begin{DoxyParams}{Parameters}
+{\em name\mbox{[}20\mbox{]}} & Le nom des instructions \\
+\hline
+{\em opcode} & Le code opératoire de l'instruction, voir fichier \char`\"{}vm\-\_\-codops.\-h\char`\"{} \\
+\hline
+{\em type} & Le type de l'instruction 0, 1, 2 ou 3 permettant de savoir si il y a des arguments et les types de ces arguments \\
+\hline
+{\em format} & Le format avec lequel on est écrit l'instruction dans l'assembleur \\
+\hline
+{\em nbops} & Le nombre d'argument, souvent un ou aucun. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf asm.\-h}\end{DoxyCompactItemize}

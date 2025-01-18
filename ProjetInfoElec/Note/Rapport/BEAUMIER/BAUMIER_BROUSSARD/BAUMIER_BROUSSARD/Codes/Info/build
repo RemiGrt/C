@@ -1,0 +1,24 @@
+#! /bin/bash
+cd ./bison
+bison -y -d -g ./grafcet.y
+cd ../lex
+flex ./grafcet.l
+cd ..
+
+# Creation du compilateur de grafcet
+make grafcet.out
+
+# Compilation (.grafcet vers .asm)
+./grafcet.out < ./graf/safe.grafcet > safe.asm
+
+# Creation de l'assembleur
+make asm.out
+
+# Assemblage (asm -> bytecode)
+./asm.out safe.asm safe.bin safe.c
+
+#Transfert Liaison Serie
+#./serialSTM32.exe COM5 safe.bin
+
+#Clean
+make cleano

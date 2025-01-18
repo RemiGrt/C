@@ -1,0 +1,29 @@
+Ex1:
+min = tab[0]
+for(int i=0; i<size(tab); i++)
+  if tab[i] < min
+    min = tab[i]
+  
+
+Ex2:
+int tab[N];
+
+for(int i=0; i<size(tab); i++)
+ scanf(" %i", &tab[i])
+
+for(int i=0; i<size(tab); i++)
+ if tab[i] == e
+ 		nb++
+
+Ex3:
+
+for(int i=0; i<size(tab); i++)
+    if tab[i] != tab[size(tab)-i]
+	printf("not palyndrome")
+
+for(int i=0; i<size(tab); i++)
+    for y=
+	if tab[i] != tab[size(tab)-i]
+	printf("not palyndrome")
+
+

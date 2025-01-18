@@ -1,0 +1,246 @@
+\hypertarget{asm_8c}{}\section{asm/asm.c File Reference}
+\label{asm_8c}\index{asm/asm.\+c@{asm/asm.\+c}}
+{\ttfamily \#include \char`\"{}asm.\+h\char`\"{}}\\*
+Include dependency graph for asm.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{asm_8c_a60657be548888550429b56403ddfc4a9}{add\+Instruction\+Name} (char $\ast$name, int opcod, int type, char $\ast$format, int nbops)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_a60657be548888550429b56403ddfc4a9}{add\+Instruction\+Name(char $\ast$name, int opcod, int type, char $\ast$format, int nbops)} permet la construction d\textquotesingle{}un dictionnaire d\textquotesingle{}instruction, on ajoute alors à partir du main toutes les instructions que l\textquotesingle{}on utilisera en assembleur. Elles peuvent être de 3 types \+: \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_af327a66714cd7aad6dd45235feaed6e4}{add\+Code} (char $\ast$\hyperlink{asm_8c_a2e70d42fa24120f44e9c0f77d52f6938}{line}, int opcod, char $\ast$format, int type)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_af327a66714cd7aad6dd45235feaed6e4}{add\+Code(char $\ast$line, int opcod, char $\ast$format, int type)} est appelé après le décodage de l\textquotesingle{}instruction. Son type a été déterminé, on peut donc récupérer l\textquotesingle{}instruction décodée et son opérande puis le placer dans le tableau d\textquotesingle{}opcode. Cette fonction fait le gros du travail de la phasee 1, en identifiant le type de l\textquotesingle{}instruction, en faisant le decodage supplémentaire, et en ajoutant des references. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction} (char $\ast$\hyperlink{asm_8c_a2e70d42fa24120f44e9c0f77d52f6938}{line})
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction(char $\ast$line)} est appelee par la boucle principale d\textquotesingle{}analyse lorsque la ligne d\textquotesingle{}assembleur lue n\textquotesingle{}est pas une étiquette (pas de \+: dans la ligne) ni un commentaire (pas de \# dans la ligne). Elle fait appel à \hyperlink{asm_8c_af327a66714cd7aad6dd45235feaed6e4}{add\+Code()} pour remplir code\+Segment lorsque l\textquotesingle{}instruction est identifiée. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_aff3f00ba43933245541092c20fcba0d5}{resolve\+References} (void)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_aff3f00ba43933245541092c20fcba0d5}{resolve\+References(void)} est appelee après l\textquotesingle{}analyse de l\textquotesingle{}assembleur afin re remplacer les références non résolus de l\textquotesingle{}opcode par l\textquotesingle{}adresse de l\textquotesingle{}opcode à laquelle elle renvoie. Pour cela on utilise le tableau des références et le tableau des labels. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_abc555bd3f46f8d69c6df158e4cb7dbb7}{add\+Label} (char labelname\mbox{[}\hyperlink{asm_8h_a706068f562dd5c64a8b7bbd4b2298dd1}{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE}\mbox{]}, int addr)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_abc555bd3f46f8d69c6df158e4cb7dbb7}{add\+Label(char labelname\mbox{[}\+M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+Z\+E\mbox{]},int addr)} est appelée lorsque qu\textquotesingle{}une étiquette est identifié lors de l\textquotesingle{}analyse de l\textquotesingle{}assembleur. Elle permet de déterminer l\textquotesingle{}étiquette et de la placer dans le tableau des labels. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_a85e7a48a9e4375f7b34506c3430518ff}{parse\+Asm} (F\+I\+LE $\ast$fin)
+\begin{DoxyCompactList}\small\item\em Cette fonction \hyperlink{asm_8c_a85e7a48a9e4375f7b34506c3430518ff}{parse\+Asm(\+F\+I\+L\+E $\ast$fin)} parcourt les lignes du fichier source assembleur tant qu\textquotesingle{}elle n\textquotesingle{}a pas rencontre de ligne avec \char`\"{}halt\char`\"{} à l\textquotesingle{}interieur. Pour chaque ligne il y a trois cas de figure\+: \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_a374b455749e0ea31debe4ef66805e564}{generate\+Binary} (F\+I\+LE $\ast$fout)
+\begin{DoxyCompactList}\small\item\em Cette fonction \hyperlink{asm_8c_a374b455749e0ea31debe4ef66805e564}{generate\+Binary(\+F\+I\+L\+E $\ast$fout)} permet de générer le fichier .bin qui contient l\textquotesingle{}opcode décodé ainsi que le nombre d\textquotesingle{}instruction. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em C\textquotesingle{}est la fonction principale du programme qui va demander l\textquotesingle{}analyse du fichier.\+asm puis il va demander la résolution des références et enfin la création du fichier.\+bin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{asm_8c_a305e1a498e970935554afae3ec49f78a}{current\+Label}
+\item 
+int \hyperlink{asm_8c_ac4d2310c6cfcbf048cc7ec2f246cce7f}{current\+Inst}
+\item 
+int \hyperlink{asm_8c_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{current\+Ref}
+\item 
+int \hyperlink{asm_8c_aafad8ec46c7b0cc15a4575cb940146f6}{instruction\+Dico}
+\item 
+char \hyperlink{asm_8c_a2e70d42fa24120f44e9c0f77d52f6938}{line} \mbox{[}\hyperlink{asm_8h_a706068f562dd5c64a8b7bbd4b2298dd1}{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+unsigned int \hyperlink{asm_8c_a2e7cc742f3dac64591e576dbc07ff026}{code\+Segment} \mbox{[}\hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{vm__codops_8h_Présentation}{}\subsection{Présentation}\label{vm__codops_8h_Présentation}
+Ce programme permet d\textquotesingle{}assembler un fichier assembleur safe.\+asm en bytecode dans un fichier safe.\+bin $\ast$
+
+Il fonctionne en deux parties \+:
+\begin{DoxyItemize}
+\item 1ère phase d\textquotesingle{}assemblage \+:
+\begin{DoxyItemize}
+\item Génère un tableau de O\+P\+\_\+\+C\+O\+DE
+\item Analyse et décode les instructions
+\item Construit la liste des réfèrences indéfinies
+\end{DoxyItemize}
+\item 2ème phase d\textquotesingle{}assemblage \+:
+\begin{DoxyItemize}
+\item Complète le tableau de O\+P\+\_\+\+C\+O\+DE
+\item Résoud les références indéfinies
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{evm_8c_Compilation}{}\subsection{Compilation}\label{evm_8c_Compilation}
+
+\begin{DoxyItemize}
+\item Utilisation en console\+: ./asm.o
+\item Commande de compilation \+: gcc \hyperlink{asm_8c}{asm.\+c} -\/o asm.\+o
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\index{asm.\+c@{asm.\+c}!add\+Code@{add\+Code}}
+\index{add\+Code@{add\+Code}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Code(char $\ast$line, int opcod, char $\ast$format, int type)}{addCode(char *line, int opcod, char *format, int type)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line, }
+\item[{int}]{opcod, }
+\item[{char $\ast$}]{format, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_af327a66714cd7aad6dd45235feaed6e4}{}\label{asm_8c_af327a66714cd7aad6dd45235feaed6e4}
+
+
+La fonction \hyperlink{asm_8c_af327a66714cd7aad6dd45235feaed6e4}{add\+Code(char $\ast$line, int opcod, char $\ast$format, int type)} est appelé après le décodage de l\textquotesingle{}instruction. Son type a été déterminé, on peut donc récupérer l\textquotesingle{}instruction décodée et son opérande puis le placer dans le tableau d\textquotesingle{}opcode. Cette fonction fait le gros du travail de la phasee 1, en identifiant le type de l\textquotesingle{}instruction, en faisant le decodage supplémentaire, et en ajoutant des references. 
+
+\index{asm.\+c@{asm.\+c}!add\+Instruction\+Name@{add\+Instruction\+Name}}
+\index{add\+Instruction\+Name@{add\+Instruction\+Name}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Instruction\+Name(char $\ast$name, int opcod, int type, char $\ast$format, int nbops)}{addInstructionName(char *name, int opcod, int type, char *format, int nbops)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Instruction\+Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int}]{opcod, }
+\item[{int}]{type, }
+\item[{char $\ast$}]{format, }
+\item[{int}]{nbops}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a60657be548888550429b56403ddfc4a9}{}\label{asm_8c_a60657be548888550429b56403ddfc4a9}
+
+
+La fonction \hyperlink{asm_8c_a60657be548888550429b56403ddfc4a9}{add\+Instruction\+Name(char $\ast$name, int opcod, int type, char $\ast$format, int nbops)} permet la construction d\textquotesingle{}un dictionnaire d\textquotesingle{}instruction, on ajoute alors à partir du main toutes les instructions que l\textquotesingle{}on utilisera en assembleur. Elles peuvent être de 3 types \+: 
+
+
+\begin{DoxyItemize}
+\item type 0 \+: elles ne demandent pas de décodage d\textquotesingle{}opérandes supplementaires (0 argument)
+\item type 1 \+: le décodage d\textquotesingle{}un entier est nécessaire. Il y a une opérande (1 argument)
+\item type 3 \+: le decodage d\textquotesingle{}une chaine de caracteres representant une etiquette est necessaire. Il y a une opérande (1 argument) 
+\end{DoxyItemize}\index{asm.\+c@{asm.\+c}!add\+Label@{add\+Label}}
+\index{add\+Label@{add\+Label}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Label(char labelname[M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE], int addr)}{addLabel(char labelname[MAX_LINE_SIZE], int addr)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Label (
+\begin{DoxyParamCaption}
+\item[{char}]{labelname\mbox{[}\+M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+Z\+E\mbox{]}, }
+\item[{int}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_abc555bd3f46f8d69c6df158e4cb7dbb7}{}\label{asm_8c_abc555bd3f46f8d69c6df158e4cb7dbb7}
+
+
+La fonction \hyperlink{asm_8c_abc555bd3f46f8d69c6df158e4cb7dbb7}{add\+Label(char labelname\mbox{[}\+M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+Z\+E\mbox{]},int addr)} est appelée lorsque qu\textquotesingle{}une étiquette est identifié lors de l\textquotesingle{}analyse de l\textquotesingle{}assembleur. Elle permet de déterminer l\textquotesingle{}étiquette et de la placer dans le tableau des labels. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{asm_8c_abc555bd3f46f8d69c6df158e4cb7dbb7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!decode\+Instruction@{decode\+Instruction}}
+\index{decode\+Instruction@{decode\+Instruction}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{decode\+Instruction(char $\ast$line)}{decodeInstruction(char *line)}}]{\setlength{\rightskip}{0pt plus 5cm}void decode\+Instruction (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{}\label{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}
+
+
+La fonction \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction(char $\ast$line)} est appelee par la boucle principale d\textquotesingle{}analyse lorsque la ligne d\textquotesingle{}assembleur lue n\textquotesingle{}est pas une étiquette (pas de \+: dans la ligne) ni un commentaire (pas de \# dans la ligne). Elle fait appel à \hyperlink{asm_8c_af327a66714cd7aad6dd45235feaed6e4}{add\+Code()} pour remplir code\+Segment lorsque l\textquotesingle{}instruction est identifiée. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!generate\+Binary@{generate\+Binary}}
+\index{generate\+Binary@{generate\+Binary}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{generate\+Binary(\+F\+I\+L\+E $\ast$fout)}{generateBinary(FILE *fout)}}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Binary (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fout}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a374b455749e0ea31debe4ef66805e564}{}\label{asm_8c_a374b455749e0ea31debe4ef66805e564}
+
+
+Cette fonction \hyperlink{asm_8c_a374b455749e0ea31debe4ef66805e564}{generate\+Binary(\+F\+I\+L\+E $\ast$fout)} permet de générer le fichier .bin qui contient l\textquotesingle{}opcode décodé ainsi que le nombre d\textquotesingle{}instruction. 
+
+\index{asm.\+c@{asm.\+c}!main@{main}}
+\index{main@{main}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{asm_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+C\textquotesingle{}est la fonction principale du programme qui va demander l\textquotesingle{}analyse du fichier.\+asm puis il va demander la résolution des références et enfin la création du fichier.\+bin. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!parse\+Asm@{parse\+Asm}}
+\index{parse\+Asm@{parse\+Asm}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{parse\+Asm(\+F\+I\+L\+E $\ast$fin)}{parseAsm(FILE *fin)}}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Asm (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fin}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a85e7a48a9e4375f7b34506c3430518ff}{}\label{asm_8c_a85e7a48a9e4375f7b34506c3430518ff}
+
+
+Cette fonction \hyperlink{asm_8c_a85e7a48a9e4375f7b34506c3430518ff}{parse\+Asm(\+F\+I\+L\+E $\ast$fin)} parcourt les lignes du fichier source assembleur tant qu\textquotesingle{}elle n\textquotesingle{}a pas rencontre de ligne avec \char`\"{}halt\char`\"{} à l\textquotesingle{}interieur. Pour chaque ligne il y a trois cas de figure\+: 
+
+
+\begin{DoxyItemize}
+\item si la ligne de texte contient un \#, il s\textquotesingle{}agit d\textquotesingle{}un commentaire alors on passe à la ligne suivante
+\item si la ligne de texte contient un \+:, il s\textquotesingle{}agit d\textquotesingle{}une etiquette et on la declare
+\item sinon, il s\textquotesingle{}agit d\textquotesingle{}une instruction et on appelle \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction()} 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_a85e7a48a9e4375f7b34506c3430518ff_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!resolve\+References@{resolve\+References}}
+\index{resolve\+References@{resolve\+References}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{resolve\+References(void)}{resolveReferences(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void resolve\+References (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_aff3f00ba43933245541092c20fcba0d5}{}\label{asm_8c_aff3f00ba43933245541092c20fcba0d5}
+
+
+La fonction \hyperlink{asm_8c_aff3f00ba43933245541092c20fcba0d5}{resolve\+References(void)} est appelee après l\textquotesingle{}analyse de l\textquotesingle{}assembleur afin re remplacer les références non résolus de l\textquotesingle{}opcode par l\textquotesingle{}adresse de l\textquotesingle{}opcode à laquelle elle renvoie. Pour cela on utilise le tableau des références et le tableau des labels. 
+
+
+
+\subsection{Variable Documentation}
+\index{asm.\+c@{asm.\+c}!code\+Segment@{code\+Segment}}
+\index{code\+Segment@{code\+Segment}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{code\+Segment}{codeSegment}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int code\+Segment\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}\mbox{]}}\hypertarget{asm_8c_a2e7cc742f3dac64591e576dbc07ff026}{}\label{asm_8c_a2e7cc742f3dac64591e576dbc07ff026}
+\index{asm.\+c@{asm.\+c}!current\+Inst@{current\+Inst}}
+\index{current\+Inst@{current\+Inst}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{current\+Inst}{currentInst}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Inst}\hypertarget{asm_8c_ac4d2310c6cfcbf048cc7ec2f246cce7f}{}\label{asm_8c_ac4d2310c6cfcbf048cc7ec2f246cce7f}
+\index{asm.\+c@{asm.\+c}!current\+Label@{current\+Label}}
+\index{current\+Label@{current\+Label}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{current\+Label}{currentLabel}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Label}\hypertarget{asm_8c_a305e1a498e970935554afae3ec49f78a}{}\label{asm_8c_a305e1a498e970935554afae3ec49f78a}
+\index{asm.\+c@{asm.\+c}!current\+Ref@{current\+Ref}}
+\index{current\+Ref@{current\+Ref}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{current\+Ref}{currentRef}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Ref}\hypertarget{asm_8c_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{}\label{asm_8c_ad90ea272bc00caeb8fc2d9cb7d8e2c91}
+\index{asm.\+c@{asm.\+c}!instruction\+Dico@{instruction\+Dico}}
+\index{instruction\+Dico@{instruction\+Dico}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{instruction\+Dico}{instructionDico}}]{\setlength{\rightskip}{0pt plus 5cm}int instruction\+Dico}\hypertarget{asm_8c_aafad8ec46c7b0cc15a4575cb940146f6}{}\label{asm_8c_aafad8ec46c7b0cc15a4575cb940146f6}
+\index{asm.\+c@{asm.\+c}!line@{line}}
+\index{line@{line}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{line}{line}}]{\setlength{\rightskip}{0pt plus 5cm}char line\mbox{[}{\bf M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE}\mbox{]}}\hypertarget{asm_8c_a2e70d42fa24120f44e9c0f77d52f6938}{}\label{asm_8c_a2e70d42fa24120f44e9c0f77d52f6938}

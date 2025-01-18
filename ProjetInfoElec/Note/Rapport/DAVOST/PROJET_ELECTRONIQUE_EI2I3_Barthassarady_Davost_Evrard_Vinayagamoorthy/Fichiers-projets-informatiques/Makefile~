@@ -1,0 +1,24 @@
+# options de compilation
+CC = gcc
+CCFLAGS = -Wall
+LIBS = -lX11 
+LIBSDIR = -L/usr/X11R6/lib
+
+# fichiers du projet
+SRC = blackjack.c carte.c partie.c
+OBJ = $(SRC:.c=.o)
+EXEC = run.out
+
+#^ tt les fichier de la liste de dépendance
+blackjack: blackjack.o carte.o partie.o
+	$(CC) $(CCFLAGS) -o $@ $^ $(LIBS) $(LIBSDIR)
+
+carte.o: carte.c carte.h
+
+partie.o: partie.c partie.h
+
+#< 1er fichier de la liste de dépendance
+blackjack.o: blackjack.c blackjack.h
+	$(CC) $(CCFLAGS) -o $@ -c $<
+
+

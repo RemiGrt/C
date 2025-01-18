@@ -1,0 +1,126 @@
+\hypertarget{_vm___prog_micro_8c}{}\section{vm/\+Vm\+\_\+\+Prog\+Micro.c File Reference}
+\label{_vm___prog_micro_8c}\index{vm/\+Vm\+\_\+\+Prog\+Micro.\+c@{vm/\+Vm\+\_\+\+Prog\+Micro.\+c}}
+{\ttfamily \#include \char`\"{}stm32f0xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vm\+\_\+codops.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}{Max\+Code\+\_\+size}~1000
+\item 
+\#define \hyperlink{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}{Max\+Stack\+\_\+size}~100
+\item 
+\#define \hyperlink{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}{Max\+Var\+\_\+size}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_vm___prog_micro_8c_ad148830eba2bc587fd22129d9dabc6c7}{init\+Patte\+P\+A5\+\_\+\+Led\+Verte} (void)
+\item 
+void \hyperlink{_vm___prog_micro_8c_a1871263d40aee485400cbde72e59c351}{Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt} (unsigned int Baud\+Rate)
+\item 
+void \hyperlink{_vm___prog_micro_8c_a05e0ffe612d44e6d7f3a9ae5b9df56a2}{run} (void)
+\item 
+int \hyperlink{_vm___prog_micro_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\item 
+void \hyperlink{_vm___prog_micro_8c_aabacf403236d807c87254092af4dcd54}{init\+P\+A0\+\_\+\+P\+A1} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_vm___prog_micro_8c_aca9e6b43b6e4951191270227238a17bb}{code} \mbox{[}\hyperlink{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}{Max\+Code\+\_\+size}\mbox{]}
+\item 
+int \hyperlink{_vm___prog_micro_8c_af33ef44483cc3925c4efa58e688cd2e5}{stack} \mbox{[}\hyperlink{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}{Max\+Stack\+\_\+size}\mbox{]}
+\item 
+int \hyperlink{_vm___prog_micro_8c_a249e1e79c3468e7214a657b0493cba8d}{var} \mbox{[}\hyperlink{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}{Max\+Var\+\_\+size}\mbox{]}
+\item 
+int \hyperlink{_vm___prog_micro_8c_a024603cda52d9847e8d8df3c2e884b8c}{sp}
+\item 
+int \hyperlink{_vm___prog_micro_8c_ac8c81e61335635fa4709d82412b31f06}{pc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}\label{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!Max\+Code\+\_\+size@{Max\+Code\+\_\+size}}
+\index{Max\+Code\+\_\+size@{Max\+Code\+\_\+size}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{Max\+Code\+\_\+size}{MaxCode\_size}}
+{\footnotesize\ttfamily \#define Max\+Code\+\_\+size~1000}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}\label{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!Max\+Stack\+\_\+size@{Max\+Stack\+\_\+size}}
+\index{Max\+Stack\+\_\+size@{Max\+Stack\+\_\+size}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{Max\+Stack\+\_\+size}{MaxStack\_size}}
+{\footnotesize\ttfamily \#define Max\+Stack\+\_\+size~100}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}\label{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!Max\+Var\+\_\+size@{Max\+Var\+\_\+size}}
+\index{Max\+Var\+\_\+size@{Max\+Var\+\_\+size}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{Max\+Var\+\_\+size}{MaxVar\_size}}
+{\footnotesize\ttfamily \#define Max\+Var\+\_\+size~100}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_vm___prog_micro_8c_a1871263d40aee485400cbde72e59c351}\label{_vm___prog_micro_8c_a1871263d40aee485400cbde72e59c351}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt@{Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt}}
+\index{Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt@{Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt()}{Init\_UART2\_Sans\_Interrupt()}}
+{\footnotesize\ttfamily void Init\+\_\+\+U\+A\+R\+T2\+\_\+\+Sans\+\_\+\+Interrupt (\begin{DoxyParamCaption}\item[{unsigned int}]{Baud\+Rate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_aabacf403236d807c87254092af4dcd54}\label{_vm___prog_micro_8c_aabacf403236d807c87254092af4dcd54}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!init\+P\+A0\+\_\+\+P\+A1@{init\+P\+A0\+\_\+\+P\+A1}}
+\index{init\+P\+A0\+\_\+\+P\+A1@{init\+P\+A0\+\_\+\+P\+A1}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{init\+P\+A0\+\_\+\+P\+A1()}{initPA0\_PA1()}}
+{\footnotesize\ttfamily void init\+P\+A0\+\_\+\+P\+A1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_ad148830eba2bc587fd22129d9dabc6c7}\label{_vm___prog_micro_8c_ad148830eba2bc587fd22129d9dabc6c7}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!init\+Patte\+P\+A5\+\_\+\+Led\+Verte@{init\+Patte\+P\+A5\+\_\+\+Led\+Verte}}
+\index{init\+Patte\+P\+A5\+\_\+\+Led\+Verte@{init\+Patte\+P\+A5\+\_\+\+Led\+Verte}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{init\+Patte\+P\+A5\+\_\+\+Led\+Verte()}{initPattePA5\_LedVerte()}}
+{\footnotesize\ttfamily void init\+Patte\+P\+A5\+\_\+\+Led\+Verte (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_vm___prog_micro_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!main@{main}}
+\index{main@{main}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_a05e0ffe612d44e6d7f3a9ae5b9df56a2}\label{_vm___prog_micro_8c_a05e0ffe612d44e6d7f3a9ae5b9df56a2}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!run@{run}}
+\index{run@{run}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_vm___prog_micro_8c_aca9e6b43b6e4951191270227238a17bb}\label{_vm___prog_micro_8c_aca9e6b43b6e4951191270227238a17bb}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!code@{code}}
+\index{code@{code}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily int code\mbox{[}\hyperlink{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}{Max\+Code\+\_\+size}\mbox{]}}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_ac8c81e61335635fa4709d82412b31f06}\label{_vm___prog_micro_8c_ac8c81e61335635fa4709d82412b31f06}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!pc@{pc}}
+\index{pc@{pc}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{pc}{pc}}
+{\footnotesize\ttfamily int pc}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_a024603cda52d9847e8d8df3c2e884b8c}\label{_vm___prog_micro_8c_a024603cda52d9847e8d8df3c2e884b8c}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!sp@{sp}}
+\index{sp@{sp}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{sp}{sp}}
+{\footnotesize\ttfamily int sp}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_af33ef44483cc3925c4efa58e688cd2e5}\label{_vm___prog_micro_8c_af33ef44483cc3925c4efa58e688cd2e5}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!stack@{stack}}
+\index{stack@{stack}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily int stack\mbox{[}\hyperlink{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}{Max\+Stack\+\_\+size}\mbox{]}}
+
+\mbox{\Hypertarget{_vm___prog_micro_8c_a249e1e79c3468e7214a657b0493cba8d}\label{_vm___prog_micro_8c_a249e1e79c3468e7214a657b0493cba8d}} 
+\index{Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}!var@{var}}
+\index{var@{var}!Vm\+\_\+\+Prog\+Micro.\+c@{Vm\+\_\+\+Prog\+Micro.\+c}}
+\subsubsection{\texorpdfstring{var}{var}}
+{\footnotesize\ttfamily int var\mbox{[}\hyperlink{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}{Max\+Var\+\_\+size}\mbox{]}}
+

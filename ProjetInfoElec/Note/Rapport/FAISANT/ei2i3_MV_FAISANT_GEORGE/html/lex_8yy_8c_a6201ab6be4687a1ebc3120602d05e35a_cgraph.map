@@ -1,0 +1,8 @@
+<map id="yypop_buffer_state" name="yypop_buffer_state">
+<area shape="rect" id="node2" href="$lex_8yy_8c.html#ae6ac796aa6c45d433a4b89bf45e6e9dc" title="yy_delete_buffer" alt="" coords="187,56,305,83"/>
+<area shape="rect" id="node6" href="$lex_8yy_8c.html#a7da304d8ef6c688c0835d35296fe61c2" title="yyalloc" alt="" coords="215,107,277,133"/>
+<area shape="rect" id="node7" href="$lex_8yy_8c.html#abcb4148bc13fe254059384c2fdf472b7" title="yyrealloc" alt="" coords="209,157,283,184"/>
+<area shape="rect" id="node3" href="$lex_8yy_8c.html#a70f82d43d4797bb2a50f7678ddbfbda5" title="yyfree" alt="" coords="379,5,438,32"/>
+<area shape="rect" id="node4" href="$lex_8yy_8c.html#ab4155ffea05dab2dafae68fd88a0517f" title="isatty" alt="" coords="381,56,436,83"/>
+<area shape="rect" id="node5" href="$lex_8yy_8c.html#a2f59cc88e85e5455c62e4ef7ce095ea8" title="yy_flush_buffer" alt="" coords="353,107,464,133"/>
+</map>

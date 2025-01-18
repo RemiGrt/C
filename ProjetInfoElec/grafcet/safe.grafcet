@@ -1,0 +1,9 @@
+step e0(tor0=0) active
+step e1(tor0=0)
+step e2(tor0=0)
+step e3(tor0=1)
+
+transition t0({e0},{e1},but0'rise.(an0<128))
+transition t1({e1},{e2},but0'rise.(an0>128))
+transition t2({e2},{e3},but0'rise.(an0<128))
+transition t3({e3},{e0},but1'rise)

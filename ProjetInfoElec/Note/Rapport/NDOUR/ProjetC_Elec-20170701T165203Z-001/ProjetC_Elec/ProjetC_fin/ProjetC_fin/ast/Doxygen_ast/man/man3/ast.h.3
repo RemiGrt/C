@@ -1,0 +1,277 @@
+.TH "ast/ast.h" 3 "Fri Jun 30 2017" "Project_C_Elec" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ast/ast.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBnumericNodeType\fP"
+.br
+.ti -1c
+.RI "struct \fBoperatorNodeType\fP"
+.br
+.ti -1c
+.RI "struct \fBidentifierNodeType\fP"
+.br
+.ti -1c
+.RI "struct \fBnodeTypeTag\fP"
+.br
+.ti -1c
+.RI "struct \fB_actionNode\fP"
+.br
+.ti -1c
+.RI "struct \fB_etapeRefNode\fP"
+.br
+.ti -1c
+.RI "struct \fB_transitionRefNode\fP"
+.br
+.ti -1c
+.RI "struct \fB_etapeNode\fP"
+.br
+.ti -1c
+.RI "struct \fB_transitionNode\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKEY_BUTTON\fP   0"
+.br
+.ti -1c
+.RI "#define \fBKEY_ANA\fP   1"
+.br
+.ti -1c
+.RI "#define \fBKEY_PWM\fP   2"
+.br
+.ti -1c
+.RI "#define \fBKEY_TOR\fP   3"
+.br
+.ti -1c
+.RI "#define \fBKEY_IDENT\fP   4"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBnodeTypeTag\fP \fBnodeType\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_actionNode\fP \fBactionNode\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_etapeRefNode\fP \fBetapeRefNode\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_transitionRefNode\fP \fBtransitionRefNode\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_etapeNode\fP \fBetapeNode\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_transitionNode\fP \fBtransitionNode\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBnodeOper\fP { \fBOPER_ADD\fP, \fBOPER_SUB\fP, \fBOPER_MULT\fP, \fBOPER_DIV\fP, \fBOPER_SEQUENCE\fP, \fBOPER_TRANSITION\fP, \fBOPER_STEP\fP, \fBOPER_INF\fP, \fBOPER_SUP\fP, \fBOPER_GE\fP, \fBOPER_LE\fP, \fBOPER_NE\fP, \fBOPER_EQ\fP, \fBOPER_NOT\fP, \fBOPER_AND\fP, \fBOPER_OR\fP, \fBOPER_NEG\fP, \fBOPER_ASSIGN\fP, \fBOPER_RESERVE_SPACE\fP, \fBOPER_MAIN\fP }"
+.br
+.ti -1c
+.RI "enum \fBnodeEnum\fP { \fBtypeNumeric\fP, \fBtypeOperator\fP, \fBtypeIdentifier\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBnodeType\fP * \fBcreateNumericNode\fP (float v)"
+.br
+.ti -1c
+.RI "\fBnodeType\fP * \fBcreateIdentifierNode\fP (char *id, int flag)"
+.br
+.ti -1c
+.RI "\fBnodeType\fP * \fBcreateOperatorNode\fP (int oper, int nOperands,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "void \fBgenerateAsmExpression\fP (\fBnodeType\fP *n, FILE *fout)"
+.br
+.ti -1c
+.RI "void \fBgrafcet_interpreter\fP ()"
+.br
+.ti -1c
+.RI "void \fBpushRefEtape\fP (\fBetapeRefNode\fP **head, char *n)"
+.br
+.ti -1c
+.RI "void \fBpushRefTransition\fP (\fBtransitionRefNode\fP **head, char *n)"
+.br
+.ti -1c
+.RI "void \fBpushAction\fP (\fBactionNode\fP **head, \fBactionNode\fP *action)"
+.br
+.ti -1c
+.RI "void \fBpushEtape\fP (\fBetapeNode\fP **head, \fBetapeNode\fP *etape)"
+.br
+.ti -1c
+.RI "void \fBpushTransition\fP (\fBtransitionNode\fP **head, \fBtransitionNode\fP *trans)"
+.br
+.ti -1c
+.RI "\fBetapeNode\fP * \fBfindEtapeByName\fP (\fBetapeNode\fP *head, char *s)"
+.br
+.ti -1c
+.RI "void \fBprintRefEtapes\fP (\fBetapeRefNode\fP *head)"
+.br
+.ti -1c
+.RI "void \fBprintRefTransitions\fP (\fBtransitionRefNode\fP *head)"
+.br
+.ti -1c
+.RI "void \fBprintEtapes\fP (\fBetapeNode\fP *head)"
+.br
+.ti -1c
+.RI "void \fBprintTransitions\fP (\fBtransitionNode\fP *head)"
+.br
+.ti -1c
+.RI "void \fBmakeDual\fP (\fBetapeNode\fP *en, \fBtransitionNode\fP *tn)"
+.br
+.ti -1c
+.RI "void \fBgenerateCode\fP (\fBetapeNode\fP *en, \fBtransitionNode\fP *tn)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define KEY_ANA   1"
+
+.SS "#define KEY_BUTTON   0"
+
+.SS "#define KEY_IDENT   4"
+
+.SS "#define KEY_PWM   2"
+
+.SS "#define KEY_TOR   3"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fB_actionNode\fP  \fBactionNode\fP"
+
+.SS "typedef struct \fB_etapeNode\fP  \fBetapeNode\fP"
+
+.SS "typedef struct \fB_etapeRefNode\fP  \fBetapeRefNode\fP"
+
+.SS "typedef struct \fBnodeTypeTag\fP  \fBnodeType\fP"
+
+.SS "typedef struct \fB_transitionNode\fP  \fBtransitionNode\fP"
+
+.SS "typedef struct \fB_transitionRefNode\fP  \fBtransitionRefNode\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBnodeEnum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fItypeNumeric \fP\fP
+.TP
+\fB\fItypeOperator \fP\fP
+.TP
+\fB\fItypeIdentifier \fP\fP
+.SS "enum \fBnodeOper\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOPER_ADD \fP\fP
+.TP
+\fB\fIOPER_SUB \fP\fP
+.TP
+\fB\fIOPER_MULT \fP\fP
+.TP
+\fB\fIOPER_DIV \fP\fP
+.TP
+\fB\fIOPER_SEQUENCE \fP\fP
+.TP
+\fB\fIOPER_TRANSITION \fP\fP
+.TP
+\fB\fIOPER_STEP \fP\fP
+.TP
+\fB\fIOPER_INF \fP\fP
+.TP
+\fB\fIOPER_SUP \fP\fP
+.TP
+\fB\fIOPER_GE \fP\fP
+.TP
+\fB\fIOPER_LE \fP\fP
+.TP
+\fB\fIOPER_NE \fP\fP
+.TP
+\fB\fIOPER_EQ \fP\fP
+.TP
+\fB\fIOPER_NOT \fP\fP
+.TP
+\fB\fIOPER_AND \fP\fP
+.TP
+\fB\fIOPER_OR \fP\fP
+.TP
+\fB\fIOPER_NEG \fP\fP
+.TP
+\fB\fIOPER_ASSIGN \fP\fP
+.TP
+\fB\fIOPER_RESERVE_SPACE \fP\fP
+.TP
+\fB\fIOPER_MAIN \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "\fBnodeType\fP* createIdentifierNode (char * id, int flag)"
+
+.SS "\fBnodeType\fP* createNumericNode (float v)"
+
+.SS "\fBnodeType\fP* createOperatorNode (int oper, int nOperands,  \&.\&.\&.)"
+
+.SS "\fBetapeNode\fP* findEtapeByName (\fBetapeNode\fP * head, char * s)"
+
+.SS "void generateAsmExpression (\fBnodeType\fP * n, FILE * fout)"
+
+.SS "void generateCode (\fBetapeNode\fP * en, \fBtransitionNode\fP * tn)"
+
+.SS "void grafcet_interpreter ()"
+
+.SS "void makeDual (\fBetapeNode\fP * en, \fBtransitionNode\fP * tn)"
+
+.SS "void printEtapes (\fBetapeNode\fP * head)"
+
+.SS "void printRefEtapes (\fBetapeRefNode\fP * head)"
+
+.SS "void printRefTransitions (\fBtransitionRefNode\fP * head)"
+
+.SS "void printTransitions (\fBtransitionNode\fP * head)"
+
+.SS "void pushAction (\fBactionNode\fP ** head, \fBactionNode\fP * action)"
+
+.SS "void pushEtape (\fBetapeNode\fP ** head, \fBetapeNode\fP * etape)"
+
+.SS "void pushRefEtape (\fBetapeRefNode\fP ** head, char * n)"
+
+.SS "void pushRefTransition (\fBtransitionRefNode\fP ** head, char * n)"
+
+.SS "void pushTransition (\fBtransitionNode\fP ** head, \fBtransitionNode\fP * trans)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project_C_Elec from the source code\&.

@@ -1,0 +1,133 @@
+stable => var[0]
+X0 => var[1]
+Old_X0 => var[2]
+Appel_X0 => var[3]
+Reponse_X0 => var[4]
+X1 => var[5]
+Old_X1 => var[6]
+Appel_X1 => var[6]
+Reponse_X1 => var[7]
+X2 => var[8]
+Old_X2 => var[9]
+Appel_X2 => var[10]
+Reponse_X2 => var[11]
+X3 => var[12]
+Old_X3 => var[13]
+Appel_X3 => var[14]
+Reponse_X3 => var[15]
+an0 => var[16]
+but0 => var[17]
+but1 => var[18]
+old_but0 => var[19]
+old_but1 => var[20]
+rise_but0 => var[21]
+rise_but1 => var[22]
+T0 => var[23]
+T1 => var[24]
+T2 => var[25]
+T3 => var[26]
+
+
+
+0: While1: PUSH 17 //While1 = étiquette pour effectuer la while(1) ; jump à la fin du programme
+1: POP 19
+2: PUSH 18
+3: POP 20
+
+4: PUSH 19
+5: PUSHI 0
+6: EQ
+7: PUSH 17
+8: PUSHI 1
+9: EQ
+10: AND
+11: JF jf1
+12: PUSHI 1
+13: POP 21
+14: J j1
+15: jf1: PUSHI 0
+16: POP 21
+
+17: j1: PUSH 20
+18: PUSHI 0
+19: EQ
+20: PUSH 18
+21: PUSHI 1
+22: EQ
+23: AND
+24: JF jf2
+25: PUSHI 1
+26: POP 22
+27: J j2
+28: jf2: PUSHI 0
+29: POP 22
+
+30: j2: PUSHI 0
+31: POP 0
+
+32: PUSHI 0
+33: POP 3
+34: PUSHI 0
+35: POP 4
+
+36: PUSHI 0
+37: POP 6
+38: PUSHI 0
+39: POP 7
+
+40: PUSHI 0
+41: POP 10
+42: PUSHI 0
+43: POP 11
+
+44: PUSHI 0
+45: POP 14
+46: PUSHI 0
+47: POP 15
+
+48: PUSHI 0
+49: PUSH 0
+50: EQ
+51: JF NoWhile //NoWhile = étiquette pour effectuer la while(stable == 0) ; jump false à la fin de la boucle
+52: WhileInstable: PUSH 21
+53: PUSHI 1
+54: EQ
+55: PUSH 16
+56: PUSHI 128
+57: INF
+58: AND
+59: POP 23
+
+60: PUSH 21
+61: PUSHI 1
+62: EQ
+63: PUSH 16
+64: PUSHI 128
+65: SUP
+66: AND
+67: POP 24
+
+68: PUSH 21
+69: PUSHI 1
+70: EQ
+71: PUSH 16
+72: PUSHI 128
+73: INF
+74: AND
+75: POP 25
+
+76: PUSH 22
+77: PUSHI 1
+78: EQ
+79: POP 26
+
+80: PUSH 1
+81: PUSH 2
+82: PUSH 5
+83: POP 6
+84: PUSH 8
+85: POP 9
+86: PUSH 12
+87: POP 13
+
+//On s'est arrêté à Old_X3 = X3;

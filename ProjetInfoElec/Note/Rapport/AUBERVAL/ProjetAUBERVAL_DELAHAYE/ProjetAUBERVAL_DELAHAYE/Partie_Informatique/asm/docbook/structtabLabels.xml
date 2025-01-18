@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structtabLabels">
+<title>tabLabels struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="asm_8h">&lt;asm.h&gt;</link></programlisting>
+</para>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>On remplit cette structure lorsqu&apos;on rencontre un &quot;:&quot;. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>! 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name[20]</entry>
+                                <entry>
+<para>Le nom des étiquettes </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>addr</entry>
+                                <entry>
+<para>Ligne dans le fichier binaire où se trouve le code de l&apos;étiquette </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+                <para>Definition at line 38 of file asm.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>asm.h</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

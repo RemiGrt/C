@@ -1,0 +1,1 @@
+void Init_UART2_Sans_Interrupt (unsigned int BaudRate);

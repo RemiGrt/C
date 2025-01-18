@@ -1,0 +1,6 @@
+<map id="_actionNode" name="_actionNode">
+<area shape="rect" id="node2" href="$structnodeTypeTag.html" title="nodeTypeTag" alt="" coords="141,96,243,123"/>
+<area shape="rect" id="node5" href="$structoperatorNodeType.html" title="operatorNodeType" alt="" coords="177,187,305,213"/>
+<area shape="rect" id="node3" href="$structidentifierNodeType.html" title="identifierNodeType" alt="" coords="51,5,180,32"/>
+<area shape="rect" id="node4" href="$structnumericNodeType.html" title="numericNodeType" alt="" coords="205,5,333,32"/>
+</map>

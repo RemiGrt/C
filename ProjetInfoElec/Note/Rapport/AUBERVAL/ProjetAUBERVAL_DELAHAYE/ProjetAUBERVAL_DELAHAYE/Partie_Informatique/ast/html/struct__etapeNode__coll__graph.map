@@ -1,0 +1,10 @@
+<map id="_etapeNode" name="_etapeNode">
+<area shape="rect" id="node9" href="$struct__etapeRefNode.html" title="_etapeRefNode" alt="" coords="133,368,245,395"/>
+<area shape="rect" id="node2" href="$struct__actionNode.html" title="_actionNode" alt="" coords="5,187,99,213"/>
+<area shape="rect" id="node3" href="$structnodeTypeTag.html" title="nodeTypeTag" alt="" coords="185,96,287,123"/>
+<area shape="rect" id="node6" href="$structoperatorNodeType.html" title="operatorNodeType" alt="" coords="177,187,305,213"/>
+<area shape="rect" id="node8" href="$struct__transitionNode.html" title="_transitionNode" alt="" coords="155,472,268,499"/>
+<area shape="rect" id="node4" href="$structidentifierNodeType.html" title="identifierNodeType" alt="" coords="95,5,224,32"/>
+<area shape="rect" id="node5" href="$structnumericNodeType.html" title="numericNodeType" alt="" coords="249,5,377,32"/>
+<area shape="rect" id="node7" href="$struct__transitionRefNode.html" title="_transitionRefNode" alt="" coords="58,563,192,589"/>
+</map>

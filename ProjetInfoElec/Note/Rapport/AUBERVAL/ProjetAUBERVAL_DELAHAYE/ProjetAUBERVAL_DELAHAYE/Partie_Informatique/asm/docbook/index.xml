@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Assembleur</title>
+    </info>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="structinstructionName.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structlabel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structtabLabels.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="asm_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="asm_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vm__codops_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

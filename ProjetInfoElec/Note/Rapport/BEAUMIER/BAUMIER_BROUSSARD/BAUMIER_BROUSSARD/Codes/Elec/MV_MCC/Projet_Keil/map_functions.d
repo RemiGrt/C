@@ -1,0 +1,14 @@
+.\map_functions.o: ..\User_Sources_Files\Map_Functions.c
+.\map_functions.o: C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h
+.\map_functions.o: C:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\map_functions.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\map_functions.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\map_functions.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\map_functions.o: C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h
+.\map_functions.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\map_functions.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\map_functions.o: ..\User_Sources_Files\InitPins.h
+.\map_functions.o: ..\User_Sources_Files\ADC.h
+.\map_functions.o: ..\User_Sources_Files\Mapping.h
+.\map_functions.o: ..\User_Sources_Files\TIMER.h
+.\map_functions.o: ..\User_Sources_Files\DigitalGPIO.h

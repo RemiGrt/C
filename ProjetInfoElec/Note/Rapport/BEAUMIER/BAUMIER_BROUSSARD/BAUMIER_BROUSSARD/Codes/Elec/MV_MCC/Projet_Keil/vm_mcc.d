@@ -1,0 +1,14 @@
+.\vm_mcc.o: ..\User_Sources_Files\VM_MCC.c
+.\vm_mcc.o: C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h
+.\vm_mcc.o: C:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\vm_mcc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\vm_mcc.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\vm_mcc.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\vm_mcc.o: C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h
+.\vm_mcc.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\vm_mcc.o: ..\User_Sources_Files\Liaison_Serie.h
+.\vm_mcc.o: ..\User_Sources_Files\Mapping.h
+.\vm_mcc.o: ..\User_Sources_Files\Instructions.h
+.\vm_mcc.o: ..\User_Sources_Files\debug.h
+.\vm_mcc.o: C:\Keil\ARM\ARMCC\bin\..\include\assert.h
+.\vm_mcc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

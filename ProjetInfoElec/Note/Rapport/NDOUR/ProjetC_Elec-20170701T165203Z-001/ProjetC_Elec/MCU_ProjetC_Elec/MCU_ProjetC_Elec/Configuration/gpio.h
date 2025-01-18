@@ -1,0 +1,1 @@
+void initPattes(void);

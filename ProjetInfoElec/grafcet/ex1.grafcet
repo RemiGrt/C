@@ -1,0 +1,9 @@
+step e10(tor0=1, tor1=0)
+step e21(tor0=0, tor1=1)
+step e22(tor0=0, tor1=1)
+step e30(tor0=0, tor1=1)
+step e40(tor0=0, tor1=1)
+
+transition condition1({e10},{e21,e30},b0.!b1)
+transition condition2({e21},{e22},b1|b2|b3)
+transition condition5({e22,e30},{e40},b0)

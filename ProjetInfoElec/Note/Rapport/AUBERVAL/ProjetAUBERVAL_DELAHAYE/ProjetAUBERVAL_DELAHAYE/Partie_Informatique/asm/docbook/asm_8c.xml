@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="asm_8c">
+    <title>asm.c File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &quot;vm_codops.h&quot;</programlisting>
+    <programlisting>#include &quot;asm.h&quot;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Programme permettant de passer d&apos;un fichier assembleur à un fichier binaire. </para>
+
+<para><formalpara><title>Auteur: </title>
+
+<para>Anaïs AUBERVAL </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>finale </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>30/06/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/anais/Bureau/ProjetInfoElec-EI2I3-2606/asm/asm.c</para>
+    </simplesect>
+</section>

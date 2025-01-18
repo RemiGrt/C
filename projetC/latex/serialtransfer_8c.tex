@@ -1,0 +1,86 @@
+\hypertarget{serialtransfer_8c}{}\section{serial/serialtransfer.c File Reference}
+\label{serialtransfer_8c}\index{serial/serialtransfer.\+c@{serial/serialtransfer.\+c}}
+{\ttfamily \#include $<$windows.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for serialtransfer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{serialtransfer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}{read\+Serial} (H\+A\+N\+D\+LE h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+read)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}{read\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial,char $\ast$buf,int bytes\+\_\+to\+\_\+read)} est appelé après l\textquotesingle{}envoie des données, elle réceptionne la confirmation de lecture des données envoyées. Par exemple pour le microcontroleur lors de chaque caractère reçus on renvoie ce même caractère afin de le valider. Tant que la confirmation de lecture n\textquotesingle{}est pas reçue le programme attend. \end{DoxyCompactList}\item 
+int \hyperlink{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}{write\+Serial} (H\+A\+N\+D\+LE h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+write)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}{write\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial,char $\ast$buf,int bytes\+\_\+to\+\_\+write)} permet d\textquotesingle{}écrire sur liaison série. Les caractères du fichier bytecode sont envoyés ici un par un. Jusqu\textquotesingle{}à ce que tout les caractères de la lignes sont envoyés. On envoie un \textquotesingle{}@\textquotesingle{} en plus pour indiquer au destinataire que tous les caractères ont été envoyés. \end{DoxyCompactList}\item 
+void \hyperlink{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}{read\+Assembly} (H\+A\+N\+D\+LE h\+Serial, F\+I\+LE $\ast$fin)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}{read\+Assembly(\+H\+A\+N\+D\+L\+E h\+Serial,\+F\+I\+L\+E $\ast$fin)} permet de parcourir le fichier d\textquotesingle{}opcode. Pour chaque ligne à envoyer on appelle la fonction qui permet d\textquotesingle{}écrire sur la liaison série puis on attend la confirmation de lecture. \end{DoxyCompactList}\item 
+int \hyperlink{serialtransfer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{vm__codops_8h_Présentation}{}\subsection{Présentation}\label{vm__codops_8h_Présentation}
+Ce programme permet d\textquotesingle{}envoyer le bytecode, fichier safe.\+bin par liaison série comme par exemple à un microcontroleur. Pour la réalisation du projet ce programme nous a entièrement été donné. $\ast$
+
+Ce programme fonctionne en 3 parties \+:
+\begin{DoxyItemize}
+\item 1ere partie\+: on parcourt le fichier de bytecode
+\end{DoxyItemize}
+
+2ème partie\+: on envoie une ligne du fichier bytecode
+\begin{DoxyItemize}
+\item 3ème partie\+: on attend de recevoir confirmation de la réception des données, le destinataire doit renvoyer un message de la même taille.
+\end{DoxyItemize}\hypertarget{evm_8c_Compilation}{}\subsection{Compilation}\label{evm_8c_Compilation}
+Le fichier contient le header windows.\+h il faut donc l\textquotesingle{}utiliser sur windows par exemple nous utiliserons codeblocks
+
+\subsection{Function Documentation}
+\index{serialtransfer.\+c@{serialtransfer.\+c}!main@{main}}
+\index{main@{main}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{serialtransfer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{serialtransfer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\index{serialtransfer.\+c@{serialtransfer.\+c}!read\+Assembly@{read\+Assembly}}
+\index{read\+Assembly@{read\+Assembly}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection[{\texorpdfstring{read\+Assembly(\+H\+A\+N\+D\+L\+E h\+Serial, F\+I\+L\+E $\ast$fin)}{readAssembly(HANDLE hSerial, FILE *fin)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Assembly (
+\begin{DoxyParamCaption}
+\item[{H\+A\+N\+D\+LE}]{h\+Serial, }
+\item[{F\+I\+LE $\ast$}]{fin}
+\end{DoxyParamCaption}
+)}\hypertarget{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}{}\label{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}
+
+
+La fonction \hyperlink{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}{read\+Assembly(\+H\+A\+N\+D\+L\+E h\+Serial,\+F\+I\+L\+E $\ast$fin)} permet de parcourir le fichier d\textquotesingle{}opcode. Pour chaque ligne à envoyer on appelle la fonction qui permet d\textquotesingle{}écrire sur la liaison série puis on attend la confirmation de lecture. 
+
+\index{serialtransfer.\+c@{serialtransfer.\+c}!read\+Serial@{read\+Serial}}
+\index{read\+Serial@{read\+Serial}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection[{\texorpdfstring{read\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+read)}{readSerial(HANDLE hSerial, char *buf, int bytes_to_read)}}]{\setlength{\rightskip}{0pt plus 5cm}int read\+Serial (
+\begin{DoxyParamCaption}
+\item[{H\+A\+N\+D\+LE}]{h\+Serial, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{bytes\+\_\+to\+\_\+read}
+\end{DoxyParamCaption}
+)}\hypertarget{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}{}\label{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}
+
+
+La fonction \hyperlink{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}{read\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial,char $\ast$buf,int bytes\+\_\+to\+\_\+read)} est appelé après l\textquotesingle{}envoie des données, elle réceptionne la confirmation de lecture des données envoyées. Par exemple pour le microcontroleur lors de chaque caractère reçus on renvoie ce même caractère afin de le valider. Tant que la confirmation de lecture n\textquotesingle{}est pas reçue le programme attend. 
+
+\index{serialtransfer.\+c@{serialtransfer.\+c}!write\+Serial@{write\+Serial}}
+\index{write\+Serial@{write\+Serial}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection[{\texorpdfstring{write\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+write)}{writeSerial(HANDLE hSerial, char *buf, int bytes_to_write)}}]{\setlength{\rightskip}{0pt plus 5cm}int write\+Serial (
+\begin{DoxyParamCaption}
+\item[{H\+A\+N\+D\+LE}]{h\+Serial, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{bytes\+\_\+to\+\_\+write}
+\end{DoxyParamCaption}
+)}\hypertarget{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}{}\label{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}
+
+
+La fonction \hyperlink{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}{write\+Serial(\+H\+A\+N\+D\+L\+E h\+Serial,char $\ast$buf,int bytes\+\_\+to\+\_\+write)} permet d\textquotesingle{}écrire sur liaison série. Les caractères du fichier bytecode sont envoyés ici un par un. Jusqu\textquotesingle{}à ce que tout les caractères de la lignes sont envoyés. On envoie un \textquotesingle{}@\textquotesingle{} en plus pour indiquer au destinataire que tous les caractères ont été envoyés. 
+

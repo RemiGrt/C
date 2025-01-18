@@ -1,0 +1,72 @@
+\hypertarget{struct__etapeNode}{}\section{\+\_\+etape\+Node Struct Reference}
+\label{struct__etapeNode}\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+
+
+{\ttfamily \#include $<$ast.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+etape\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__etapeNode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{struct__etapeNode_a4ebe4f794f80b118f0432af7dada31fd}{name}
+\item 
+int \hyperlink{struct__etapeNode_a336427fefb9a6d41bf4561eac9d27d28}{id}
+\item 
+int \hyperlink{struct__etapeNode_ada91e4cad58bcdc1cc8343ba2f533d34}{active}
+\item 
+struct \hyperlink{struct__actionNode}{\+\_\+action\+Node} $\ast$ \hyperlink{struct__etapeNode_a670ec666f56cc3216c5b454b1e2eb052}{actions}
+\item 
+struct \hyperlink{struct__transitionRefNode}{\+\_\+transition\+Ref\+Node} $\ast$ \hyperlink{struct__etapeNode_a09d6998355aa6ba3e9d48b1160b2d40e}{transitions\+Amont}
+\item 
+int \hyperlink{struct__etapeNode_a8668c866d59c44f2a1fb06b12eceea9a}{nb\+Transitions\+Amont}
+\item 
+struct \hyperlink{struct__transitionRefNode}{\+\_\+transition\+Ref\+Node} $\ast$ \hyperlink{struct__etapeNode_a0d8711116aefef2182d1cb840317fcff}{transitions\+Aval}
+\item 
+int \hyperlink{struct__etapeNode_ad66d5f8cf9aa988a9f4e93ba54ace1aa}{nb\+Transitions\+Aval}
+\item 
+struct \hyperlink{struct__etapeNode}{\+\_\+etape\+Node} $\ast$ \hyperlink{struct__etapeNode_a73067713dc0dbd54c48499c76e75ad5f}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!actions@{actions}}
+\index{actions@{actions}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{actions}{actions}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+action\+Node}$\ast$ \+\_\+etape\+Node\+::actions}\hypertarget{struct__etapeNode_a670ec666f56cc3216c5b454b1e2eb052}{}\label{struct__etapeNode_a670ec666f56cc3216c5b454b1e2eb052}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!active@{active}}
+\index{active@{active}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{active}{active}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+etape\+Node\+::active}\hypertarget{struct__etapeNode_ada91e4cad58bcdc1cc8343ba2f533d34}{}\label{struct__etapeNode_ada91e4cad58bcdc1cc8343ba2f533d34}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!id@{id}}
+\index{id@{id}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+etape\+Node\+::id}\hypertarget{struct__etapeNode_a336427fefb9a6d41bf4561eac9d27d28}{}\label{struct__etapeNode_a336427fefb9a6d41bf4561eac9d27d28}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!name@{name}}
+\index{name@{name}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ \+\_\+etape\+Node\+::name}\hypertarget{struct__etapeNode_a4ebe4f794f80b118f0432af7dada31fd}{}\label{struct__etapeNode_a4ebe4f794f80b118f0432af7dada31fd}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!nb\+Transitions\+Amont@{nb\+Transitions\+Amont}}
+\index{nb\+Transitions\+Amont@{nb\+Transitions\+Amont}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{nb\+Transitions\+Amont}{nbTransitionsAmont}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+etape\+Node\+::nb\+Transitions\+Amont}\hypertarget{struct__etapeNode_a8668c866d59c44f2a1fb06b12eceea9a}{}\label{struct__etapeNode_a8668c866d59c44f2a1fb06b12eceea9a}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!nb\+Transitions\+Aval@{nb\+Transitions\+Aval}}
+\index{nb\+Transitions\+Aval@{nb\+Transitions\+Aval}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{nb\+Transitions\+Aval}{nbTransitionsAval}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+etape\+Node\+::nb\+Transitions\+Aval}\hypertarget{struct__etapeNode_ad66d5f8cf9aa988a9f4e93ba54ace1aa}{}\label{struct__etapeNode_ad66d5f8cf9aa988a9f4e93ba54ace1aa}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!next@{next}}
+\index{next@{next}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+etape\+Node}$\ast$ \+\_\+etape\+Node\+::next}\hypertarget{struct__etapeNode_a73067713dc0dbd54c48499c76e75ad5f}{}\label{struct__etapeNode_a73067713dc0dbd54c48499c76e75ad5f}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!transitions\+Amont@{transitions\+Amont}}
+\index{transitions\+Amont@{transitions\+Amont}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{transitions\+Amont}{transitionsAmont}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+transition\+Ref\+Node}$\ast$ \+\_\+etape\+Node\+::transitions\+Amont}\hypertarget{struct__etapeNode_a09d6998355aa6ba3e9d48b1160b2d40e}{}\label{struct__etapeNode_a09d6998355aa6ba3e9d48b1160b2d40e}
+\index{\+\_\+etape\+Node@{\+\_\+etape\+Node}!transitions\+Aval@{transitions\+Aval}}
+\index{transitions\+Aval@{transitions\+Aval}!\+\_\+etape\+Node@{\+\_\+etape\+Node}}
+\subsubsection[{\texorpdfstring{transitions\+Aval}{transitionsAval}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+transition\+Ref\+Node}$\ast$ \+\_\+etape\+Node\+::transitions\+Aval}\hypertarget{struct__etapeNode_a0d8711116aefef2182d1cb840317fcff}{}\label{struct__etapeNode_a0d8711116aefef2182d1cb840317fcff}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ast_8h}{ast.\+h}\end{DoxyCompactItemize}

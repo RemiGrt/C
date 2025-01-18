@@ -1,0 +1,172 @@
+	PUSHI 0
+	POP 79
+	PUSHI 0
+	POP 88
+	PUSHI 0
+	POP 92
+	PUSHI 0
+	POP 89
+	PUSHI 0
+	POP 93
+	PUSHI 0
+	POP 90
+	PUSHI 0
+	POP 94
+	PUSHI 0
+	POP 91
+	PUSHI 0
+	POP 95
+mainloop :
+	PUSH 79
+	PUSHI 0
+	EQ
+	JF 236 (fin_de_loop)
+	PUSH 80
+	POP 84
+	PUSH 81
+	POP 85
+	PUSH 82
+	POP 86
+	PUSH 83
+	POP 87
+	PUSH 80
+	PUSHI 1
+	EQ
+	PUSH 1
+	PUSHI 1
+	POP 64
+	PUSH 65
+	PUSHI 2048
+	EQI
+	AND
+	AND
+	JF 87 (Etiquette0)
+	PUSHI 1
+	POP 89
+	PUSHI 1
+	POP 92
+Etiquette0 :
+	PUSH 81
+	PUSHI 1
+	EQ
+	PUSH 1
+	PUSHI 1
+	POP 64
+	PUSH 65
+	PUSHI 2048
+	EQS
+	AND
+	AND
+	JF 115 (Etiquette1)
+	PUSHI 1
+	POP 90
+	PUSHI 1
+	POP 93
+Etiquette1 :
+	PUSH 82
+	PUSHI 1
+	EQ
+	PUSH 1
+	PUSHI 1
+	POP 64
+	PUSH 65
+	PUSHI 2048
+	EQI
+	AND
+	AND
+	JF 143 (Etiquette2)
+	PUSHI 1
+	POP 91
+	PUSHI 1
+	POP 94
+Etiquette2 :
+	PUSH 83
+	PUSHI 1
+	EQ
+	PUSH 1
+	AND
+	JF 161 (Etiquette3)
+	PUSHI 1
+	POP 88
+	PUSHI 1
+	POP 95
+Etiquette3 :
+	PUSH 80
+	PUSH 92
+	NOT
+	AND
+	PUSH 88
+	OR
+	POP 80
+	PUSH 81
+	PUSH 93
+	NOT
+	AND
+	PUSH 89
+	OR
+	POP 81
+	PUSH 82
+	PUSH 94
+	NOT
+	AND
+	PUSH 90
+	OR
+	POP 82
+	PUSH 83
+	PUSH 95
+	NOT
+	AND
+	PUSH 91
+	OR
+	POP 83
+	PUSH 80
+	PUSH 84
+	EQ
+	PUSH 81
+	PUSH 85
+	EQ
+	PUSH 82
+	PUSH 86
+	EQ
+	PUSH 83
+	PUSH 87
+	EQ
+	AND
+	AND
+	AND
+	JF 234 (next_loop)
+	PUSHI 1
+	POP 79
+next_loop :
+	J 36 (mainloop)
+fin_de_loop :
+	PUSH 80
+	PUSHI 1
+	EQ
+	JF 247 (sortie0)
+	PUSHI 0
+	POP 48
+sortie0 :
+	PUSH 81
+	PUSHI 1
+	EQ
+	JF 258 (sortie1)
+	PUSHI 0
+	POP 48
+sortie1 :
+	PUSH 82
+	PUSHI 1
+	EQ
+	JF 269 (sortie2)
+	PUSHI 0
+	POP 48
+sortie2 :
+	PUSH 83
+	PUSHI 1
+	EQ
+	JF 280 (sortie3)
+	PUSHI 1
+	POP 48
+sortie3 :
+	HALT
+	end

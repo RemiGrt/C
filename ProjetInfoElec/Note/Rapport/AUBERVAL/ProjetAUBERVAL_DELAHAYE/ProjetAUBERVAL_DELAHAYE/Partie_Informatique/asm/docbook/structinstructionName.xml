@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structinstructionName">
+<title>instructionName struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="asm_8h">&lt;asm.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char name[20]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int opcode</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char format[20]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int nbops</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>! 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name[20]</entry>
+                                <entry>
+<para>Le nom des instructions </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>opcode</entry>
+                                <entry>
+<para>Le code opératoire de l&apos;instruction, voir fichier &quot;vm_codops.h&quot; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>type</entry>
+                                <entry>
+<para>Le type de l&apos;instruction 0, 1, 2 ou 3 permettant de savoir si il y a des arguments et les types de ces arguments </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>format</entry>
+                                <entry>
+<para>Le format avec lequel on est écrit l&apos;instruction dans l&apos;assembleur </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>nbops</entry>
+                                <entry>
+<para>Le nombre d&apos;argument, souvent un ou aucun. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+                <para>Definition at line 65 of file asm.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>asm.h</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

@@ -1,0 +1,42 @@
+\hypertarget{serialtransfer_8c}{}\section{serialtransfer.\+c File Reference}
+\label{serialtransfer_8c}\index{serialtransfer.\+c@{serialtransfer.\+c}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}{read\+Serial} (H\+A\+N\+D\+LE h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+read)
+\item 
+int \hyperlink{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}{write\+Serial} (H\+A\+N\+D\+LE h\+Serial, char $\ast$buf, int bytes\+\_\+to\+\_\+write)
+\item 
+void \hyperlink{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}{read\+Assembly} (H\+A\+N\+D\+LE h\+Serial, F\+I\+LE $\ast$fin)
+\item 
+int \hyperlink{serialtransfer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{serialtransfer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{serialtransfer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{serialtransfer.\+c@{serialtransfer.\+c}!main@{main}}
+\index{main@{main}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}\label{serialtransfer_8c_a7ebb41efb2fc9d15737e5a1364865d63}} 
+\index{serialtransfer.\+c@{serialtransfer.\+c}!read\+Assembly@{read\+Assembly}}
+\index{read\+Assembly@{read\+Assembly}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection{\texorpdfstring{read\+Assembly()}{readAssembly()}}
+{\footnotesize\ttfamily void read\+Assembly (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{h\+Serial,  }\item[{F\+I\+LE $\ast$}]{fin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}\label{serialtransfer_8c_acb089e16756281dd17cbf6cf0131ba84}} 
+\index{serialtransfer.\+c@{serialtransfer.\+c}!read\+Serial@{read\+Serial}}
+\index{read\+Serial@{read\+Serial}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection{\texorpdfstring{read\+Serial()}{readSerial()}}
+{\footnotesize\ttfamily int read\+Serial (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{h\+Serial,  }\item[{char $\ast$}]{buf,  }\item[{int}]{bytes\+\_\+to\+\_\+read }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}\label{serialtransfer_8c_a3121f1d2fc282b4db02572efc69fba36}} 
+\index{serialtransfer.\+c@{serialtransfer.\+c}!write\+Serial@{write\+Serial}}
+\index{write\+Serial@{write\+Serial}!serialtransfer.\+c@{serialtransfer.\+c}}
+\subsubsection{\texorpdfstring{write\+Serial()}{writeSerial()}}
+{\footnotesize\ttfamily int write\+Serial (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{h\+Serial,  }\item[{char $\ast$}]{buf,  }\item[{int}]{bytes\+\_\+to\+\_\+write }\end{DoxyParamCaption})}
+

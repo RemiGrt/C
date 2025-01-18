@@ -1,0 +1,4 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$evm_8c.html#a7a4dbf773122867221b481a401881860" title="La fonction read_bin(char *filename) va parcourir le fichier.bin afin d&#39;y extraire l&#39;opcode..." alt="" coords="104,5,175,32"/>
+<area shape="rect" id="node3" href="$evm_8c.html#a13a43e6d814de94978c515cb084873b1" title="La fonction run() est la partie principale de la machine virtuelle. C&#39;est elle qui va interpréter le ..." alt="" coords="119,56,159,83"/>
+</map>

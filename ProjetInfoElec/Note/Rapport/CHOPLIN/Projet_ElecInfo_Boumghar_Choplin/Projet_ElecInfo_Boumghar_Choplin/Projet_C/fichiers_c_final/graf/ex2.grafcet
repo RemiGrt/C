@@ -1,0 +1,5 @@
+step e0(tor0=1, pwm1=0)
+step e1(tor0=0, v1=1)
+
+transition condition0({e0},{e1},but0.!ana1)
+transition condition1({e1},{e0},but1|but2|but3)

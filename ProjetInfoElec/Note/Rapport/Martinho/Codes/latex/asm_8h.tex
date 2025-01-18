@@ -1,0 +1,241 @@
+\hypertarget{asm_8h}{}\section{asm/asm.h File Reference}
+\label{asm_8h}\index{asm/asm.\+h@{asm/asm.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structinstruction_name}{instruction\+Name}
+\item 
+struct \hyperlink{structlabel}{label}
+\item 
+struct \hyperlink{structref}{ref}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}~1000
+\item 
+\#define \hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}~100
+\item 
+\#define \hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{asm_8h_a79768c03b0a3a825aca8f66127a22a35}{add\+Code} (int v)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter une instruction dans le Code\+Segment à la position indiquée par current\+Inst. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_adb68a5377b3fc4689743c5b060f7d08a}{add\+Instruction\+Name} (char $\ast$instname, int opcod, int type, char $\ast$format, int nbops)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter une instruction à la liste des instructions. Les instructions sont séparées en trois catégories selon leur type Elles sont identifiées par leur nom et leur Op\+\_\+\+Cod afin d\textquotesingle{}y faire référence Le format permet d\textquotesingle{}appliquer un \char`\"{}masque\char`\"{} lors de la lecture afin d\textquotesingle{}identifier les différents arguments de l\textquotesingle{}instruction. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_af1248a22adfbfa85be10ed09b7570a3a}{find\+Label} (char $\ast$labelname)
+\begin{DoxyCompactList}\small\item\em Permet de chercher une étiquette irrésolue dans le tableau des étiquettes. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_aa0b13c47db77611034e4b839b39e68ed}{add\+Label} (char $\ast$labelname, int addr)
+\item 
+void \hyperlink{asm_8h_aaabafc3ddfe1c7c2768629e366907922}{add\+Reference} (char $\ast$labelname, int addr\+In\+Code)
+\item 
+void \hyperlink{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}{resolve\+References} ()
+\item 
+void \hyperlink{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction} (char $\ast$line)
+\item 
+int \hyperlink{asm_8h_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm} (F\+I\+LE $\ast$fin)
+\item 
+void \hyperlink{asm_8h_afbf1f814881d73eefde6bccdde641db8}{print\+Labels} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher les références et étiquettes contenues dans le tableau au moment de l\textquotesingle{}exécution. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8h_a5a883df802289858d1693c2812f1fd96}{dump\+Binary\+Code} ()
+\item 
+void \hyperlink{asm_8h_a374b455749e0ea31debe4ef66805e564}{generate\+Binary} (F\+I\+LE $\ast$fout)
+\begin{DoxyCompactList}\small\item\em Permet de produire le fichier .bin avec le nombre de lignes en première ligne du fichier, les lignes, instructions et variables ( Exemple des lignes -\/$>$ 0\+:100) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{asm_8h_a2e7cc742f3dac64591e576dbc07ff026}{code\+Segment} \mbox{[}\hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variable globale stockant les O\+P\+C\+O\+D\+ES. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}{current\+Inst}
+\begin{DoxyCompactList}\small\item\em Variable globale indiquant le nombre courant de O\+P\+C\+O\+D\+ES dans code\+Segment. \end{DoxyCompactList}\item 
+struct \hyperlink{structinstruction_name}{instruction\+Name} \hyperlink{asm_8h_aa6283a3a3e3bd95373d2dafcf0aec96b}{tab\+Instruction\+Names} \mbox{[}\hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}{current\+Instruction\+Name}
+\item 
+struct \hyperlink{structlabel}{label} \hyperlink{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}{tab\+Labels} \mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{asm_8h_a305e1a498e970935554afae3ec49f78a}{current\+Label}
+\item 
+struct \hyperlink{structref}{ref} \hyperlink{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}{tab\+References} \mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}{current\+Ref}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{asm_8h_af4c0f18024ae80530be0c34f53b9e265}\label{asm_8h_af4c0f18024ae80530be0c34f53b9e265}} 
+\index{asm.\+h@{asm.\+h}!M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}{MAX\_CODESEGMENT\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE~1000}
+
+\mbox{\Hypertarget{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}\label{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}} 
+\index{asm.\+h@{asm.\+h}!M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}{MAX\_IDENTS\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE~100}
+
+\mbox{\Hypertarget{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}\label{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}} 
+\index{asm.\+h@{asm.\+h}!M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}{MAX\_LABELS\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE~100}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{asm_8h_a79768c03b0a3a825aca8f66127a22a35}\label{asm_8h_a79768c03b0a3a825aca8f66127a22a35}} 
+\index{asm.\+h@{asm.\+h}!add\+Code@{add\+Code}}
+\index{add\+Code@{add\+Code}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{add\+Code()}{addCode()}}
+{\footnotesize\ttfamily void add\+Code (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}ajouter une instruction dans le Code\+Segment à la position indiquée par current\+Inst. 
+
+\mbox{\Hypertarget{asm_8h_adb68a5377b3fc4689743c5b060f7d08a}\label{asm_8h_adb68a5377b3fc4689743c5b060f7d08a}} 
+\index{asm.\+h@{asm.\+h}!add\+Instruction\+Name@{add\+Instruction\+Name}}
+\index{add\+Instruction\+Name@{add\+Instruction\+Name}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{add\+Instruction\+Name()}{addInstructionName()}}
+{\footnotesize\ttfamily void add\+Instruction\+Name (\begin{DoxyParamCaption}\item[{char $\ast$}]{instname,  }\item[{int}]{opcod,  }\item[{int}]{type,  }\item[{char $\ast$}]{format,  }\item[{int}]{nbops }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}ajouter une instruction à la liste des instructions. Les instructions sont séparées en trois catégories selon leur type Elles sont identifiées par leur nom et leur Op\+\_\+\+Cod afin d\textquotesingle{}y faire référence Le format permet d\textquotesingle{}appliquer un \char`\"{}masque\char`\"{} lors de la lecture afin d\textquotesingle{}identifier les différents arguments de l\textquotesingle{}instruction. 
+
+\mbox{\Hypertarget{asm_8h_aa0b13c47db77611034e4b839b39e68ed}\label{asm_8h_aa0b13c47db77611034e4b839b39e68ed}} 
+\index{asm.\+h@{asm.\+h}!add\+Label@{add\+Label}}
+\index{add\+Label@{add\+Label}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{add\+Label()}{addLabel()}}
+{\footnotesize\ttfamily void add\+Label (\begin{DoxyParamCaption}\item[{char $\ast$}]{labelname,  }\item[{int}]{addr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{asm_8h_aaabafc3ddfe1c7c2768629e366907922}\label{asm_8h_aaabafc3ddfe1c7c2768629e366907922}} 
+\index{asm.\+h@{asm.\+h}!add\+Reference@{add\+Reference}}
+\index{add\+Reference@{add\+Reference}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{add\+Reference()}{addReference()}}
+{\footnotesize\ttfamily void add\+Reference (\begin{DoxyParamCaption}\item[{char $\ast$}]{labelname,  }\item[{int}]{addr\+In\+Code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d}\label{asm_8h_aab0fc8f69b5d21a640117e2425d6f24d}} 
+\index{asm.\+h@{asm.\+h}!decode\+Instruction@{decode\+Instruction}}
+\index{decode\+Instruction@{decode\+Instruction}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{decode\+Instruction()}{decodeInstruction()}}
+{\footnotesize\ttfamily void decode\+Instruction (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{asm_8h_a5a883df802289858d1693c2812f1fd96}\label{asm_8h_a5a883df802289858d1693c2812f1fd96}} 
+\index{asm.\+h@{asm.\+h}!dump\+Binary\+Code@{dump\+Binary\+Code}}
+\index{dump\+Binary\+Code@{dump\+Binary\+Code}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{dump\+Binary\+Code()}{dumpBinaryCode()}}
+{\footnotesize\ttfamily void dump\+Binary\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{asm_8h_af1248a22adfbfa85be10ed09b7570a3a}\label{asm_8h_af1248a22adfbfa85be10ed09b7570a3a}} 
+\index{asm.\+h@{asm.\+h}!find\+Label@{find\+Label}}
+\index{find\+Label@{find\+Label}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{find\+Label()}{findLabel()}}
+{\footnotesize\ttfamily int find\+Label (\begin{DoxyParamCaption}\item[{char $\ast$}]{labelname }\end{DoxyParamCaption})}
+
+
+
+Permet de chercher une étiquette irrésolue dans le tableau des étiquettes. 
+
+Lis l\textquotesingle{}intégralité du fichier d\textquotesingle{}entrée et décode les instructions lues Ajoute les étiquettes au tableau des labbels S\textquotesingle{}arrête lorsque l\textquotesingle{}instruction lue est I\+\_\+\+H\+A\+LT.
+
+Permet de lire le code une première fois, en ajoutant les instructions dans le tableau Code pour lister les opérations à effectuer Permet également de lister les références et étiquettes inconnues lors du premier passage.
+
+Permet de résoudre les références irrésolues contenues dans le tableau des références.
+
+Permet d\textquotesingle{}ajouter une référence et sa position dans le tableau des références.
+
+Si le label n\textquotesingle{}est pas connu, cette fonction ajoute le label et sa position au tableau des étiquettes. \mbox{\Hypertarget{asm_8h_a374b455749e0ea31debe4ef66805e564}\label{asm_8h_a374b455749e0ea31debe4ef66805e564}} 
+\index{asm.\+h@{asm.\+h}!generate\+Binary@{generate\+Binary}}
+\index{generate\+Binary@{generate\+Binary}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{generate\+Binary()}{generateBinary()}}
+{\footnotesize\ttfamily void generate\+Binary (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fout }\end{DoxyParamCaption})}
+
+
+
+Permet de produire le fichier .bin avec le nombre de lignes en première ligne du fichier, les lignes, instructions et variables ( Exemple des lignes -\/$>$ 0\+:100) 
+
+\mbox{\Hypertarget{asm_8h_ac9247e4068e106aca0b16bb1b1b51835}\label{asm_8h_ac9247e4068e106aca0b16bb1b1b51835}} 
+\index{asm.\+h@{asm.\+h}!parse\+Asm@{parse\+Asm}}
+\index{parse\+Asm@{parse\+Asm}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{parse\+Asm()}{parseAsm()}}
+{\footnotesize\ttfamily int parse\+Asm (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{asm_8h_afbf1f814881d73eefde6bccdde641db8}\label{asm_8h_afbf1f814881d73eefde6bccdde641db8}} 
+\index{asm.\+h@{asm.\+h}!print\+Labels@{print\+Labels}}
+\index{print\+Labels@{print\+Labels}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{print\+Labels()}{printLabels()}}
+{\footnotesize\ttfamily void print\+Labels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}afficher les références et étiquettes contenues dans le tableau au moment de l\textquotesingle{}exécution. 
+
+\mbox{\Hypertarget{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}\label{asm_8h_a64fd9559bd8aac7553d6e16593859fcb}} 
+\index{asm.\+h@{asm.\+h}!resolve\+References@{resolve\+References}}
+\index{resolve\+References@{resolve\+References}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{resolve\+References()}{resolveReferences()}}
+{\footnotesize\ttfamily void resolve\+References (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{asm_8h_a2e7cc742f3dac64591e576dbc07ff026}\label{asm_8h_a2e7cc742f3dac64591e576dbc07ff026}} 
+\index{asm.\+h@{asm.\+h}!code\+Segment@{code\+Segment}}
+\index{code\+Segment@{code\+Segment}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{code\+Segment}{codeSegment}}
+{\footnotesize\ttfamily unsigned int code\+Segment\mbox{[}\hyperlink{asm_8h_af4c0f18024ae80530be0c34f53b9e265}{M\+A\+X\+\_\+\+C\+O\+D\+E\+S\+E\+G\+M\+E\+N\+T\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+
+
+Variable globale stockant les O\+P\+C\+O\+D\+ES. 
+
+\mbox{\Hypertarget{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}\label{asm_8h_ac4d2310c6cfcbf048cc7ec2f246cce7f}} 
+\index{asm.\+h@{asm.\+h}!current\+Inst@{current\+Inst}}
+\index{current\+Inst@{current\+Inst}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{current\+Inst}{currentInst}}
+{\footnotesize\ttfamily int current\+Inst}
+
+
+
+Variable globale indiquant le nombre courant de O\+P\+C\+O\+D\+ES dans code\+Segment. 
+
+\mbox{\Hypertarget{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}\label{asm_8h_ada0b2a75ab7b38d27871f33b45884b0b}} 
+\index{asm.\+h@{asm.\+h}!current\+Instruction\+Name@{current\+Instruction\+Name}}
+\index{current\+Instruction\+Name@{current\+Instruction\+Name}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{current\+Instruction\+Name}{currentInstructionName}}
+{\footnotesize\ttfamily int current\+Instruction\+Name}
+
+\mbox{\Hypertarget{asm_8h_a305e1a498e970935554afae3ec49f78a}\label{asm_8h_a305e1a498e970935554afae3ec49f78a}} 
+\index{asm.\+h@{asm.\+h}!current\+Label@{current\+Label}}
+\index{current\+Label@{current\+Label}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{current\+Label}{currentLabel}}
+{\footnotesize\ttfamily int current\+Label}
+
+\mbox{\Hypertarget{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}\label{asm_8h_ad90ea272bc00caeb8fc2d9cb7d8e2c91}} 
+\index{asm.\+h@{asm.\+h}!current\+Ref@{current\+Ref}}
+\index{current\+Ref@{current\+Ref}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{current\+Ref}{currentRef}}
+{\footnotesize\ttfamily int current\+Ref}
+
+\mbox{\Hypertarget{asm_8h_aa6283a3a3e3bd95373d2dafcf0aec96b}\label{asm_8h_aa6283a3a3e3bd95373d2dafcf0aec96b}} 
+\index{asm.\+h@{asm.\+h}!tab\+Instruction\+Names@{tab\+Instruction\+Names}}
+\index{tab\+Instruction\+Names@{tab\+Instruction\+Names}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{tab\+Instruction\+Names}{tabInstructionNames}}
+{\footnotesize\ttfamily struct \hyperlink{structinstruction_name}{instruction\+Name}  tab\+Instruction\+Names\mbox{[}\hyperlink{asm_8h_a2493ee2807d0a22ea99da2a945ad1623}{M\+A\+X\+\_\+\+I\+D\+E\+N\+T\+S\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}\label{asm_8h_a25c031a226e71ec6fa392444fcd54b3f}} 
+\index{asm.\+h@{asm.\+h}!tab\+Labels@{tab\+Labels}}
+\index{tab\+Labels@{tab\+Labels}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{tab\+Labels}{tabLabels}}
+{\footnotesize\ttfamily struct \hyperlink{structlabel}{label}  tab\+Labels\mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}\label{asm_8h_aac2c287ae1bbe0240cd3cbc005c5e813}} 
+\index{asm.\+h@{asm.\+h}!tab\+References@{tab\+References}}
+\index{tab\+References@{tab\+References}!asm.\+h@{asm.\+h}}
+\subsubsection{\texorpdfstring{tab\+References}{tabReferences}}
+{\footnotesize\ttfamily struct \hyperlink{structref}{ref}  tab\+References\mbox{[}\hyperlink{asm_8h_a68a2897ab5006c370ee8d1cc8a480a82}{M\+A\+X\+\_\+\+L\+A\+B\+E\+L\+S\+\_\+\+S\+I\+ZE}\mbox{]}}
+

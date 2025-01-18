@@ -1,0 +1,10 @@
+.\gpio.o: ..\User_Sources_Files\gpio.c
+.\gpio.o: C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h
+.\gpio.o: C:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\gpio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\gpio.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\gpio.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\gpio.o: C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h
+.\gpio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\gpio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\gpio.o: ..\User_Sources_Files\gpio.h

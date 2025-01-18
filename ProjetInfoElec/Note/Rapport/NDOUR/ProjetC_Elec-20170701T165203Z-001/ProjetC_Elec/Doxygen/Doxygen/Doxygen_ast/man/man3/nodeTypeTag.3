@@ -1,0 +1,53 @@
+.TH "nodeTypeTag" 3 "Fri Jun 30 2017" "Project_C_Elec" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nodeTypeTag
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ast\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBnodeEnum\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "int \fBdigraphNode\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   \fBnumericNodeType\fP \fBt_numeric\fP"
+.br
+.ti -1c
+.RI "   \fBoperatorNodeType\fP \fBt_oper\fP"
+.br
+.ti -1c
+.RI "   \fBidentifierNodeType\fP \fBt_identifier\fP"
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+.SH "Field Documentation"
+.PP 
+.SS "union { \&.\&.\&. } "
+
+.SS "int digraphNode"
+
+.SS "\fBidentifierNodeType\fP t_identifier"
+
+.SS "\fBnumericNodeType\fP t_numeric"
+
+.SS "\fBoperatorNodeType\fP t_oper"
+
+.SS "\fBnodeEnum\fP type"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project_C_Elec from the source code\&.

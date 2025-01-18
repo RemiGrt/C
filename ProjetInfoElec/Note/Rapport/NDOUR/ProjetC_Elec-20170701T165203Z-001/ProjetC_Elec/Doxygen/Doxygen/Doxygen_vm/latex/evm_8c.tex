@@ -1,0 +1,119 @@
+\hypertarget{evm_8c}{}\section{vm/evm.c File Reference}
+\label{evm_8c}\index{vm/evm.\+c@{vm/evm.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vm\+\_\+codops.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{evm_8c_adf4334b20b3da95fbe7ef3cb255c146c}{I\+\_\+\+OR}~206
+\item 
+\#define \hyperlink{evm_8c_a622343a6f3d10e28e15da9eab97dd417}{Max\+Code\+\_\+size}~1000
+\item 
+\#define \hyperlink{evm_8c_a6022c8d67ca68b831ae27d5ddff6c256}{Max\+Stack\+\_\+size}~100
+\item 
+\#define \hyperlink{evm_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}{Max\+Var\+\_\+size}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{evm_8c_a13a43e6d814de94978c515cb084873b1}{run} ()
+\item 
+void \hyperlink{evm_8c_a3b94a60fb26bd3f8481cf3c61c5fb702}{read\+Bin} (char $\ast$filename)
+\item 
+int \hyperlink{evm_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{evm_8c_aca9e6b43b6e4951191270227238a17bb}{code} \mbox{[}\hyperlink{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}{Max\+Code\+\_\+size}\mbox{]}
+\item 
+int \hyperlink{evm_8c_af33ef44483cc3925c4efa58e688cd2e5}{stack} \mbox{[}\hyperlink{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}{Max\+Stack\+\_\+size}\mbox{]}
+\item 
+int \hyperlink{evm_8c_a249e1e79c3468e7214a657b0493cba8d}{var} \mbox{[}\hyperlink{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}{Max\+Var\+\_\+size}\mbox{]}
+\item 
+int \hyperlink{evm_8c_a024603cda52d9847e8d8df3c2e884b8c}{sp} =-\/1
+\item 
+int \hyperlink{evm_8c_ac8c81e61335635fa4709d82412b31f06}{pc} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{evm_8c_adf4334b20b3da95fbe7ef3cb255c146c}\label{evm_8c_adf4334b20b3da95fbe7ef3cb255c146c}} 
+\index{evm.\+c@{evm.\+c}!I\+\_\+\+OR@{I\+\_\+\+OR}}
+\index{I\+\_\+\+OR@{I\+\_\+\+OR}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{I\+\_\+\+OR}{I\_OR}}
+{\footnotesize\ttfamily \#define I\+\_\+\+OR~206}
+
+\mbox{\Hypertarget{evm_8c_a622343a6f3d10e28e15da9eab97dd417}\label{evm_8c_a622343a6f3d10e28e15da9eab97dd417}} 
+\index{evm.\+c@{evm.\+c}!Max\+Code\+\_\+size@{Max\+Code\+\_\+size}}
+\index{Max\+Code\+\_\+size@{Max\+Code\+\_\+size}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{Max\+Code\+\_\+size}{MaxCode\_size}}
+{\footnotesize\ttfamily \#define Max\+Code\+\_\+size~1000}
+
+\mbox{\Hypertarget{evm_8c_a6022c8d67ca68b831ae27d5ddff6c256}\label{evm_8c_a6022c8d67ca68b831ae27d5ddff6c256}} 
+\index{evm.\+c@{evm.\+c}!Max\+Stack\+\_\+size@{Max\+Stack\+\_\+size}}
+\index{Max\+Stack\+\_\+size@{Max\+Stack\+\_\+size}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{Max\+Stack\+\_\+size}{MaxStack\_size}}
+{\footnotesize\ttfamily \#define Max\+Stack\+\_\+size~100}
+
+\mbox{\Hypertarget{evm_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}\label{evm_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}} 
+\index{evm.\+c@{evm.\+c}!Max\+Var\+\_\+size@{Max\+Var\+\_\+size}}
+\index{Max\+Var\+\_\+size@{Max\+Var\+\_\+size}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{Max\+Var\+\_\+size}{MaxVar\_size}}
+{\footnotesize\ttfamily \#define Max\+Var\+\_\+size~100}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{evm_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{evm_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{evm.\+c@{evm.\+c}!main@{main}}
+\index{main@{main}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evm_8c_a3b94a60fb26bd3f8481cf3c61c5fb702}\label{evm_8c_a3b94a60fb26bd3f8481cf3c61c5fb702}} 
+\index{evm.\+c@{evm.\+c}!read\+Bin@{read\+Bin}}
+\index{read\+Bin@{read\+Bin}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{read\+Bin()}{readBin()}}
+{\footnotesize\ttfamily void read\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{evm_8c_a13a43e6d814de94978c515cb084873b1}\label{evm_8c_a13a43e6d814de94978c515cb084873b1}} 
+\index{evm.\+c@{evm.\+c}!run@{run}}
+\index{run@{run}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{evm_8c_aca9e6b43b6e4951191270227238a17bb}\label{evm_8c_aca9e6b43b6e4951191270227238a17bb}} 
+\index{evm.\+c@{evm.\+c}!code@{code}}
+\index{code@{code}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily int code\mbox{[}\hyperlink{_vm___prog_micro_8c_a622343a6f3d10e28e15da9eab97dd417}{Max\+Code\+\_\+size}\mbox{]}}
+
+\mbox{\Hypertarget{evm_8c_ac8c81e61335635fa4709d82412b31f06}\label{evm_8c_ac8c81e61335635fa4709d82412b31f06}} 
+\index{evm.\+c@{evm.\+c}!pc@{pc}}
+\index{pc@{pc}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{pc}{pc}}
+{\footnotesize\ttfamily int pc =0}
+
+\mbox{\Hypertarget{evm_8c_a024603cda52d9847e8d8df3c2e884b8c}\label{evm_8c_a024603cda52d9847e8d8df3c2e884b8c}} 
+\index{evm.\+c@{evm.\+c}!sp@{sp}}
+\index{sp@{sp}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{sp}{sp}}
+{\footnotesize\ttfamily int sp =-\/1}
+
+\mbox{\Hypertarget{evm_8c_af33ef44483cc3925c4efa58e688cd2e5}\label{evm_8c_af33ef44483cc3925c4efa58e688cd2e5}} 
+\index{evm.\+c@{evm.\+c}!stack@{stack}}
+\index{stack@{stack}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily int stack\mbox{[}\hyperlink{_vm___prog_micro_8c_a6022c8d67ca68b831ae27d5ddff6c256}{Max\+Stack\+\_\+size}\mbox{]}}
+
+\mbox{\Hypertarget{evm_8c_a249e1e79c3468e7214a657b0493cba8d}\label{evm_8c_a249e1e79c3468e7214a657b0493cba8d}} 
+\index{evm.\+c@{evm.\+c}!var@{var}}
+\index{var@{var}!evm.\+c@{evm.\+c}}
+\subsubsection{\texorpdfstring{var}{var}}
+{\footnotesize\ttfamily int var\mbox{[}\hyperlink{_vm___prog_micro_8c_aa32d77feca25e488e7a8fa6ec8a87f4b}{Max\+Var\+\_\+size}\mbox{]}}
+

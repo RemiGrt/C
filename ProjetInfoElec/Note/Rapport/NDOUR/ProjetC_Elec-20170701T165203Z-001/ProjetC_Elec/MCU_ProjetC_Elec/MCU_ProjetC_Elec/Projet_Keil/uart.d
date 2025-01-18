@@ -1,0 +1,10 @@
+.\uart.o: ..\User_Sources_Files\UART.c
+.\uart.o: C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h
+.\uart.o: C:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\uart.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\uart.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\uart.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\uart.o: C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h
+.\uart.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\uart.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\uart.o: ..\User_Sources_Files\UART.h

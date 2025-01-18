@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="asm_8h">
+    <title>asm.h File Reference</title>
+<para>Include dependency diagram for asm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="asm_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for asm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="asm_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structinstructionName">instructionName</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlabel">label</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structref">ref</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1af4c0f18024ae80530be0c34f53b9e265">MAX_CODESEGMENT_SIZE</link> 1000</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1a2493ee2807d0a22ea99da2a945ad1623">MAX_IDENTS_SIZE</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="asm_8h_1a2e7cc742f3dac64591e576dbc07ff026">codeSegment</link><para><emphasis>Variable globale stockant les OPCODES.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ac4d2310c6cfcbf048cc7ec2f246cce7f">currentInst</link><para><emphasis>Variable globale indiquant le nombre courant de OPCODES dans codeSegment.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structinstructionName">instructionName</link> <link linkend="asm_8h_1aa6283a3a3e3bd95373d2dafcf0aec96b">tabInstructionNames</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ada0b2a75ab7b38d27871f33b45884b0b">currentInstructionName</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlabel">label</link> <link linkend="asm_8h_1a25c031a226e71ec6fa392444fcd54b3f">tabLabels</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1a305e1a498e970935554afae3ec49f78a">currentLabel</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structref">ref</link> <link linkend="asm_8h_1aac2c287ae1bbe0240cd3cbc005c5e813">tabReferences</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ad90ea272bc00caeb8fc2d9cb7d8e2c91">currentRef</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Fonctions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a79768c03b0a3a825aca8f66127a22a35">addCode</link> (
+int v)<para><emphasis>Complète le tableau codeSegment.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1adb68a5377b3fc4689743c5b060f7d08a">addInstructionName</link> (
+char * instname, int opcod, int type, char * format, int nbops)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1af1248a22adfbfa85be10ed09b7570a3a">findLabel</link> (
+char * labelname)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1aa0b13c47db77611034e4b839b39e68ed">addLabel</link> (
+char * labelname, int addr)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1aaabafc3ddfe1c7c2768629e366907922">addReference</link> (
+char * labelname, int addrInCode)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a64fd9559bd8aac7553d6e16593859fcb">resolveReferences</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1aab0fc8f69b5d21a640117e2425d6f24d">decodeInstruction</link> (
+char * line)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ac9247e4068e106aca0b16bb1b1b51835">parseAsm</link> (
+FILE * fin)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1afbf1f814881d73eefde6bccdde641db8">printLabels</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a5a883df802289858d1693c2812f1fd96">dumpBinaryCode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a374b455749e0ea31debe4ef66805e564">generateBinary</link> (
+FILE * fout)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Description détaillée</title>
+    <para>Definition in file /media/sf_Remi/Dropbox/Work/UPMC/ProjetInfoElec/20170224/grafcet3/asm/asm.h</para>
+    </simplesect>
+</section>

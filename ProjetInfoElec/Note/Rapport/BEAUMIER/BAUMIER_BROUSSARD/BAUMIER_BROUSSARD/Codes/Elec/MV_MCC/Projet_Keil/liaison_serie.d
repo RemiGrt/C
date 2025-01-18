@@ -1,0 +1,11 @@
+.\liaison_serie.o: ..\User_Sources_Files\Liaison_Serie.c
+.\liaison_serie.o: C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h
+.\liaison_serie.o: C:\Keil\ARM\CMSIS\Include\core_cm0.h
+.\liaison_serie.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\liaison_serie.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\liaison_serie.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\liaison_serie.o: C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h
+.\liaison_serie.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\liaison_serie.o: ..\User_Sources_Files\InitPins.h
+.\liaison_serie.o: ..\User_Sources_Files\Mapping.h
+.\liaison_serie.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

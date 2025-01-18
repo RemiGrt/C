@@ -1,0 +1,17 @@
+Dependencies for Project 'projet', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_stm32f072.s)(0x592D29F1)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx--list .\startup_stm32f072.lst --xref -o .\startup_stm32f072.o --depend .\startup_stm32f072.d)
+F (..\System\system_stm32f0xx_SYSCLK_48MHz_GeneAvecRC_Int_8MHz.c)(0x592D29F1)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx-DSTM32F072-o .\system_stm32f0xx_sysclk_48mhz_geneavecrc_int_8mhz.o --omf_browse .\system_stm32f0xx_sysclk_48mhz_geneavecrc_int_8mhz.crf --depend .\system_stm32f0xx_sysclk_48mhz_geneavecrc_int_8mhz.d)
+I (C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h)(0x532C63DC)
+I (C:\Keil\ARM\CMSIS\Include\core_cm0.h)(0x532C6842)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h)(0x532C63DC)
+F (..\User_Sources_Files\main.c)(0x592EC15C)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx-DSTM32F072-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\Inc\ST\STM32F0xx\stm32f0xx.h)(0x532C63DC)
+I (C:\Keil\ARM\CMSIS\Include\core_cm0.h)(0x532C6842)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil\ARM\Inc\ST\STM32F0xx\system_stm32f0xx.h)(0x532C63DC)
+I (..\User_Sources_Files\vm_codops.h)(0x592DE671)

@@ -1,0 +1,298 @@
+\hypertarget{ast_8c}{}\section{ast.\+c File Reference}
+\label{ast_8c}\index{ast.\+c@{ast.\+c}}
+{\ttfamily \#include \char`\"{}ast.\+h\char`\"{}}\\*
+Include dependency graph for ast.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{ast_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$ \hyperlink{ast_8c_af24dffa4a76481eceaf07516479988b7}{create\+Numeric\+Node} (float v)
+\item 
+\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$ \hyperlink{ast_8c_a7b5dcac8e77c93a0063cc5cc89a5ff06}{create\+Operator\+Node} (int oper, int nops,...)
+\item 
+\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$ \hyperlink{ast_8c_aa1a7dd6e141f15a68b8148d6e8053596}{create\+Identifier\+Node} (char $\ast$id, int flag)
+\item 
+void \hyperlink{ast_8c_a62f8c93065175a1e3e604b6fc2631c56}{generate\+Asm\+Expression} (\hyperlink{ast_8h_a5107519e23f35648044d9a2300d4a609}{node\+Type} $\ast$n, F\+I\+LE $\ast$fout)
+\item 
+void \hyperlink{ast_8c_a56b0b138b1ae9b94bc6bdf5638a0535e}{grafcet\+\_\+interpreter} ()
+\item 
+void \hyperlink{ast_8c_a9ba813acb7deef1f162c85cafbd94a29}{push\+Ref\+Etape} (\hyperlink{ast_8h_a783fed330882669eab7bb82b2387504c}{etape\+Ref\+Node} $\ast$$\ast$head, char $\ast$n)
+\item 
+void \hyperlink{ast_8c_ad94fc48b92faaa7067d7ff8b8bd92a91}{push\+Ref\+Transition} (\hyperlink{ast_8h_a67b6895182f914664b7fae2a669508e3}{transition\+Ref\+Node} $\ast$$\ast$head, char $\ast$n)
+\item 
+void \hyperlink{ast_8c_aca4967e85b3288533392e4d136604713}{push\+Action} (\hyperlink{ast_8h_aadd5a12e44d84c3ed461231ff4b6f001}{action\+Node} $\ast$$\ast$head, \hyperlink{ast_8h_aadd5a12e44d84c3ed461231ff4b6f001}{action\+Node} $\ast$n)
+\item 
+void \hyperlink{ast_8c_aa46d913c59a0a4a5caa3a53bc5af834c}{push\+Etape} (\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$$\ast$head, \hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$n)
+\item 
+void \hyperlink{ast_8c_aaeb905ea8071a9664304e4f9f1f04f20}{push\+Transition} (\hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$$\ast$head, \hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$n)
+\item 
+void \hyperlink{ast_8c_a72a3046f6b7c2b5d5f27fffe496f25d8}{print\+Ref\+Etapes} (\hyperlink{ast_8h_a783fed330882669eab7bb82b2387504c}{etape\+Ref\+Node} $\ast$head)
+\item 
+void \hyperlink{ast_8c_ab977bf46a28dbfb71181eba6a5ad07a7}{print\+Ref\+Transitions} (\hyperlink{ast_8h_a67b6895182f914664b7fae2a669508e3}{transition\+Ref\+Node} $\ast$head)
+\item 
+int \hyperlink{ast_8c_ab846634f150247ddf5853ac8c01b88fe}{nb\+Etapes} (\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$head)
+\item 
+int \hyperlink{ast_8c_ae0657925f57c22d15d5359a8de0cb890}{nb\+Transitions} (\hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$head)
+\item 
+\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$ \hyperlink{ast_8c_adec973bf53fb10e61f09148779f2e0e2}{find\+Etape\+By\+Name} (\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$head, char $\ast$n)
+\item 
+\hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$ \hyperlink{ast_8c_a1ef6fdf0c149cac2dd1744f5572a1d45}{find\+Transition\+By\+Name} (\hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$head, char $\ast$n)
+\item 
+void \hyperlink{ast_8c_a32827db69ed62cf87903524799d397ae}{print\+Etapes} (\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$en)
+\item 
+void \hyperlink{ast_8c_adc3777eca5ecb6367e2b617e92650eb7}{print\+Transitions} (\hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$tn)
+\item 
+void \hyperlink{ast_8c_a76304605dc888b516fa1b253ddb84391}{make\+Dual} (\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$en, \hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$tn)
+\item 
+void \hyperlink{ast_8c_a77e171dbbf8fe93237a20247f3af5cc9}{generate\+Code} (\hyperlink{ast_8h_ab27be445acdf8e5bf407a55fdc849078}{etape\+Node} $\ast$en, \hyperlink{ast_8h_a931358a8be317923752cdaae1a8c09d8}{transition\+Node} $\ast$tn)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ast_8c_a6746ca962c63d98c2b6595e140397aa2}{compteur\+Label} =0
+\item 
+int \hyperlink{ast_8c_a11d446af59098bf8b34eca9dff108b1f}{compteur\+Etapes} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{ast.\+c@{ast.\+c}!create\+Identifier\+Node@{create\+Identifier\+Node}}
+\index{create\+Identifier\+Node@{create\+Identifier\+Node}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{create\+Identifier\+Node(char $\ast$id, int flag)}{createIdentifierNode(char *id, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+Type}$\ast$ create\+Identifier\+Node (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{id, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_aa1a7dd6e141f15a68b8148d6e8053596}{}\label{ast_8c_aa1a7dd6e141f15a68b8148d6e8053596}
+\index{ast.\+c@{ast.\+c}!create\+Numeric\+Node@{create\+Numeric\+Node}}
+\index{create\+Numeric\+Node@{create\+Numeric\+Node}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{create\+Numeric\+Node(float v)}{createNumericNode(float v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+Type}$\ast$ create\+Numeric\+Node (
+\begin{DoxyParamCaption}
+\item[{float}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_af24dffa4a76481eceaf07516479988b7}{}\label{ast_8c_af24dffa4a76481eceaf07516479988b7}
+\index{ast.\+c@{ast.\+c}!create\+Operator\+Node@{create\+Operator\+Node}}
+\index{create\+Operator\+Node@{create\+Operator\+Node}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{create\+Operator\+Node(int oper, int nops,...)}{createOperatorNode(int oper, int nops,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\+Type}$\ast$ create\+Operator\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{oper, }
+\item[{int}]{nops, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a7b5dcac8e77c93a0063cc5cc89a5ff06}{}\label{ast_8c_a7b5dcac8e77c93a0063cc5cc89a5ff06}
+\index{ast.\+c@{ast.\+c}!find\+Etape\+By\+Name@{find\+Etape\+By\+Name}}
+\index{find\+Etape\+By\+Name@{find\+Etape\+By\+Name}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{find\+Etape\+By\+Name(etape\+Node $\ast$head, char $\ast$n)}{findEtapeByName(etapeNode *head, char *n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf etape\+Node}$\ast$ find\+Etape\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Node} $\ast$}]{head, }
+\item[{char $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_adec973bf53fb10e61f09148779f2e0e2}{}\label{ast_8c_adec973bf53fb10e61f09148779f2e0e2}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{ast_8c_adec973bf53fb10e61f09148779f2e0e2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{ast.\+c@{ast.\+c}!find\+Transition\+By\+Name@{find\+Transition\+By\+Name}}
+\index{find\+Transition\+By\+Name@{find\+Transition\+By\+Name}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{find\+Transition\+By\+Name(transition\+Node $\ast$head, char $\ast$n)}{findTransitionByName(transitionNode *head, char *n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf transition\+Node}$\ast$ find\+Transition\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+Node} $\ast$}]{head, }
+\item[{char $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a1ef6fdf0c149cac2dd1744f5572a1d45}{}\label{ast_8c_a1ef6fdf0c149cac2dd1744f5572a1d45}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{ast_8c_a1ef6fdf0c149cac2dd1744f5572a1d45_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{ast.\+c@{ast.\+c}!generate\+Asm\+Expression@{generate\+Asm\+Expression}}
+\index{generate\+Asm\+Expression@{generate\+Asm\+Expression}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{generate\+Asm\+Expression(node\+Type $\ast$n, F\+I\+L\+E $\ast$fout)}{generateAsmExpression(nodeType *n, FILE *fout)}}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Asm\+Expression (
+\begin{DoxyParamCaption}
+\item[{{\bf node\+Type} $\ast$}]{n, }
+\item[{F\+I\+LE $\ast$}]{fout}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a62f8c93065175a1e3e604b6fc2631c56}{}\label{ast_8c_a62f8c93065175a1e3e604b6fc2631c56}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ast_8c_a62f8c93065175a1e3e604b6fc2631c56_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{ast.\+c@{ast.\+c}!generate\+Code@{generate\+Code}}
+\index{generate\+Code@{generate\+Code}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{generate\+Code(etape\+Node $\ast$en, transition\+Node $\ast$tn)}{generateCode(etapeNode *en, transitionNode *tn)}}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Node} $\ast$}]{en, }
+\item[{{\bf transition\+Node} $\ast$}]{tn}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a77e171dbbf8fe93237a20247f3af5cc9}{}\label{ast_8c_a77e171dbbf8fe93237a20247f3af5cc9}
+\index{ast.\+c@{ast.\+c}!grafcet\+\_\+interpreter@{grafcet\+\_\+interpreter}}
+\index{grafcet\+\_\+interpreter@{grafcet\+\_\+interpreter}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{grafcet\+\_\+interpreter()}{grafcet_interpreter()}}]{\setlength{\rightskip}{0pt plus 5cm}void grafcet\+\_\+interpreter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a56b0b138b1ae9b94bc6bdf5638a0535e}{}\label{ast_8c_a56b0b138b1ae9b94bc6bdf5638a0535e}
+\index{ast.\+c@{ast.\+c}!make\+Dual@{make\+Dual}}
+\index{make\+Dual@{make\+Dual}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{make\+Dual(etape\+Node $\ast$en, transition\+Node $\ast$tn)}{makeDual(etapeNode *en, transitionNode *tn)}}]{\setlength{\rightskip}{0pt plus 5cm}void make\+Dual (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Node} $\ast$}]{en, }
+\item[{{\bf transition\+Node} $\ast$}]{tn}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a76304605dc888b516fa1b253ddb84391}{}\label{ast_8c_a76304605dc888b516fa1b253ddb84391}
+\index{ast.\+c@{ast.\+c}!nb\+Etapes@{nb\+Etapes}}
+\index{nb\+Etapes@{nb\+Etapes}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{nb\+Etapes(etape\+Node $\ast$head)}{nbEtapes(etapeNode *head)}}]{\setlength{\rightskip}{0pt plus 5cm}int nb\+Etapes (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Node} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_ab846634f150247ddf5853ac8c01b88fe}{}\label{ast_8c_ab846634f150247ddf5853ac8c01b88fe}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{ast_8c_ab846634f150247ddf5853ac8c01b88fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{ast.\+c@{ast.\+c}!nb\+Transitions@{nb\+Transitions}}
+\index{nb\+Transitions@{nb\+Transitions}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{nb\+Transitions(transition\+Node $\ast$head)}{nbTransitions(transitionNode *head)}}]{\setlength{\rightskip}{0pt plus 5cm}int nb\+Transitions (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+Node} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_ae0657925f57c22d15d5359a8de0cb890}{}\label{ast_8c_ae0657925f57c22d15d5359a8de0cb890}
+\index{ast.\+c@{ast.\+c}!print\+Etapes@{print\+Etapes}}
+\index{print\+Etapes@{print\+Etapes}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{print\+Etapes(etape\+Node $\ast$en)}{printEtapes(etapeNode *en)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Etapes (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Node} $\ast$}]{en}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a32827db69ed62cf87903524799d397ae}{}\label{ast_8c_a32827db69ed62cf87903524799d397ae}
+\index{ast.\+c@{ast.\+c}!print\+Ref\+Etapes@{print\+Ref\+Etapes}}
+\index{print\+Ref\+Etapes@{print\+Ref\+Etapes}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{print\+Ref\+Etapes(etape\+Ref\+Node $\ast$head)}{printRefEtapes(etapeRefNode *head)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Ref\+Etapes (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Ref\+Node} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a72a3046f6b7c2b5d5f27fffe496f25d8}{}\label{ast_8c_a72a3046f6b7c2b5d5f27fffe496f25d8}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{ast_8c_a72a3046f6b7c2b5d5f27fffe496f25d8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{ast.\+c@{ast.\+c}!print\+Ref\+Transitions@{print\+Ref\+Transitions}}
+\index{print\+Ref\+Transitions@{print\+Ref\+Transitions}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{print\+Ref\+Transitions(transition\+Ref\+Node $\ast$head)}{printRefTransitions(transitionRefNode *head)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Ref\+Transitions (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+Ref\+Node} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_ab977bf46a28dbfb71181eba6a5ad07a7}{}\label{ast_8c_ab977bf46a28dbfb71181eba6a5ad07a7}
+\index{ast.\+c@{ast.\+c}!print\+Transitions@{print\+Transitions}}
+\index{print\+Transitions@{print\+Transitions}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{print\+Transitions(transition\+Node $\ast$tn)}{printTransitions(transitionNode *tn)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Transitions (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+Node} $\ast$}]{tn}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_adc3777eca5ecb6367e2b617e92650eb7}{}\label{ast_8c_adc3777eca5ecb6367e2b617e92650eb7}
+\index{ast.\+c@{ast.\+c}!push\+Action@{push\+Action}}
+\index{push\+Action@{push\+Action}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{push\+Action(action\+Node $\ast$$\ast$head, action\+Node $\ast$n)}{pushAction(actionNode **head, actionNode *n)}}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf action\+Node} $\ast$$\ast$}]{head, }
+\item[{{\bf action\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_aca4967e85b3288533392e4d136604713}{}\label{ast_8c_aca4967e85b3288533392e4d136604713}
+\index{ast.\+c@{ast.\+c}!push\+Etape@{push\+Etape}}
+\index{push\+Etape@{push\+Etape}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{push\+Etape(etape\+Node $\ast$$\ast$head, etape\+Node $\ast$n)}{pushEtape(etapeNode **head, etapeNode *n)}}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Etape (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Node} $\ast$$\ast$}]{head, }
+\item[{{\bf etape\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_aa46d913c59a0a4a5caa3a53bc5af834c}{}\label{ast_8c_aa46d913c59a0a4a5caa3a53bc5af834c}
+\index{ast.\+c@{ast.\+c}!push\+Ref\+Etape@{push\+Ref\+Etape}}
+\index{push\+Ref\+Etape@{push\+Ref\+Etape}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{push\+Ref\+Etape(etape\+Ref\+Node $\ast$$\ast$head, char $\ast$n)}{pushRefEtape(etapeRefNode **head, char *n)}}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Ref\+Etape (
+\begin{DoxyParamCaption}
+\item[{{\bf etape\+Ref\+Node} $\ast$$\ast$}]{head, }
+\item[{char $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_a9ba813acb7deef1f162c85cafbd94a29}{}\label{ast_8c_a9ba813acb7deef1f162c85cafbd94a29}
+\index{ast.\+c@{ast.\+c}!push\+Ref\+Transition@{push\+Ref\+Transition}}
+\index{push\+Ref\+Transition@{push\+Ref\+Transition}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{push\+Ref\+Transition(transition\+Ref\+Node $\ast$$\ast$head, char $\ast$n)}{pushRefTransition(transitionRefNode **head, char *n)}}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Ref\+Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+Ref\+Node} $\ast$$\ast$}]{head, }
+\item[{char $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_ad94fc48b92faaa7067d7ff8b8bd92a91}{}\label{ast_8c_ad94fc48b92faaa7067d7ff8b8bd92a91}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{ast_8c_ad94fc48b92faaa7067d7ff8b8bd92a91_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{ast.\+c@{ast.\+c}!push\+Transition@{push\+Transition}}
+\index{push\+Transition@{push\+Transition}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{push\+Transition(transition\+Node $\ast$$\ast$head, transition\+Node $\ast$n)}{pushTransition(transitionNode **head, transitionNode *n)}}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+Node} $\ast$$\ast$}]{head, }
+\item[{{\bf transition\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ast_8c_aaeb905ea8071a9664304e4f9f1f04f20}{}\label{ast_8c_aaeb905ea8071a9664304e4f9f1f04f20}
+
+
+\subsection{Variable Documentation}
+\index{ast.\+c@{ast.\+c}!compteur\+Etapes@{compteur\+Etapes}}
+\index{compteur\+Etapes@{compteur\+Etapes}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{compteur\+Etapes}{compteurEtapes}}]{\setlength{\rightskip}{0pt plus 5cm}int compteur\+Etapes =0}\hypertarget{ast_8c_a11d446af59098bf8b34eca9dff108b1f}{}\label{ast_8c_a11d446af59098bf8b34eca9dff108b1f}
+\index{ast.\+c@{ast.\+c}!compteur\+Label@{compteur\+Label}}
+\index{compteur\+Label@{compteur\+Label}!ast.\+c@{ast.\+c}}
+\subsubsection[{\texorpdfstring{compteur\+Label}{compteurLabel}}]{\setlength{\rightskip}{0pt plus 5cm}int compteur\+Label =0}\hypertarget{ast_8c_a6746ca962c63d98c2b6595e140397aa2}{}\label{ast_8c_a6746ca962c63d98c2b6595e140397aa2}

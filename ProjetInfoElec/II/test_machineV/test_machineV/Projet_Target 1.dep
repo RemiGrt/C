@@ -1,0 +1,7 @@
+Dependencies for Project 'Projet', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_stm32f072.s)(0x532C639C)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx--list .\startup_stm32f072.lst --xref -o .\startup_stm32f072.o --depend .\startup_stm32f072.d)
+F (.\evm.c)(0x5909CF32)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx-DSTM32F072-o .\evm.o --omf_browse .\evm.crf --depend .\evm.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C827C4)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C827C4)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C827C4)
+I (vm_codops.h)(0x58AFF5D3)

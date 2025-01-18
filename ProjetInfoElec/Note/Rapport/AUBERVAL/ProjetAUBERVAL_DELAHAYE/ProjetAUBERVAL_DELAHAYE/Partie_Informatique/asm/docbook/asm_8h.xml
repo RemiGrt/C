@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="asm_8h">
+    <title>asm.h File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &quot;vm_codops.h&quot;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlabel">label</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structref">ref</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structinstructionName">instructionName</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1af4c0f18024ae80530be0c34f53b9e265">MAX_CODESEGMENT_SIZE</link> 1000</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1a68a2897ab5006c370ee8d1cc8a480a82">MAX_LABELS_SIZE</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1a2493ee2807d0a22ea99da2a945ad1623">MAX_IDENTS_SIZE</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="asm_8h_1ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ac4d2310c6cfcbf048cc7ec2f246cce7f">currentInst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ada0b2a75ab7b38d27871f33b45884b0b">currentInstructionName</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1acb559820d9ca11295b4500f179ef6392">i</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1a11f7ecf6b6f6435ab0ed1200ff74d806">codeSegment</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1a83d22b1f05244d83f0c68fd19f754a66">segment</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1a55b0baf361ab71ec0736cc1a0b29fc1d">OP_CODE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ae6796f1a096cae791ba9e10ea92fb2bd">cpt_ref</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlabel">label</link> <link linkend="asm_8h_1a25c031a226e71ec6fa392444fcd54b3f">tabLabels</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1a305e1a498e970935554afae3ec49f78a">currentLabel</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structref">ref</link> <link linkend="asm_8h_1aac2c287ae1bbe0240cd3cbc005c5e813">tabReferences</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1ad90ea272bc00caeb8fc2d9cb7d8e2c91">currentRef</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structinstructionName">instructionName</link> <link linkend="asm_8h_1ab053067135c098e6c687dd2cffc1911b">tabInstructionNames</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a8e3f8c306236a7780a005af024b409d0">addInstructionName</link> (
+char * name, int opcode, int type, char * format, int nbops)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1ab750a01f64600b7671b2ece23411428e">addLabel</link> (
+char * labelname, int addr)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1aee7b83aeaa35ee53b1766904c6a41c52">addCode</link> (
+struct <link linkend="structinstructionName">instructionName</link> instr, int d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1aceff036175ccdfa4a7abdb0a4b696292">decodeInstruction</link> (
+char * line)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a12125ac03c4380dc7612b1f5ad76dce6">parseAsm</link> (
+char * file)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a06dffbe98503c9bf89e38e51a064a93d">generateBinaryCode</link> (
+char * file)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="asm_8h_1a561e8a3d0dbcd8cf8b9f5bf563382c28">findLabel</link> (
+int cpt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a64fd9559bd8aac7553d6e16593859fcb">resolveReferences</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="asm_8h_1a77427535e3802e3d601169083f4094b2">dumpBinaryCode</link> (
+char * fout)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Programme contenant les fonctions nécessaires pour <link linkend="asm_8c">asm.c</link> /! Principe : Remplir un tableau codeSegment pour qu&apos;en le parcourant on n&apos;ai qu&apos;à écrire son contenu /! pour générer le fichier binaire. </para>
+
+<para>/! <formalpara><title>Auteur: </title>
+
+<para>Anaïs AUBERVAL /! </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>finale /! </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>30/06/2017 /! </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/anais/Bureau/ProjetInfoElec-EI2I3-2606/asm/asm.h</para>
+    </simplesect>
+</section>

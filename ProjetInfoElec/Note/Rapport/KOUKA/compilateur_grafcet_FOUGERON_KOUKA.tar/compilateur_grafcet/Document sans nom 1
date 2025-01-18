@@ -1,0 +1,35 @@
+int parseAsm( char *f)
+{
+	
+	FILE *fichier = fopen(f,"r");
+	
+	char line [100];
+	fgets(line,100,fichier);
+	while ( strstr ( line,"end")== NULL)
+	{
+		if ( line[0]=='#')
+		{
+			printf("ceci est un commentaire\n");
+		}
+		else
+		{
+			char *p=strstr(line,":");
+			if(p!=NULL)
+			{
+				printf("ceci est une étiquette\n");
+				*p='\0';
+				addLabel(line,currentInst);
+				
+			}
+			else
+			{
+				printf("ceci est une instruction\n");
+				decodeInstruction(line);
+			}
+		}
+		fgets(line,100,fichier);
+	}
+	return 0 ;
+	
+}
+

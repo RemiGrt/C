@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Assembleur</title>
+    </info>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="struct__actionNode.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct__etapeNode.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct__etapeRefNode.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct__transitionNode.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct__transitionRefNode.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structidentifierNodeType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnodeTypeTag.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnumericNodeType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structoperatorNodeType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="ast_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ast_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

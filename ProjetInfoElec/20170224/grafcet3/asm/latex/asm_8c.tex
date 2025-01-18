@@ -1,0 +1,335 @@
+\hypertarget{asm_8c}{}\section{Référence du fichier asm.\+c}
+\label{asm_8c}\index{asm.\+c@{asm.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}vm\+\_\+codops.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}asm.\+h\char`\"{}}\\*
+Graphe des dépendances par inclusion de asm.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{asm_8c_a79768c03b0a3a825aca8f66127a22a35}{add\+Code} (int v)
+\begin{DoxyCompactList}\small\item\em Complète le tableau code\+Segment. \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_adb68a5377b3fc4689743c5b060f7d08a}{add\+Instruction\+Name} (char $\ast$instname, int opcod, int type, char $\ast$format, int nbops)
+\item 
+int \hyperlink{asm_8c_af1248a22adfbfa85be10ed09b7570a3a}{find\+Label} (char $\ast$labelname)
+\item 
+void \hyperlink{asm_8c_aa0b13c47db77611034e4b839b39e68ed}{add\+Label} (char $\ast$labelname, int addr)
+\item 
+void \hyperlink{asm_8c_aaabafc3ddfe1c7c2768629e366907922}{add\+Reference} (char $\ast$labelname, int addr\+In\+Code)
+\item 
+void \hyperlink{asm_8c_a64fd9559bd8aac7553d6e16593859fcb}{resolve\+References} ()
+\item 
+void \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction} (char $\ast$line)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction(char $\ast$line)} est appelee par la boucle principale d\textquotesingle{}analyse lorsque la ligne d\textquotesingle{}assembleur lue n\textquotesingle{}est pas une (pas de \+: dans la ligne). Cette fonction fait le gros du travail de la passe 1, en identifiant le type de l\textquotesingle{}instruction, en faisant le decodage supplementaire, en appelant \hyperlink{asm_8c_a79768c03b0a3a825aca8f66127a22a35}{add\+Code()} pour remplir code\+Segment et en ajoutant des references si l\textquotesingle{}instruction decodee fait reference a une etiquette encore inconnue. \end{DoxyCompactList}\item 
+int \hyperlink{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm} (F\+I\+LE $\ast$fin)
+\begin{DoxyCompactList}\small\item\em Cette fonction \hyperlink{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm(\+F\+I\+L\+E $\ast$fin)} parcourt les lignes du fichier source assembleur tant qu\textquotesingle{}elle n\textquotesingle{}a pas rencontre de ligne avec \char`\"{}end\char`\"{} a l\textquotesingle{}interieur. Pour chaque ligne il y a deux cas de figure\+: \end{DoxyCompactList}\item 
+void \hyperlink{asm_8c_afbf1f814881d73eefde6bccdde641db8}{print\+Labels} ()
+\item 
+void \hyperlink{asm_8c_a5a883df802289858d1693c2812f1fd96}{dump\+Binary\+Code} ()
+\item 
+void \hyperlink{asm_8c_a374b455749e0ea31debe4ef66805e564}{generate\+Binary} (F\+I\+LE $\ast$fout)
+\item 
+int \hyperlink{asm_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\index{asm.\+c@{asm.\+c}!add\+Code@{add\+Code}}
+\index{add\+Code@{add\+Code}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Code(int v)}{addCode(int v)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Code (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a79768c03b0a3a825aca8f66127a22a35}{}\label{asm_8c_a79768c03b0a3a825aca8f66127a22a35}
+
+
+Complète le tableau code\+Segment. 
+
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_a79768c03b0a3a825aca8f66127a22a35_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!add\+Instruction\+Name@{add\+Instruction\+Name}}
+\index{add\+Instruction\+Name@{add\+Instruction\+Name}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Instruction\+Name(char $\ast$instname, int opcod, int type, char $\ast$format, int nbops)}{addInstructionName(char *instname, int opcod, int type, char *format, int nbops)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Instruction\+Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{instname, }
+\item[{int}]{opcod, }
+\item[{int}]{type, }
+\item[{char $\ast$}]{format, }
+\item[{int}]{nbops}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_adb68a5377b3fc4689743c5b060f7d08a}{}\label{asm_8c_adb68a5377b3fc4689743c5b060f7d08a}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{asm_8c_adb68a5377b3fc4689743c5b060f7d08a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!add\+Label@{add\+Label}}
+\index{add\+Label@{add\+Label}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Label(char $\ast$labelname, int addr)}{addLabel(char *labelname, int addr)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Label (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname, }
+\item[{int}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_aa0b13c47db77611034e4b839b39e68ed}{}\label{asm_8c_aa0b13c47db77611034e4b839b39e68ed}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{asm_8c_aa0b13c47db77611034e4b839b39e68ed_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{asm_8c_aa0b13c47db77611034e4b839b39e68ed_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!add\+Reference@{add\+Reference}}
+\index{add\+Reference@{add\+Reference}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{add\+Reference(char $\ast$labelname, int addr\+In\+Code)}{addReference(char *labelname, int addrInCode)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Reference (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname, }
+\item[{int}]{addr\+In\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_aaabafc3ddfe1c7c2768629e366907922}{}\label{asm_8c_aaabafc3ddfe1c7c2768629e366907922}
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_aaabafc3ddfe1c7c2768629e366907922_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!decode\+Instruction@{decode\+Instruction}}
+\index{decode\+Instruction@{decode\+Instruction}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{decode\+Instruction(char $\ast$line)}{decodeInstruction(char *line)}}]{\setlength{\rightskip}{0pt plus 5cm}void decode\+Instruction (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{}\label{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}
+
+
+La fonction \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction(char $\ast$line)} est appelee par la boucle principale d\textquotesingle{}analyse lorsque la ligne d\textquotesingle{}assembleur lue n\textquotesingle{}est pas une (pas de \+: dans la ligne). Cette fonction fait le gros du travail de la passe 1, en identifiant le type de l\textquotesingle{}instruction, en faisant le decodage supplementaire, en appelant \hyperlink{asm_8c_a79768c03b0a3a825aca8f66127a22a35}{add\+Code()} pour remplir code\+Segment et en ajoutant des references si l\textquotesingle{}instruction decodee fait reference a une etiquette encore inconnue. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!dump\+Binary\+Code@{dump\+Binary\+Code}}
+\index{dump\+Binary\+Code@{dump\+Binary\+Code}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{dump\+Binary\+Code()}{dumpBinaryCode()}}]{\setlength{\rightskip}{0pt plus 5cm}void dump\+Binary\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a5a883df802289858d1693c2812f1fd96}{}\label{asm_8c_a5a883df802289858d1693c2812f1fd96}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{asm_8c_a5a883df802289858d1693c2812f1fd96_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!find\+Label@{find\+Label}}
+\index{find\+Label@{find\+Label}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{find\+Label(char $\ast$labelname)}{findLabel(char *labelname)}}]{\setlength{\rightskip}{0pt plus 5cm}int find\+Label (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{labelname}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_af1248a22adfbfa85be10ed09b7570a3a}{}\label{asm_8c_af1248a22adfbfa85be10ed09b7570a3a}
+
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_af1248a22adfbfa85be10ed09b7570a3a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!generate\+Binary@{generate\+Binary}}
+\index{generate\+Binary@{generate\+Binary}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{generate\+Binary(\+F\+I\+L\+E $\ast$fout)}{generateBinary(FILE *fout)}}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Binary (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fout}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a374b455749e0ea31debe4ef66805e564}{}\label{asm_8c_a374b455749e0ea31debe4ef66805e564}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{asm_8c_a374b455749e0ea31debe4ef66805e564_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!main@{main}}
+\index{main@{main}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{asm_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!parse\+Asm@{parse\+Asm}}
+\index{parse\+Asm@{parse\+Asm}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{parse\+Asm(\+F\+I\+L\+E $\ast$fin)}{parseAsm(FILE *fin)}}]{\setlength{\rightskip}{0pt plus 5cm}int parse\+Asm (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fin}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}{}\label{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}
+
+
+Cette fonction \hyperlink{asm_8c_ac9247e4068e106aca0b16bb1b1b51835}{parse\+Asm(\+F\+I\+L\+E $\ast$fin)} parcourt les lignes du fichier source assembleur tant qu\textquotesingle{}elle n\textquotesingle{}a pas rencontre de ligne avec \char`\"{}end\char`\"{} a l\textquotesingle{}interieur. Pour chaque ligne il y a deux cas de figure\+: 
+
+
+\begin{DoxyItemize}
+\item si la ligne de texte contient un \+:, il s\textquotesingle{}agit d\textquotesingle{}une etiquette et on la declare
+\item sinon, il s\textquotesingle{}agit d\textquotesingle{}une instruction et on appelle \hyperlink{asm_8c_aab0fc8f69b5d21a640117e2425d6f24d}{decode\+Instruction()} 
+\end{DoxyItemize}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asm_8c_ac9247e4068e106aca0b16bb1b1b51835_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{asm_8c_ac9247e4068e106aca0b16bb1b1b51835_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!print\+Labels@{print\+Labels}}
+\index{print\+Labels@{print\+Labels}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{print\+Labels()}{printLabels()}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_afbf1f814881d73eefde6bccdde641db8}{}\label{asm_8c_afbf1f814881d73eefde6bccdde641db8}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{asm_8c_afbf1f814881d73eefde6bccdde641db8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{asm.\+c@{asm.\+c}!resolve\+References@{resolve\+References}}
+\index{resolve\+References@{resolve\+References}!asm.\+c@{asm.\+c}}
+\subsubsection[{\texorpdfstring{resolve\+References()}{resolveReferences()}}]{\setlength{\rightskip}{0pt plus 5cm}void resolve\+References (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{asm_8c_a64fd9559bd8aac7553d6e16593859fcb}{}\label{asm_8c_a64fd9559bd8aac7553d6e16593859fcb}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{asm_8c_a64fd9559bd8aac7553d6e16593859fcb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{asm_8c_a64fd9559bd8aac7553d6e16593859fcb_icgraph}
+\end{center}
+\end{figure}
+
+

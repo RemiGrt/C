@@ -1,0 +1,7 @@
+active step e0(led0=0)
+step e1(led0=1)
+step e2(led0=2)
+
+transition t0({e0},{e1},but0'rise)
+transition t1({e1},{e2},but1'rise)
+transition t2({e2},{e0},but2'rise)

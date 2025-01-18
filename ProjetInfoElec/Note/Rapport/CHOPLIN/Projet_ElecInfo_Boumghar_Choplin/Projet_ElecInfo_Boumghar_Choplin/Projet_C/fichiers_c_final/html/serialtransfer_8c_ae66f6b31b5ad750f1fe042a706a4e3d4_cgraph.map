@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$serialtransfer_8c.html#a7ebb41efb2fc9d15737e5a1364865d63" title="La fonction readAssembly(HANDLE hSerial,FILE *fin) permet de parcourir le fichier d&#39;opcode..." alt="" coords="104,31,209,57"/>
+<area shape="rect" id="node3" href="$serialtransfer_8c.html#a3121f1d2fc282b4db02572efc69fba36" title="La fonction writeSerial(HANDLE hSerial,char *buf,int bytes_to_write) permet d&#39;écrire sur liaison séri..." alt="" coords="257,5,340,32"/>
+<area shape="rect" id="node4" href="$serialtransfer_8c.html#acb089e16756281dd17cbf6cf0131ba84" title="La fonction readSerial(HANDLE hSerial,char *buf,int bytes_to_read) est appelé après l&#39;envoie des donn..." alt="" coords="259,56,339,83"/>
+</map>
